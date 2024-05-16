@@ -2,11 +2,11 @@
 
 ## Overview
 
-[MeMedia](https://www.memedia.fr/) is an audiovisual production agency created in 2020 and settled in Chateauroux in the Centre region of France. It is integrated in the group "We Are Evolution" specialized in Video Marketing, alongside WEvolution and SmileBox.
+["We Are Evolution"](https://www.we-are-evolution.com/) is a group specialized in Communication, Video Marketing, and Human Ressources that was created in 2019. Composed of 3 branches (MeMedia, WEvolution and Smile Event), their mission is to make companies more attractive for candidates.
 
-The society is specialized in the realization of corporate videos, corporate films, presentation films, video reports, media clips and animated motion design films, and their goal is to provide solutions for highlighting a brand image with originality, professionalism and the aim of maximum positive visibility.
+Indeed, they want to highlight companies to showcase it to candidates and win the contributors' loyalty.
 
-They requested the ALGOSUP school to create an App named "Adopte un Candidat": the product is a Tinder-like recruitment application whose goal is to match jobseekers with companies depending the required soft skills. Indeed, the product must provide a unique way to hire people depending on their behavorial and relational skills that are required for a certain company.
+In fact, the group asked the ALGOSUP school to create an App named "Adopte un Candidat": the product is a Tinder-like recruitment application whose goal is to match jobseekers with companies depending the required soft skills. Indeed, the product must provide a unique way to hire people depending on their behavorial and relational skills that are required for a certain company.
 
 In this project, the client want us to create the prototype of the app with the expected features:
 - Anonymization of candidates and companies.
