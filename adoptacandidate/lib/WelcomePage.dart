@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -108,7 +109,7 @@ class WelcomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'login'.tr,
+                            'connection'.tr,
                             style: GoogleFonts.roboto(
                               fontSize: 13,
                               color: Colors.white,
@@ -124,10 +125,15 @@ class WelcomePage extends StatelessWidget {
                     // Bouton "Continuer avec un email"
                     ElevatedButton(
                       onPressed: () {
-                        // Logique pour continuer avec un email
+                         Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                         builder: (context) => LoginPage(),
+                        ),
+                        );
                       },
                       child: Text(
-                        'register'.tr,
+                        'email'.tr,
                         style: GoogleFonts.roboto(
                           fontSize: 16,
                           color: Colors.white,
@@ -150,7 +156,7 @@ class WelcomePage extends StatelessWidget {
                     
                     // Texte "ou"
                     Text(
-                      'ou'.tr,
+                      'choice'.tr,
                       style: GoogleFonts.roboto(
                         fontSize: 16,
                         color: Colors.white,

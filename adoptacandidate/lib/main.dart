@@ -17,8 +17,6 @@ class AdoptACandidate extends StatelessWidget {
       fallbackLocale: Locale('fr', 'FR'),
       title: 'Adopt A Candidate',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.light),
-      darkTheme: ThemeData(brightness: Brightness.dark),
       home: WelcomePage(),
     );
   }
