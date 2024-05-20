@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/creationPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -63,7 +64,12 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => creationPage()));
+                      },
                       child: Text(
                         'Login'.tr,
                         style: TextStyle(color: Colors.white),
