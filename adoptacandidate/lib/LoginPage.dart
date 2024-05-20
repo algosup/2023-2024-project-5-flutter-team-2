@@ -56,11 +56,33 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              
+              SizedBox(height: 20),
+              DelayedAnimation(
+                delay: 2000,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Login'.tr,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: yellow,
+                        padding: EdgeInsets.symmetric(horizontal: 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
+          ),
         ),
       ),
-    ),
     );
   }
 }

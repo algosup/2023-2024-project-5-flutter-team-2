@@ -16,6 +16,7 @@ class Language extends Translations{
       'forgot': 'Forgot Password',
       'name': 'Name',
       'confirm': 'Confirm Password',
+      'login'  : 'Login',
       'choice': 'or',
   },
     'fr FR': {
@@ -29,6 +30,7 @@ class Language extends Translations{
       'forgot': 'Mot de passe oublié',
       'name': 'Nom',
       'confirm': 'Confirmer le mot de passe',
+      'login'  : 'Connexion',
       'choice': 'ou',
     },
   };
