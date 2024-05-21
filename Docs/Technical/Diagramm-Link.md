@@ -1,3 +1,11 @@
+**Document Information:**
+
+|                   | Information |
+| ----------------- | ----------- |
+| Document Owner    | Mouatassime Seiv|
+| Creation Date     | 2024/05/13  |
+| Last Update Date  | 2024/05/21  |
+
 ### This diagram is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
 
 1 - Password and logins
