@@ -123,10 +123,11 @@
 
 ## 2 ##
 
-### UML VERSION 
+# UML Diagram for Recruitment App
 
+## Class Diagram
 
-
+```plaintext
 +----------------+              +-----------------+               +-------------------+
 |     User       |<|---------|  | EmployeeProfile |               |  CompanyProfile   |
 |----------------|              |-----------------|               |-------------------|
