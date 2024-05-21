@@ -36,19 +36,41 @@ At the third warning of the week, the project manager will report to any member 
 
 These rules are additionary advices to ensure the organization of this project.
 
-**Secondary rule n°1:** No one has to work or update the main branch without the supervision of the project manager.
+**Secondary rule n°1:** No one has to work or update the main branch without the supervision of the Project Manager.
 
 **Secondary rule n°2:** Any use of any AI-enhanced tool such as ChatGPT must be reported to the Project Manager.
 
-In general, any breaking of thes rules shouldn't lead to a warning, but it could create potential roadblocks for the project's progression.
+**Secondary rule n°3:** Any work committed outside project class should be reported to the Project Manager.
+
+In general, any breaking of these rules shouldn't lead to a warning, but it could create potential roadblocks for the project's progression.
 
 ## Meetings
 
+Meetings are organized regularly to discuss about the project progress:
+
+    - At the end of the project class (around 12.25 am or 4.55 pm), the project manager will discuss with the whole team to update the task list, and to gather information for filling the project report. He will need to know on what work each member has contributed and other discoveries.
+    
+    - At the end of each week, each student must fill a survey made by the Project Manager to retrieve their personal moods for a certain week.
+
+    - If necessary, a meeting outside project time (either at the ALGOSUP school or through Discord) can be organized. Depending on the team's progress, the Project Manager has the final word on the meeting's schedule.
+
 ## Task Schedule
+
+A task schedule has been created to gather all tasks required for the development of this project:
+
+[Task List](https://algosup-my.sharepoint.com/:x:/p/paul_nowak/EZ5LSwoZ7URIkUB2GmtieIsBF0v54p2bRAPRpypMxDk_9w?e=3WzS50) <br>
 
 ## Retroplanning and KPIs
 
-## Risk mitigation plan
+An file must be created to show the Key Performance Indicators (KPIs) with graphics to show their progress. Furthermore, a retro-planning graphic will show the progress of each task per week, and how they are organized. There will be a comparison between the expected outcome and the actual outcome.
+
+[KPIs](TBD) <br>
+
+## Risk Mitigation Plan
+
+To anticipate future problems, a risk management plan must be created to list the risks and assumptions that could be met during the project:
+
+[Risk Mitigation Plan](TBD)
 
 ## Weekly Reports
 
