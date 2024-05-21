@@ -1,5 +1,7 @@
+import 'package:adoptacandidate/SwipePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:swipe_cards/swipe_cards.dart';
 
 void main() {
   runApp(MyApp());
@@ -223,6 +225,10 @@ class MySituation extends StatelessWidget {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (context) => SwipePage()));
                     controller.saveSituation();
                   },
                   child: Text(
