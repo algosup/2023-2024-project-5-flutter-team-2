@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/MySituation.dart';
 import 'package:adoptacandidate/widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,7 @@ class Research extends StatelessWidget {
           },
         ),
         title: Text(
-          'Titre au Milieu',
+          'Ma Recherche',
           style: TextStyle(color: Colors.white),
         ),
         actions: [
@@ -164,7 +165,10 @@ class BottomButton extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-              // Action à effectuer lorsque le bouton est pressé
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context) => MySituation()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor:yellow, // Couleur de fond du bouton
@@ -179,8 +183,4 @@ class BottomButton extends StatelessWidget {
       ),
     );
   }
-}
-
-void main() {
-  runApp(Research());
 }
