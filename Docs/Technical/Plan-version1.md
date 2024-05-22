@@ -6,7 +6,21 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/05/22  |
 
-![alt text](image-2.png) ![alt text](image-3.png)
+### Mandatory Tools for the Project :
+
+### 
+                             FIGMA :
+
+Figma is a graphics editing and prototyping program . Figma is mainly used for digital design: in other words, for the design of websites and application interfaces.
+
+![alt text](image-2.png) 
+
+### 
+                            Flutter: 
+Flutter uses the programming language Dart and compiles into machine code. Host devices understand this code, which ensures a fast and effective performance.* 
+![alt text](image-3.png)
+
+
 
 ### Tech Plan for Adopte Un Candidat Using Flutter (Frontend Only)
 
@@ -90,11 +104,11 @@
 - Implement additional features based on user needs and market trends.
 
 #### 5. Project Timeline
-**Month 1**: Requirements gathering, planning, and design.
-**Month 2-3**: Project setup, UI development, and state management.
-**Month 4**: Integration and testing.
-**Month 5**: Deployment preparation and app store submissions.
-**Month 6**: Post-launch support and feature enhancements.
+**Week 1**: Requirements gathering, planning, and design.
+**Week 2-3**: Project setup, UI development, and state management.
+**Week 4**: Integration and testing.
+**Week 5**: Deployment preparation and app store submissions.
+**Week 6**: Post-launch support and feature enhancements.
 
 #### 6. Team Structure
 - **Project Manager**: Oversee project progress, manage timelines and resources.
