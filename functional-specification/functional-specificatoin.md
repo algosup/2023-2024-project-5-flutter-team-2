@@ -43,26 +43,42 @@
       - [4. Candidate Search and Matching](#4-candidate-search-and-matching-1)
       - [5. Application Management](#5-application-management-1)
   - [2.4 Matching Algorithm](#24-matching-algorithm)
+    - [2.4.1 Overview](#241-overview)
+    - [2.4.2 Algorithm Design](#242-algorithm-design)
+      - [Matching Criteria](#matching-criteria)
+    - [2.4.3 Algorithm Workflow](#243-algorithm-workflow)
+      - [Technology and Techniques](#technology-and-techniques)
+      - [Example Algorithm Flow](#example-algorithm-flow)
+    - [Example Content for the Matching Algorithm Section](#example-content-for-the-matching-algorithm-section)
+      - [Overview](#overview)
+      - [Algorithm Design](#algorithm-design)
+      - [Matching Criteria](#matching-criteria-1)
+      - [Algorithm Workflow](#algorithm-workflow)
+      - [Technology and Techniques](#technology-and-techniques-1)
 - [3. Non-Functional Requirements](#3-non-functional-requirements)
-  - [3.1 Performance](#31-performance)
-  - [3.2 Security](#32-security)
-  - [3.3 Usability](#33-usability)
-  - [3.4 Scalability](#34-scalability)
+  - [3.1 Performance Requirements](#31-performance-requirements)
+  - [3.2 Reliability and Availability](#32-reliability-and-availability)
+  - [3.3 Security](#33-security)
+  - [3.4 Usability](#34-usability)
+  - [3.5 Maintainability](#35-maintainability)
+  - [3.6 Portability](#36-portability)
+  - [3.7 Backup and Recovery](#37-backup-and-recovery)
+  - [3.8 Compliance and Legal Requirements](#38-compliance-and-legal-requirements)
 - [4. User Interface Design](#4-user-interface-design)
   - [4.1 Design Principles](#41-design-principles)
   - [4.2 Wireframes and Mockups](#42-wireframes-and-mockups)
 - [5. Technical Architecture](#5-technical-architecture)
-  - [5.1 System Architecture](#51-system-architecture)
-  - [5.2 Technology Stack](#52-technology-stack)
+  - [5.1 Front-End](#51-front-end)
+  - [5.2 Back-End](#52-back-end)
 - [6. Development and Testing Plan](#6-development-and-testing-plan)
-  - [6.1 Development Methodology](#61-development-methodology)
-  - [6.2 Testing Strategy](#62-testing-strategy)
-- [7. Deployment and Maintenance](#7-deployment-and-maintenance)
-  - [7.1 Deployment Plan](#71-deployment-plan)
-  - [7.2 Maintenance and Support](#72-maintenance-and-support)
-- [8. Risks and Mitigations](#8-risks-and-mitigations)
-- [9. Appendices](#9-appendices)
-- [10. Glossary](#10-glossary)
+  - [6.1 Development Phases](#61-development-phases)
+  - [6.3 Testing Strategies](#63-testing-strategies)
+  - [6.4 Quality Assurance (QA) Processes](#64-quality-assurance-qa-processes)
+  - [6.5 Roles and Responsibilities](#65-roles-and-responsibilities)
+  - [6.7 Duration and  Milestones](#67-duration-and--milestones)
+- [7. Maintenance](#7-maintenance)
+  - [7.1 Maintenance Plan](#71-maintenance-plan)
+- [8. Risks and Mitigation](#8-risks-and-mitigation)
 
 
 </details>
@@ -91,7 +107,7 @@ The key points of the Adopte un Candidat concept are as follows:
 
 - **Process:** In our approach, we do not have tests, quizzes, or games. Instead, candidates will have the opportunity to select their soft skills from a provided list, while recruiters will choose the desired skills from the same list. The match will occur when there is a 50% overlap of soft skills between the candidate and the company. Our concept is inspired by the functionality of the "Tinder" application for recruitment. There is no document or defined skills matrix<sup id="a1">[1](#f1)</sup>.
 
-**NB:**<sup id="a1">[2](#f1)</sup> in short, the Adopt a Candidate concept aims to promote fair recruitment by anonymizing candidates and companies, promoting soft skills, emphasizing the human aspect of the process and facilitating connections between candidates and companies via a dedicated application.
+**NB:**<sup id="a2">[2](#f2)</sup> in short, the Adopt a Candidate concept aims to promote fair recruitment by anonymizing candidates and companies, promoting soft skills, emphasizing the human aspect of the process and facilitating connections between candidates and companies via a dedicated application.
 
 ## 1.3 Stakeholders
 
@@ -368,6 +384,7 @@ The Employer Module is designed to provide companies with the tools they need to
   - Job Description: We are seeking a skilled Software Engineer with strong problem-solving abilities and a collaborative spirit. The ideal candidate will have experience in full-stack development and a passion for innovative technology solutions.
   - Location: San Francisco, CA (Remote options available)
   - Employment Type: Full-time
+  - Type of contract: Permanent Contract
   - Salary Range: $80,000 - $100,000
   - Soft Skills Required: Communication, Teamwork, Problem-solving
 
@@ -382,29 +399,153 @@ The Employer Module is designed to provide companies with the tools they need to
 
 ## 2.4 Matching Algorithm
 
-- **Summary:** Explain the core functionality of matching candidates with job postings.
-- **Detail:** Describe how the algorithm prioritizes soft skills, the criteria used for matching, and the technology behind it (e.g., machine learning).
+It is a key component of the recruitment app, designed to connect candidates with job opportunities that best fit their soft skills and other relevant criteria. This section of the Functional Specification Document should detail the algorithm's design, functionality, criteria for matching, and underlying technology. Here’s a comprehensive breakdown of what to include:
+
+### 2.4.1 Overview
+- **Purpose:** The Matching Algorithm aims to enhance the recruitment process by prioritizing candidates' soft skills and aligning them with employers' requirements. This focus ensures a better fit for both the candidate and the employer, leading to more successful and lasting employment relationships.
+
+### 2.4.2 Algorithm Design
+
+- **Inputs:**
+  - **Candidate Inputs:** Soft skills (validated through assessments), professional experience, educational background, job preferences (location, job type, industry), and profile endorsements.
+  - **Employer Inputs:** Job requirements, preferred soft skills, job description, Company's description, salary, and location.
+
+- **Outputs:**
+  - **Candidate Matches:** A ranked list of job opportunities that best match the candidate’s profile.
+  - **Employer Matches:** A ranked list of candidates that best match the job posting’s requirements.
+
+#### Matching Criteria
+- **Soft Skills:** The primary criterion, with weighting based on relevance to the job description and employer preferences. This includes both self-reported skills.
+
+- **Experience:** Secondary criteria that consider the candidate's professional background is relevant to the job.
+
+- **Job Preferences:** Match candidates’ job search preferences (e.g., Software engineer, Project manager) with the specifics of job postings.
+
+- **Location:** Geographical proximity or specific location preferences, important for roles requiring on-site presence.
+
+- **Employment preference:** Match candidates’ job search preferences (e.g., Fulltime, remote) with the specifics of job postings.
+
+- **Type of Contract:** The type of contract will play an important role during match (e.g., Permanent contract, temporary contract)
+
+### 2.4.3 Algorithm Workflow
+1. **Data Collection:** Gather and process data from candidate profiles and job postings.
+
+2. **Preprocessing:** Normalize and categorize the data for consistent comparison.
+
+3. **Feature Extraction:** Identify and weigh relevant features from both candidate and employer inputs for consistent matching proposition.
+
+#### Technology and Techniques
+
+- **Natural Language Processing (NLP):** Analyze and extract meaningful information from job descriptions and candidate profiles, particularly for soft skills.
+
+- **Collaborative Filtering:** Utilize recommendation techniques to suggest jobs to candidates and candidates to employers based on similar profiles and preferences.
+
+- **Feedback Loop:** Continuously refine the algorithm using feedback from other group team members about match quality and success rates.
+
+#### Example Algorithm Flow
+1. **Profile Update:** A candidate updates their profile with new soft skills validated.
+
+2. **Job Posting:** An employer posts a new job requiring specific soft skills, such as communication and teamwork.
+
+3. **Data Matching:** The algorithm evaluates the candidate’s soft skills against the job requirements.
+
+4. **Scoring:** The candidate and the employer receives a match score due to a strong alignment of soft skills of at least 50% soft-skills overlapping on both parties.
+
+5. **Recommendation:** The job is presented to the candidate as a match, and the candidate's profile is highlighted to the employer.
+
+
+### Example Content for the Matching Algorithm Section
+#### Overview
+The Matching Algorithm is designed to connect job seekers and employers by prioritizing soft skills, thus ensuring a better fit and higher job satisfaction. By focusing on attributes like communication, teamwork, and problem-solving, the algorithm aims to provide more meaningful matches.
+#### Algorithm Design
+- **Inputs:**
+  - Candidate Inputs: Soft skills (assessed and endorsed), experience, education, job preferences, location.
+  - Employer Inputs: Job requirements, preferred soft skills, company culture, job location.
+
+- **Outputs:**
+  - Candidate Matches: Ranked job opportunities.
+  - Employer Matches: Ranked candidate profiles.
+
+#### Matching Criteria
+  - **Soft Skills:** Weighted heavily based on job requirements.
+  - **Experience and Education:** Considered to ensure relevant background.
+  - **Job Preferences:** Matched to job specifics.
+  - **Location:** Geographical matching.
+  - **Company Culture Fit:** Ensuring alignment of values.
+  - **Engagement and Activity:** Prioritizing active users.
+
+#### Algorithm Workflow
+  1. Data Collection
+  2. Preprocessing
+  3. Feature Extraction
+
+#### Technology and Techniques
+- **NLP:** Extracting relevant information from profiles and descriptions.
+- **Collaborative Filtering:** Enhancing recommendations.
+- **Feedback Loop:** Refining matches based on user feedback.
+
+By detailing these aspects, these provide a clear and comprehensive understanding of the Matching Algorithm, its functionality, and its importance in the recruitment app.
 
 # 3. Non-Functional Requirements
-## 3.1 Performance
 
-- **Summary:** Define performance expectations.
-- **Detail:** Specify response times, load times, and other performance metrics.
+Non-functional requirements (NFRs) define the system's operational characteristics and constraints, focusing on how the system performs rather than what it performs. These requirements are crucial for ensuring the overall quality, usability, and reliability of the system. Here’s a detailed breakdown of what to include in the Non-Functional Requirements section:
 
-## 3.2 Security
+## 3.1 Performance Requirements
+- **Response Time:** The system should respond to user actions (e.g., loading profiles) within 2 seconds under normal load conditions.
 
-- **Summary:** Outline the security measures.
-- **Detail:** Include data encryption, user authentication, and compliance with data protection regulations.
+- **Throughput:** The system should handle a minimum of 100 concurrent users without performance degradation.
 
-## 3.3 Usability
+- **Scalability:** The system must scale to support up to 10,000 concurrent users with minimal impact on performance.
 
-- **Summary:** Describe usability standards.
-- **Detail:** Ensure the app is user-friendly, with an intuitive interface and accessible design.
 
-## 3.4 Scalability
+## 3.2 Reliability and Availability
+- **Uptime:** The system should have an uptime of 99.9% to ensure it is available for users at all times, excluding scheduled maintenance.
 
-- **Summary:** Discuss how the app will handle growth.
-- **Detail:** Plan for increasing user numbers and expanding features without compromising performance.
+- **Error Handling:** The system should handle errors gracefully, providing meaningful error messages to users.
+
+
+## 3.3 Security
+- **Data Protection:** All sensitive data (e.g., personal information, passwords) must be encrypted both in transit and at rest.
+
+- **Authentication and Authorization:** Implement secure authentication (e.g., multi-factor authentication) and authorization mechanisms to control user access.
+
+- **Compliance:** The system must comply with relevant data protection regulations (e.g., GDPR).
+
+
+## 3.4 Usability
+- **User Interface:** The user interface should be intuitive and easy to navigate, following design best practices and accessibility standards (e.g., WCAG 2.1).
+
+- **Accessibility:** The system must be accessible to users with disabilities, including screen reader compatibility and keyboard navigation.
+
+- **Localization:** Support multiple languages and regional settings to cater to a diverse user base. Main priority(English, and French).
+
+
+## 3.5 Maintainability
+- **Code Quality:** Follow coding standards and best practices to ensure code is maintainable and easy to understand.
+
+- **Documentation:** Provide comprehensive documentation for developers, including code comments, API documentation, and user manuals.
+
+- **Modularity:** Design the system in a modular way to facilitate easy updates and additions of new features.
+
+
+## 3.6 Portability
+- **Platform Compatibility:** Ensure the system is compatible with multiple operating systems (e.g., Windows, macOS, Linux) and devices (e.g., desktops, tablets, smartphones).
+
+- **Browser Compatibility:** Support all major web browsers (e.g., Chrome, Firefox, Safari, Edge) to ensure a consistent user experience.
+
+
+## 3.7 Backup and Recovery
+- **Data Backup:** Implement regular data backups (e.g., daily, weekly) and ensure backups are stored securely.
+
+- **Disaster Recovery:** Have a disaster recovery plan, including regular testing to ensure the system can be restored within a specified time frame.
+
+
+## 3.8 Compliance and Legal Requirements
+- **Data Privacy:** Adhere to data privacy laws and regulations, ensuring user data is handled appropriately.
+
+- **Terms of Service and Privacy Policy:** Clearly outline the terms of service and privacy policy, making them easily accessible to users.
+
+
 
 # 4. User Interface Design
 ## 4.1 Design Principles
@@ -418,48 +559,135 @@ The Employer Module is designed to provide companies with the tools they need to
 - **Detail:** Include wireframes and mockups for key screens like the home page, profile pages, job search, and application tracking.
 
 # 5. Technical Architecture
-## 5.1 System Architecture
+The technical architecture outlines the overall structure and the technologies used to build and run the application. This section provides a high-level view, avoiding deep technical details to keep it accessible to a wider audience.
 
-- **Summary:** Describe the overall system architecture.
-- **Detail:** Outline the architecture, including client-server model, databases, and any external integrations.
+## 5.1 Front-End
+- **Technologies:** For the technology that will be used to build the front-end part of the project, we will have to use Flutter and Dart. Dart is a programming language used to write Flutter apps. On the other hand, Flutter is a UI toolkit from Google for building natively compiled mobile, web, and desktop applications from a single code base.
 
-## 5.2 Technology Stack
+- **Responsive Design:** The user interface will be built using a responsive design tool, known as FIGMA, it will help to ensure that the app looks and works well on various screen sizes and orientations.
 
-- **Summary:** List the technologies used.
-- **Detail:** Detail the frontend and backend technologies, databases, and any third-party services.
+
+## 5.2 Back-End
+- **Technologies Used:** Dart is working on both Front-End and Back-End, so for the logical part of the app, Dart will be used to handle that.
+
+- **Back-End Framework:** The sever-side logic is handle by a robust backend framework that manages data processing, user authentication, and business logic.
+
+- **Database:** A relational database stores all user data, job postings, and application records securely. This database is optimized for fast retrieval and data integrity.
+
+
 
 # 6. Development and Testing Plan
-## 6.1 Development Methodology
+The Development and Testing Plan outlines the approach, methodologies, and processes to be followed during the development and testing phases of the recruitment app. This plan ensures that the project progresses smoothly, meets its objectives, and delivers a high-quality product.
 
-- **Summary:** Define the development approach.
-- **Detail:** Explain the chosen methodology (e.g., Agile, Scrum) and the rationale behind it.
+## 6.1 Development Phases
+**1. Requirements Gathering:** Collect detailed requirements from stakeholders, including feature specifications and user stories.
 
-## 6.2 Testing Strategy
+**2. Design Phase:**
+- **UI/UX Design:** Create wireframes and prototypes for the user interface.
 
-- **Summary:** Describe the testing plan.
-- **Detail:** Cover unit testing, integration testing, user acceptance testing, and any automated testing tools to be used.
+- **Architecture Design:** Define the overall system architecture, including the client-side, server-side, and database design.
 
-# 7. Deployment and Maintenance
-## 7.1 Deployment Plan
+**3. Implementation Phase:**
+- **Frontend Development:** Develop the user interface using modern web and mobile development frameworks.
 
-- **Summary:** Outline the deployment strategy.
-- **Detail:** Describe the process for deploying the app, including staging environments, roll-out plans, and any downtime considerations.
+- **Backend Development:**Implement the server-side logic, and database interactions.
 
-## 7.2 Maintenance and Support
+- **Integration:** Integrate the frontend and backend components to ensure seamless communication and functionality.
 
-- **Summary:** Plan for ongoing maintenance.
-- **Detail:** Include plans for bug fixes, updates, and user support.
+**4. Testing Phase:**
+- **Unit Testing:** Test individual components and modules for correctness.
 
-# 8. Risks and Mitigations
+- **Integration Testing:** Test the interactions between integrated components to ensure they work together as expected.
 
-- **Summary:** Identify potential risks and their mitigations.
+- **System Testing:** Conduct end-to-end testing of the entire system to validate overall functionality.
+
+- **User Acceptance Testing (UAT):** Perform testing with actual users(team members) to gather feedback and ensure the app meets their needs.
+
+## 6.3 Testing Strategies
+- **Automated Testing:** Implement automated testing for unit and integration tests to ensure consistent and repeatable test coverage.
+
+- **Manual Testing:** Conduct manual testing for UI/UX, exploratory testing, and user acceptance testing to identify issues that automated tests might miss.
+
+- **Performance Testing:** Test the app's performance under various conditions to ensure it meets response time and scalability requirements.
+
+- **Security Testing:** Perform security assessments to identify and address vulnerabilities, ensuring data protection and compliance with regulations.
+
+
+## 6.4 Quality Assurance (QA) Processes
+- **Code Reviews:** Conduct regular code reviews to ensure code quality, consistency, and adherence to best practices.
+
+- **Defect Tracking:** Use a defect tracking system to log, prioritize, and track issues until they are resolved.
+
+
+## 6.5 Roles and Responsibilities
+- **Project Manager:** Oversees the project, ensures timelines are met, and communicates with stakeholders.
+
+- **Product Owner or Program Manager:** Represents the stakeholders, prioritizes the backlog, and ensures the product meets user needs.
+
+- **Developers:** Responsible for implementing the frontend and backend components.
+
+- **QA Engineers:** Conduct testing to ensure the app meets quality standards.
+
+- **UI/UX Designers:** Design the user interface and user experience.
+
+## 6.7 Duration and  Milestones
+**1. Duration Timeline:**
+
+| Milestones                                                 | Duration time   |
+|:----------------------------------------------------------:|:---------------:|
+| Required documents(functional and technical specification) | 3 weeks         |
+| UX/UI design                                               | 2 weeks         |
+| Architecture design                                        | 1 week          |
+| Frontend development                                       | 1 week          |
+| Backend development                                        | 1 week          |
+| System testing                                             | 1 week          |
+| User Manual                                                | 3 weeks         |
+
+
+**2. Milestones:**
+- **M1:** Completion of all the required documents.
+- **M2:** Completion of the UX/UI design.
+- **M3:** Completion of the architecture design.
+- **M4:** Completion of the Front-End development.
+- **M5:** Completion of the Back-End development.
+- **M6:** Completion of the system testing.
+- **M7:** Completion of the User Manual document.
+
+# 7. Maintenance
+The Maintenance section outlines the strategies and processes for ensuring its ongoing reliability and performance. This section covers the steps for an ongoing maintenance activities.
+
+## 7.1 Maintenance Plan
+**1. Regular Updates:** Schedule regular updates to add new features, improve existing functionalities, and fix bugs.
+
+- **Bug Fixes:** Address any reported bugs promptly to maintain a high-quality user experience.
+
+- **Security Patches:** Release security patches regularly to protect against vulnerabilities.
+
+**2. Performance Monitoring:**
+- **Performance Tuning:** Continuously analyze performance data to identify bottlenecks and optimize the app for better performance.
+
+**3. Backup and Recovery:**
+- **Regular Backups:** Schedule automated backups of the database and critical systems to prevent data loss.
+
+**4. User Support and Help Desk:**
+- **Knowledge Base:** Maintain an online knowledge base with FAQs, guides, and troubleshooting steps to help users resolve common issues independently.
+
+**5. Documentation:**
+- **Technical Documentation:** Maintain up-to-date technical documentation for developers and support staff, covering system architecture, deployment processes, and troubleshooting.
+
+- **User Documentation:** Provide user manuals, guides, and tutorials to help users understand and make the most of the app's features.
+
+# 8. Risks and Mitigation
+
+- **Summary:** Identify potential risks and their mitigation.
 - **Detail:__ List risks (e.g., security breaches, performance issues) and corresponding mitigation strategies.
 
-# 9. Appendices
-Summary: Include supplementary information.
-Detail: Add any additional documents, such as detailed questionnaires for soft skill assessments, detailed use case scenarios, and glossary of terms.
+9. Glossary
 
-# 10. Glossary
-<sup id="f1">1</sup> skills matrix is a  document or a defined list that outlines the specific skills or competencies that are required for a particular job role or that a candidate possesses.[↩](#a1)
+<sup id="f1"></sup> skills matrix is a  document or a defined list that outlines the specific skills or competencies that are required for a particular job role or that a candidate possesses.[↩](#a1)
 
-<sup id="f1">2</sup> NB is an abbreviation for the Latin phrase "Nota Bene", which translates to "note well" in English. It is used to draw the reader's attention to a particular point or detail. [↩](#a1)
+<sup id="f2"></sup> NB is an abbreviation for the Latin phrase "Nota Bene", which translates to "note well" in English. It is used to draw the reader's attention to a particular point or detail. [↩](#a2)
+
+<sup id="f1">^</sup> GDPR (General Data Protection Regulation): This is a regulation in EU law that protects the privacy and personal data of EU citizens. It gives individuals control over their personal data and simplifies the regulatory environment for international business. Key aspects of GDPR include the right to access your own data, the right to be forgotten (data erasure), and the requirement for organizations to obtain consent before collecting or processing personal data. [↩](#a1^)
+
+<sup id="f1">^</sup>WCAG 2.1, or Web Content Accessibility Guidelines 2.1, is a set of guidelines developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. [↩](#a1^)
