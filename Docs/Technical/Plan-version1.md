@@ -105,9 +105,13 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 
 #### 5. Project Timeline
 **Week 1**: Requirements gathering, planning, and design.
+
 **Week 2-3**: Project setup, UI development, and state management.
+
 **Week 4**: Integration and testing.
+
 **Week 5**: Deployment preparation and app store submissions.
+
 **Week 6**: Post-launch support and feature enhancements.
 
 #### 6. Team Structure
