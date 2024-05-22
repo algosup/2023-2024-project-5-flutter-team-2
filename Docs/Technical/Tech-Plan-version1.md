@@ -13,12 +13,13 @@
 
 Figma is a graphics editing and prototyping program . Figma is mainly used for digital design: in other words, for the design of websites and application interfaces.
 
-![alt text](image-2.png) 
+<img src="image-2.png" alt="alt text" width="300">
 
 ### 
                             Flutter: 
 Flutter uses the programming language Dart and compiles into machine code. Host devices understand this code, which ensures a fast and effective performance.* 
-![alt text](image-3.png)
+
+<img src="image-3.png" alt="alt text" width="300">
 
 
 
