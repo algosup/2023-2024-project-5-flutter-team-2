@@ -4,7 +4,7 @@
 | ----------------- | ----------- |
 | Document Owner    | Mouatassime Seiv|
 | Creation Date     | 2024/05/13  |
-| Last Update Date  | 2024/05/21  |
+| Last Update Date  | 2024/05/22  |
 
 ### This diagram is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
 
@@ -12,7 +12,7 @@
 
 2 - Candidate details
 
-3 - Company hiring process
+3 - Company hiring/recruiting process
 
  ### https://app.creately.com/d/fqCu9nL0a1Z/view ( click on the the link for the Full Diagramm )
 
