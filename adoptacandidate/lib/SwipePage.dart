@@ -25,14 +25,9 @@ class SwipePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Get.back();
-          },
-        ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        
           children: [
             Image.asset(
               'images/logo.png',
@@ -169,4 +164,4 @@ class JobCard extends StatelessWidget {
       ),
     );
   }
-}
+} 

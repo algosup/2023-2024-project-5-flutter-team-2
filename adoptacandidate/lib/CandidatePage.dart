@@ -1,7 +1,12 @@
+import 'dart:convert';
+import 'dart:ffi';
+import 'dart:html';
+
 import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http ;
 
 class CandidatePage extends StatefulWidget {
   @override
@@ -9,6 +14,20 @@ class CandidatePage extends StatefulWidget {
 }
 
 class _CandidatePageState extends State<CandidatePage> {
+  void register(String FirstName, String LastName, String Phone, String Email, String City, String Password)async{
+    final response = await http.post(Uri.parse('https://adopt1candidat.000webhostapp.com/adoptacandidat/register.php'), body: {
+         "FirstName":FirstName,
+         "LastName":LastName,
+         "Phone":Phone,
+         "Email":Email,
+         "City":City,
+         "Password":Password,
+    });
+    if(response.statusCode == 200){
+      var data = jsonDecode(response.body);
+      print(data);
+    }
+  }
   bool _obscureText1 = true;
   bool _obscureText2 = true;
 
@@ -212,6 +231,7 @@ class _CandidatePageState extends State<CandidatePage> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
+                    register(FirstName, LastName, Phone, Email, City, Password);
                     Navigator.push(
                       context, 
                       MaterialPageRoute(
@@ -246,3 +266,5 @@ void main() {
     home: CandidatePage(),
   ));
 }
+
+
