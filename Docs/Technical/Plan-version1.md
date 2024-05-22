@@ -116,8 +116,8 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 
 #### 6. Team Structure
 - **Project Manager**: Oversee project progress, manage timelines and resources.
-- **Flutter Developers**: 2-3 developers skilled in Flutter for cross-platform mobile development.
-- **QA Engineers**: 2 testers for unit, integration, and user acceptance testing.
+- **Flutter Developers**: 2 developers skilled in Flutter for cross-platform mobile development.
+- **QA Engineers**: 1 tester for unit, integration, and user acceptance testing.
 - **UI/UX Designer**: Design user-friendly interfaces and ensure a consistent user experience.
 
 This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.
