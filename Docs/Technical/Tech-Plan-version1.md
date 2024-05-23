@@ -15,12 +15,62 @@ Figma is a graphics editing and prototyping program . Figma is mainly used for d
 
 <img src="image-2.png" alt="alt text" width="300">
 
+| **Advantages**                                                | **Inconveniences**                                     |
+|---------------------------------------------------------------|--------------------------------------------------------|
+| **Cloud-based platform**                                      | **Dependent on internet connection**                   |
+| Accessible from anywhere with an internet connection         | Requires a stable internet connection to function      |
+| **Real-time collaboration**                                   | **Performance issues on large projects**               |
+| Multiple users can work on the same file simultaneously       | Can become slow or laggy with very large files         |
+| **Cross-platform compatibility**                              | **Limited offline capabilities**                       |
+| Works on Windows, macOS, Linux, and web browsers              | Limited functionality when not connected to the internet|
+| **Design and prototyping in one tool**                        | **Subscription cost for premium features**             |
+| Allows both designing and prototyping without switching tools | Free version has limitations, premium plans can be expensive |
+| **Intuitive and user-friendly interface**                     | **Steeper learning curve for advanced features**       |
+| Easy to learn for beginners, with a clean and organized UI    | Advanced features and plugins require more time to master |
+| **Component and style management**                            | **Plugin ecosystem still growing**                     |
+| Efficient reuse of components and consistent styling          | Although growing, the number of plugins is still limited |
+| **Version control and history**                               | **Browser dependency**                                 |
+| Maintains a history of changes, allowing easy reversion       | Performance and experience can vary across different browsers |
+| **Strong community and resource support**                     | **File management complexity**                         |
+| Large community with extensive tutorials and resources        | Managing multiple projects and files can become cumbersome |
+| **Integrations with other tools**                             | **Limited animation capabilities**                     |
+| Integrates well with tools like Slack, Zeplin, and more       | Basic animation features compared to dedicated tools like After Effects |
+| **Scalable for teams and enterprises**                        | **Data privacy concerns**                              |
+| Suitable for both small teams and large organizations         | Storing sensitive design data on a third-party server can be a concern |
+| **Frequent updates and new features**                         | **Complexity in handling design systems**              |
+| Regularly updated with new features and improvements          | Managing and updating large design systems can be challenging |
+
+
 ### 
                             Flutter: 
 Flutter uses the programming language Dart and compiles into machine code. Host devices understand this code, which ensures a fast and effective performance.* 
 
 <img src="image-3.png" alt="alt text" width="300">
 
+
+
+| **Advantages**                                                | **Inconveniences**                                   |
+|---------------------------------------------------------------|------------------------------------------------------|
+| **Cross-platform development**                                | **Large app sizes**                                  |
+| Write one codebase for iOS, Android, web, and desktop         | Flutter apps tend to have larger file sizes          |
+| **Fast development**                                          | **Limited third-party libraries**                    |
+| Hot reload feature allows for quick code changes and testing | Although growing, Flutter's ecosystem is smaller     |
+| **High performance**                                          | **Limited support for certain native features**      |
+| Compiled to native ARM code for fast execution               | Some platform-specific features may not be supported |
+| **Rich set of pre-designed widgets**                         | **Learning curve for Dart language**                 |
+| Provides extensive widgets that are customizable             | Developers need to learn Dart, which is less common  |
+| **Consistent UI across platforms**                            | **Performance can vary on different platforms**      |
+| Ensures uniform look and feel on different OS                 | Optimization needed for each platform individually   |
+| **Strong community and corporate support**                   | **More resource-intensive**                          |
+| Backed by Google and has an active developer community       | Can consume more CPU and memory compared to native   |
+| **Open-source and free**                                     | **Fewer UI templates compared to native SDKs**       |
+| Free to use with a wealth of community-contributed packages  | Limited in-built UI templates, requiring custom designs |
+| **Customizable and flexible UI**                             | **Some platform-specific look and feel issues**      |
+| Enables highly tailored and dynamic UIs                      | May not perfectly match the native appearance        |
+| **Access to native features through plugins**                | **Still maturing and evolving framework**            |
+| Large repository of plugins for native functionalities       | Rapid changes can introduce instability              |
+| **Strong documentation and resources**                       | **Potential for changes and deprecations**           |
+| Comprehensive official documentation and tutorials available | Features may be deprecated as the framework evolves  |
 
 
 ### Tech Plan for Adopte Un Candidat Using Flutter (Frontend Only)
