@@ -55,30 +55,52 @@
       - [Matching Criteria](#matching-criteria-1)
       - [Algorithm Workflow](#algorithm-workflow)
       - [Technology and Techniques](#technology-and-techniques-1)
-- [3. Non-Functional Requirements](#3-non-functional-requirements)
-  - [3.1 Performance Requirements](#31-performance-requirements)
-  - [3.2 Reliability and Availability](#32-reliability-and-availability)
-  - [3.3 Security](#33-security)
-  - [3.4 Usability](#34-usability)
-  - [3.5 Maintainability](#35-maintainability)
-  - [3.6 Portability](#36-portability)
-  - [3.7 Backup and Recovery](#37-backup-and-recovery)
-  - [3.8 Compliance and Legal Requirements](#38-compliance-and-legal-requirements)
-- [4. User Interface Design](#4-user-interface-design)
-  - [4.1 Design Principles](#41-design-principles)
-  - [4.2 Wireframes and Mockups](#42-wireframes-and-mockups)
-- [5. Technical Architecture](#5-technical-architecture)
-  - [5.1 Front-End](#51-front-end)
-  - [5.2 Back-End](#52-back-end)
-- [6. Development and Testing Plan](#6-development-and-testing-plan)
-  - [6.1 Development Phases](#61-development-phases)
-  - [6.3 Testing Strategies](#63-testing-strategies)
-  - [6.4 Quality Assurance (QA) Processes](#64-quality-assurance-qa-processes)
-  - [6.5 Roles and Responsibilities](#65-roles-and-responsibilities)
-  - [6.7 Duration and  Milestones](#67-duration-and--milestones)
-- [7. Maintenance](#7-maintenance)
-  - [7.1 Maintenance Plan](#71-maintenance-plan)
-- [8. Risks and Mitigation](#8-risks-and-mitigation)
+- [3. Use Case \& Personas](#3-use-case--personas)
+  - [3.1 Use Case](#31-use-case)
+    - [1 Main Success Scenario:](#1-main-success-scenario)
+    - [2 Alternate Scenarios:](#2-alternate-scenarios)
+    - [3 Postconditions:](#3-postconditions)
+    - [4 Exceptions:](#4-exceptions)
+  - [3.2 Personas](#32-personas)
+- [4. Non-Functional Requirements](#4-non-functional-requirements)
+  - [4.1 Performance Requirements](#41-performance-requirements)
+  - [4.2 Reliability and Availability](#42-reliability-and-availability)
+  - [4.3 Security](#43-security)
+  - [4.4 Usability](#44-usability)
+  - [4.5 Maintainability](#45-maintainability)
+  - [4.6 Portability](#46-portability)
+  - [4.7 Backup and Recovery](#47-backup-and-recovery)
+  - [4.8 Compliance and Legal Requirements](#48-compliance-and-legal-requirements)
+- [5. User Interface Design](#5-user-interface-design)
+  - [5.1 Design Principles](#51-design-principles)
+  - [5.2 Main Components](#52-main-components)
+  - [5.3 Visual Design Elements](#53-visual-design-elements)
+  - [5.4 User Interaction Design](#54-user-interaction-design)
+- [6. Technical Architecture](#6-technical-architecture)
+  - [6.1 Front-End](#61-front-end)
+  - [6.2 Back-End](#62-back-end)
+- [7. Development and Testing Plan](#7-development-and-testing-plan)
+  - [7.1 Development Phases](#71-development-phases)
+  - [7.2 Testing Strategies](#72-testing-strategies)
+  - [7.3 Quality Assurance (QA) Processes](#73-quality-assurance-qa-processes)
+  - [7.4 Roles and Responsibilities](#74-roles-and-responsibilities)
+  - [7.5 Duration and  Milestones](#75-duration-and--milestones)
+- [8. Maintenance](#8-maintenance)
+  - [8.1 Maintenance Plan](#81-maintenance-plan)
+- [9. Risks and Mitigation](#9-risks-and-mitigation)
+  - [9.1 Risk Identification](#91-risk-identification)
+    - [1. Technical Risks:](#1-technical-risks)
+    - [2. Operational Risks:](#2-operational-risks)
+    - [3. Project Management Risks:](#3-project-management-risks)
+    - [4. User Adoption Risks:](#4-user-adoption-risks)
+    - [5. Compliance Risks:](#5-compliance-risks)
+  - [9.2 Mitigation Strategies](#92-mitigation-strategies)
+    - [1. Technical Risks:](#1-technical-risks-1)
+    - [2. Operational Risks:](#2-operational-risks-1)
+    - [3. Project Management Risks:](#3-project-management-risks-1)
+    - [4. User Adoption Risks:](#4-user-adoption-risks-1)
+  - [9.3 Risk Management Process](#93-risk-management-process)
+- [10.  Glossary](#10--glossary)
 
 
 </details>
@@ -128,10 +150,10 @@ The key points of the Adopte un Candidat concept are as follows:
 |----------------------------------------------------------------|
 | Create a recruitment application in flutter                    |
 | Design the application mockup                                  |
-| Us the programming language dart                               |
+| Use the programming language Dart                              |
 | Create a LOGO for the application                              |
 | The application should have a "Tinder Style" interface         |
-| Simulate the backend of the application                        |
+| Do a little bit of backend for the application                        |
 
 | Out of Scope                                             |
 |----------------------------------------------------------|
@@ -140,13 +162,13 @@ The key points of the Adopte un Candidat concept are as follows:
 
 ## 1.5 Deliverables
 
-| Name                     | Type               |   Deadline   |
+| Name                     | Extension          |   Deadline   |
 | ------------------------ | ------------------ | :----------: |
 | Functional Specification | Markdown           | 24/05/2024   |
-| Technical Specification  | Markdown           | 07/05/2024   |
-| Test Plan                | Markdown           | 07/05/2024   |
-| Code                     | dart               | 14/05/2024   |
-| User Manual              | PDF                | 14/05/2024   |
+| Technical Specification  | Markdown           | 07/06/2024   |
+| Test Plan                | Markdown           | 07/06/2024   |
+| Code                     | Dart               | 14/06/2024   |
+| User Manual              | PDF                | 14/06/2024   |
 
 
 # 2. Functional Requirements
@@ -157,8 +179,8 @@ The key points of the Adopte un Candidat concept are as follows:
       - Full Name
       - Contact Information(Email Address, Phone Number)
       - Location (City, Country)
-      - Profile Picture
       - Industry
+      - Phone Number
 
 2. **Professional Information**
     - ***Fields:***
@@ -166,27 +188,35 @@ The key points of the Adopte un Candidat concept are as follows:
       - Actual Situation
       - Availability
       - Level Of Experience
-      - Qualificatoin Level
+      - Qualification Level
+      - size of the Company
+      - Description of the Company
+      - Salary
 
 3. **SoftSkills**
    - ***Features:***
-     - Candidates can select their soft skills from a predefined list and can also add a skill that doesn't appears on the list(e.g., communication, teamwork, leadership, time management).
+     - Users can select their soft skills from a predefined list and can also add a skill that doesn't appears on the list(e.g., communication, teamwork, leadership, time management).
 
 4. **Preferences**
-   - ***Fields:*** 
+   - ***Fields:***
      - Desired Job Title
      - Location
      - Type of Contract
+     - Job preference
 
 5. **Swiping**
    - ***Features:***
-     - Name 
-     - Logo
+     - Name
      - Description
      - Job Title
+     - Salary
+     - Location
+     - Type of Contract
+     - Job preference
+     - Skills
 
 6. **Message**
-    There is a message widget available in case both the employer and the employee need to discuss on certain points.
+    There is a message system to allow both the employer and the employee to interact with each other after a match is done on both the employee and the employer side.
 
 ## 2.2 Candidate Module
 
@@ -200,18 +230,18 @@ The Candidate Module is a critical part of the recruitment app, designed to prov
 
 ### 2. Profile Creation and Management
 - ***Features:***
-  - **Personal Information:** Candidates has their name, contact details, location, and they have to upload a profile picture.
+  - **Personal Information:** Candidates has their name, email, password, contact details, location, and they have their which they can upload if they want.
 
-  - **Search:** Candidates add their desired job title, Location, and finally the type of contract the candidate wishes to have.
+  - **Search:** Candidates add their desired job title, Location, job preference(e.g., fulltime, part time) and finally the type of contract they wishes to have(e.g., permanent contract, temporary contract).
 
   - **Soft Skills Section:**
     - **Self-Assessment:** Candidates select their soft skills from a predefined list (e.g., communication, teamwork, problem-solving, leadership, time management).
+
   - **Situation:**
     - Candidates enter the job he wishes from a list of job
     - Candidates actual situation(Employed, unemployed),
     - Availability(Immediately, Adjustable)
     - Level of experience(Beginner, 2-3 years, 4-10 years, 10 years plus).
-    - Qualification level(BEP/CAP, Employee/Operator/BAC, Technician/ Employee BAC+2, Agent-control/ BAC +3/4, Engineer/Officer/BAC +5, Executive Officer).
 
 ### 3. Job Search and Matching
 - ***Features:***
@@ -223,13 +253,13 @@ The Candidate Module is a critical part of the recruitment app, designed to prov
 - ***Features:***
   - **Match Applications:** Candidates can have a match with a COMPANY directly through the app.
 
-  - **Swap Actions:** The choice to reject or accept any Employer base on the information you can see.
+  - **Swap Actions:** The choice to reject or accept any Employer base on the information seen.
 
   - **Communication:** In-app messaging system to communicate with potential employers.
 
 ### 5. Notifications and Alerts
 - ***Features:***
-  - **Match Alerts:** Candidates can see the company in the message widget if there is a match between both parties.
+  - **Match Alerts:** Candidates can see the company in the message system if there is a match between both parties.
 
   - **Job Alerts:** Candidates receive notifications about new job postings that match their profile and preferences.
 
@@ -240,7 +270,7 @@ The Candidate Module is a critical part of the recruitment app, designed to prov
 - ***Features:***
   - **Profile Visibility:** Options for candidates to control who can view their profile (public, private, or only specific employers).
 
-  - **Account Settings:** Options to manage account details, change passwords, and deactivate accounts if needed.
+  - **Account Settings:** Options to manage account details like change the name, change password, change email, change phone number, and delete account if needed.
 
 ### Example Content for the Candidate Module
 
@@ -266,12 +296,12 @@ The Candidate Module is a critical part of the recruitment app, designed to prov
   - Password: ********
   - Location: New York, USA
   - Phone Number: 123456789
-  - Profile Picture: [Upload Option]
 
 - **2.2 Searchings:**
   - Job Title: Marketing Manager
   - Location: California, USA
-  - Type of contract: CDI
+  - Job preference: Full time
+  - Type of contract: Permanent contract
 
 - **2.3 Soft Skills Section:**
   - *Self-Assessment:*
@@ -287,7 +317,6 @@ The Candidate Module is a critical part of the recruitment app, designed to prov
   - Actual status: unemployed
   - Availability: Immediately
   - Level of experience: 6 years
-  - Qualification: BAC +5
 
 ## 2.3 Employer Module
 
@@ -297,23 +326,21 @@ The Employer Module is designed to provide companies with the tools they need to
 - **Features:**
   - **Sign-Up Options:** Allow employer to register using their company email, google, social media accounts (Facebook), or with a dedicated company account(icloud), else the Employer will have to enter the COMPANY's NAME, The COMPANY's size, Location(s), email address, password, confirm password, phone number.
 
-  - **Login:** Secure login functionality with password protection and options for password recovery.
+  - **Login:** Secure login functionality with email, password protection and options for password recovery.
 
 ### 2. Company Profile Creation and Management
 - **Features:**
   - **Basic Information:** Employers has the company name, industry, size (number of employees), and location(s), email address, password.
 
-  - **Company Description:** A detailed description of the company’s mission, values, culture, and work environment.
-
-  - **Multimedia:** Upload company logo
+  - **Company Description:** A detailed description of the company’s mission, and work environment.
 
   - **Social Media Links:** Links to the company’s social media profiles (LinkedIn, Facebook, Twitter, etc.).
 
 ### 3. Job Posting Management
 - **Features:**
-  - **Create Job Postings:** Employers can create and publish job postings with detailed descriptions, requirements, and preferred soft skills.
+  - **Create Job Postings:** Employers can create and publish job postings with detailed descriptions, requirements, salary, location, and preferred soft skills.
 
-  - **Job Posting Fields:** Job title, job description, location (remote, on-site, hybrid), employment type (full-time, part-time, contract), salary range, and soft skills required.
+  - **Job Posting Fields:** Job title, job description, location (remote, on-site, hybrid), employment type (full-time, part-time), salary range, type of contract(permanent contract, temporary contract), and soft skills required.
 
 ### 4. Candidate Search and Matching
 - **Features:**
@@ -326,7 +353,7 @@ The Employer Module is designed to provide companies with the tools they need to
 - **Features:**
   - **Communication:** In-app messaging system to communicate directly with candidates.
 
-  - **Swap Actions:** The choice to reject or accept any candidate base on the informations you can see.
+  - **Swap Actions:** The choice to reject or accept any candidate base on the information you can see.
 
 
 ### 6. Notifications and Alerts
@@ -370,10 +397,7 @@ The Employer Module is designed to provide companies with the tools they need to
 - **2.2 Company Description:**
     Tech Innovators Inc. is a leading technology company dedicated to developing innovative solutions for modern business challenges. Our mission is to leverage cutting-edge technology to drive business success while fostering a collaborative and inclusive work environment.
 
-- **2.3 Multimedia:**
-  - Logo: [Upload Option]
-
-- **2.4 Social Media Links:**
+- **2.3 Social Media Links:**
   - LinkedIn: [Link]
   - Facebook: [Link]
   - Twitter: [Link]
@@ -402,13 +426,13 @@ The Employer Module is designed to provide companies with the tools they need to
 It is a key component of the recruitment app, designed to connect candidates with job opportunities that best fit their soft skills and other relevant criteria. This section of the Functional Specification Document should detail the algorithm's design, functionality, criteria for matching, and underlying technology. Here’s a comprehensive breakdown of what to include:
 
 ### 2.4.1 Overview
-- **Purpose:** The Matching Algorithm aims to enhance the recruitment process by prioritizing candidates' soft skills and aligning them with employers' requirements. This focus ensures a better fit for both the candidate and the employer, leading to more successful and lasting employment relationships.
+- **Purpose:** The Matching Algorithm aims to enhance the recruitment process by prioritizing candidates' soft skills and aligning them with employers' requirements. This focus ensures a better fit for both the candidate and the employer.
 
 ### 2.4.2 Algorithm Design
 
 - **Inputs:**
-  - **Candidate Inputs:** Soft skills (validated through assessments), professional experience, educational background, job preferences (location, job type, industry), and profile endorsements.
-  - **Employer Inputs:** Job requirements, preferred soft skills, job description, Company's description, salary, and location.
+  - **Candidate Inputs:** Soft skills (validated through assessments), professional experience, job preferences (location, job type, industry), and profile endorsements.
+  - **Employer Inputs:** Job requirements, preferred soft skills, job description, company's description, salary, and location.
 
 - **Outputs:**
   - **Candidate Matches:** A ranked list of job opportunities that best match the candidate’s profile.
@@ -421,7 +445,7 @@ It is a key component of the recruitment app, designed to connect candidates wit
 
 - **Job Preferences:** Match candidates’ job search preferences (e.g., Software engineer, Project manager) with the specifics of job postings.
 
-- **Location:** Geographical proximity or specific location preferences, important for roles requiring on-site presence.
+- **Location:** Geographical proximity or specific location preferences is very important.
 
 - **Employment preference:** Match candidates’ job search preferences (e.g., Fulltime, remote) with the specifics of job postings.
 
@@ -457,6 +481,7 @@ It is a key component of the recruitment app, designed to connect candidates wit
 ### Example Content for the Matching Algorithm Section
 #### Overview
 The Matching Algorithm is designed to connect job seekers and employers by prioritizing soft skills, thus ensuring a better fit and higher job satisfaction. By focusing on attributes like communication, teamwork, and problem-solving, the algorithm aims to provide more meaningful matches.
+
 #### Algorithm Design
 - **Inputs:**
   - Candidate Inputs: Soft skills (assessed and endorsed), experience, education, job preferences, location.
@@ -468,11 +493,9 @@ The Matching Algorithm is designed to connect job seekers and employers by prior
 
 #### Matching Criteria
   - **Soft Skills:** Weighted heavily based on job requirements.
-  - **Experience and Education:** Considered to ensure relevant background.
+  - **Experience** Considered to ensure relevant background.
   - **Job Preferences:** Matched to job specifics.
   - **Location:** Geographical matching.
-  - **Company Culture Fit:** Ensuring alignment of values.
-  - **Engagement and Activity:** Prioritizing active users.
 
 #### Algorithm Workflow
   1. Data Collection
@@ -486,11 +509,85 @@ The Matching Algorithm is designed to connect job seekers and employers by prior
 
 By detailing these aspects, these provide a clear and comprehensive understanding of the Matching Algorithm, its functionality, and its importance in the recruitment app.
 
-# 3. Non-Functional Requirements
+
+# 3. Use Case & Personas
+## 3.1 Use Case
+- **Title:** Job Application Process
+- **Primary Actor:** Candidate
+- **Goal:** To successfully apply for a job through the recruitment app.
+- **Preconditions:**
+  1. The candidate is registered and logged into the app.
+  2. The candidate has completed their profile, including their soft skills and resume.
+
+### 1 Main Success Scenario:
+1. **Jobs Alerts:**
+   - The candidate will see all the employers who need his skills and have to work the desired job.
+2. **View Job Details:**
+   - The candidate clicks on a job listing to view detailed information about the job, including requirements, responsibilities, company information, and benefits.
+3. **Apply for Job:**
+    - The candidate clicks will either swipe left if he doesn't find any interest in the company or he will swipe right if he finds out that the company offer suits him.
+
+4. **Confirmation:**
+   - The app displays a confirmation message indicating that the application has been successfully matched.
+
+### 2 Alternate Scenarios:
+- **Incomplete Profile:**
+  - If the candidate's profile is incomplete, the app prompts the candidate to complete their profile before applying.
+
+### 3 Postconditions:
+- The employer receives the candidate’s match on his notification bar.
+
+### 4 Exceptions:
+- **Invalid Data:** If the application form contains invalid data, the app prompts the candidate to correct it before submission.
+
+## 3.2 Personas
+
+- **Persona 1: Sarah Jenkins**
+- **Age:** 28
+- **Occupation:** Marketing Specialist
+- **Background:** Sarah has 6 years of experience in digital marketing. She is skilled in SEO, content creation, and social media management. She is looking to move to a company that values creativity and team collaboration.
+- **Goals:**
+  - Find a job that aligns with her passion for creative marketing.
+  - Work in a company that values soft skills like communication and teamwork.
+- **Frustrations:**
+  - Finding job listings that focus too much on technical skills rather than soft skills.
+  - Navigating complex application processes.
+- **Behavior:**
+  - Sarah uses her smartphone primarily for job searching.
+  - She values a clean and intuitive app interface.
+- **Preferred Features:**
+  - Personalized job recommendations based on her skills and preferences.
+  - Easy-to-use job application process.
+  - The ability to track her application status in real-time.
+
+**Persona 2: Mark Thompson**
+- **Age:** 35
+- **Occupation:** HR Manager at a mid-sized tech company
+- **Background:** Mark has been in HR for over 10 years, focusing on talent acquisition and employee engagement. His company is looking to hire individuals with strong leadership and problem-solving skills.
+- **Goals:**
+  - Find candidates who fit the company essential soft skills.
+  - Streamline the recruitment process to save time and resources.
+- **Frustrations:**
+  - Filtering through numerous resumes that do not highlight relevant soft skills.
+  - The difficulty in assessing soft skills during the initial stages of recruitment.
+- **Behavior:**
+  - Mark uses a desktop computer at work but prefers mobile access when on the go.
+  - He values efficiency and quick access to relevant candidate information.
+- **Preferred Features:**
+  - Advanced filtering options to find candidates based on specific soft skills.
+  - A comprehensive dashboard to manage job postings and candidate applications.
+  - Direct messaging to communicate quickly with potential hires.
+
+
+
+These personas help in understanding the key users of the recruitment app and their specific needs, guiding the design and functionality of the app to ensure it meets their expectations effectively.
+
+
+# 4. Non-Functional Requirements
 
 Non-functional requirements (NFRs) define the system's operational characteristics and constraints, focusing on how the system performs rather than what it performs. These requirements are crucial for ensuring the overall quality, usability, and reliability of the system. Here’s a detailed breakdown of what to include in the Non-Functional Requirements section:
 
-## 3.1 Performance Requirements
+## 4.1 Performance Requirements
 - **Response Time:** The system should respond to user actions (e.g., loading profiles) within 2 seconds under normal load conditions.
 
 - **Throughput:** The system should handle a minimum of 100 concurrent users without performance degradation.
@@ -498,13 +595,13 @@ Non-functional requirements (NFRs) define the system's operational characteristi
 - **Scalability:** The system must scale to support up to 10,000 concurrent users with minimal impact on performance.
 
 
-## 3.2 Reliability and Availability
+## 4.2 Reliability and Availability
 - **Uptime:** The system should have an uptime of 99.9% to ensure it is available for users at all times, excluding scheduled maintenance.
 
 - **Error Handling:** The system should handle errors gracefully, providing meaningful error messages to users.
 
 
-## 3.3 Security
+## 4.3 Security
 - **Data Protection:** All sensitive data (e.g., personal information, passwords) must be encrypted both in transit and at rest.
 
 - **Authentication and Authorization:** Implement secure authentication (e.g., multi-factor authentication) and authorization mechanisms to control user access.
@@ -512,7 +609,7 @@ Non-functional requirements (NFRs) define the system's operational characteristi
 - **Compliance:** The system must comply with relevant data protection regulations (e.g., GDPR).
 
 
-## 3.4 Usability
+## 4.4 Usability
 - **User Interface:** The user interface should be intuitive and easy to navigate, following design best practices and accessibility standards (e.g., WCAG 2.1).
 
 - **Accessibility:** The system must be accessible to users with disabilities, including screen reader compatibility and keyboard navigation.
@@ -520,7 +617,7 @@ Non-functional requirements (NFRs) define the system's operational characteristi
 - **Localization:** Support multiple languages and regional settings to cater to a diverse user base. Main priority(English, and French).
 
 
-## 3.5 Maintainability
+## 4.5 Maintainability
 - **Code Quality:** Follow coding standards and best practices to ensure code is maintainable and easy to understand.
 
 - **Documentation:** Provide comprehensive documentation for developers, including code comments, API documentation, and user manuals.
@@ -528,47 +625,150 @@ Non-functional requirements (NFRs) define the system's operational characteristi
 - **Modularity:** Design the system in a modular way to facilitate easy updates and additions of new features.
 
 
-## 3.6 Portability
+## 4.6 Portability
 - **Platform Compatibility:** Ensure the system is compatible with multiple operating systems (e.g., Windows, macOS, Linux) and devices (e.g., desktops, tablets, smartphones).
 
 - **Browser Compatibility:** Support all major web browsers (e.g., Chrome, Firefox, Safari, Edge) to ensure a consistent user experience.
 
 
-## 3.7 Backup and Recovery
+## 4.7 Backup and Recovery
 - **Data Backup:** Implement regular data backups (e.g., daily, weekly) and ensure backups are stored securely.
 
 - **Disaster Recovery:** Have a disaster recovery plan, including regular testing to ensure the system can be restored within a specified time frame.
 
 
-## 3.8 Compliance and Legal Requirements
+## 4.8 Compliance and Legal Requirements
 - **Data Privacy:** Adhere to data privacy laws and regulations, ensuring user data is handled appropriately.
 
 - **Terms of Service and Privacy Policy:** Clearly outline the terms of service and privacy policy, making them easily accessible to users.
 
 
 
-# 4. User Interface Design
-## 4.1 Design Principles
+# 5. User Interface Design
 
-- **Summary:** State the principles guiding the UI design.
-- **Detail:** Focus on simplicity, consistency, and accessibility.
+The User Interface (UI) design is a critical component of the recruitment app, aimed at providing an intuitive, engaging, and user-friendly experience for both candidates and employers. This section outlines the principles, structure, and features of the UI design.
 
-## 4.2 Wireframes and Mockups
+## 5.1 Design Principles
+The UI design of the recruitment app(ADOPTE 1 CANDIDAT) is guided by the following principles:
 
-- **Summary:** Provide visual representations of the app.
-- **Detail:** Include wireframes and mockups for key screens like the home page, profile pages, job search, and application tracking.
+- **User-Centric Design:** Focus on the needs, preferences, and behaviors of the users to ensure the interface is intuitive and easy to navigate.
 
-# 5. Technical Architecture
+- **Consistency:** Maintain consistency in design elements, such as fonts, colors, and layouts, to provide a cohesive user experience, and concerning the color pallets, the following colors will be used.
+  - Dark blue: #0D1B2A
+  - Neutral Gray : #808080
+  - White : #FFFFFF
+  - Yellow orange : #FFA500
+
+- **Accessibility:** Ensure the app is accessible to all users, including those with disabilities, by following accessibility standards (e.g., WCAG).
+
+- **Responsiveness:** Design the interface to be responsive, ensuring it works well on a variety of devices, including desktops, tablets, and smartphones.
+
+- **Simplicity:** Keep the design clean and straightforward to minimize user confusion and reduce cognitive load.
+
+## 5.2 Main Components
+The UI design consists of several main components, each serving a specific purpose within the app:
+1. **Home Screen:**
+   - **Navigation Bar:** Provides easy access to the main sections of the app, such as the Dashboard(Swiping board), Profile, Notification, FAQ, and Messages.
+  
+   -  **Swiping Dashboard:** Help the user to make a left or right swipe, and a left  or right button.
+      -  **Swiping left:** If the User don't like a profile, he will have to swipe left.
+      -  **Swiping right:** If the user don't like a profile, he will have to swipe right.
+      -  **Left button:** If the user want to refresh the Swiping dashboard he can click on the refresh button.
+      -  **Right button:** If the user want to like a job, he will click on the start button.
+
+   -  The image below illustrates how the Home page will look like
+<img src="images/swipe.png" align="center">
+
+1. **User Profile:**
+   - **Profile Picture and Basic Info:** Displays the User's name, and brief bio.
+
+   - **Skills and Experience:** Sections for listing soft skills, experience.
+
+   - **Resume Upload:** Option to upload a resume or to modify, using the app’s template.
+
+  <img src="images/profile.png" align="center">
+
+2. **Job Listings:**
+   - **Job Cards:** Each job listing is presented in a card format, showing key details like job title, company, location, brief description, job preference, and salary.
+
+3. **Users' Dashboard:**
+   - **Notifications:** Alerts for new job matches.
+
+  <img src="images/notifications.png" align="center">
+
+4. **Messaging System:**
+
+   - **Matching Profiles:** Profiles that have matched each other, will be able to see the user's profile at top of the messaging system, just below the appBar.
+
+<img src="images/message 1.png" align="center">
+
+   - **Inbox and Chat Interface:** Enables direct communication between candidates and employers.
+
+   - **Templates and Quick Replies:** Predefined message templates to streamline communication.
+
+<img src="images/message.png" align="center">
+
+
+5. **Setting System:**  On the setting system, information about, data privacy, general usage, disconnect, app updates and other information.
+
+<img src="images/settings.png" align="center">
+
+6. **Entrance page:** The entrance page is where the user will register or login
+
+<img src="images/entrence.png" align="center">
+
+## 5.3 Visual Design Elements
+The visual design elements contribute to the overall look and feel of the app:
+
+- **Color Scheme:** A professional and modern color palette that aligns with the app’s branding. Use contrasting colors for readability and emphasis. The following colors will be used on the app.
+  - Dark blue: #0D1B2A
+  - Neutral Gray : #808080
+  - White : #FFFFFF
+  - Yellow orange : #FFA500
+
+          Then on the swiping board different color pallets will be used depending on the sector of activities
+    1. **Primary Sector**: This sector involves the extraction and harvesting of natural resources. It includes industries such as agriculture, fishing, forestry, and mining. The color that will be used is green.
+
+    2. **Secondary Sector**: This sector focuses on transforming raw materials into finished or semi-finished products. It includes manufacturing, construction, and industrial production. The color that will be used is blue
+
+    3. **Tertiary Sector**: Also known as the service sector, it includes industries that provide services rather than physical goods. This includes retail, transportation, financial services, education, healthcare, and hospitality. The color that will be used is yellow
+
+    4. **Quaternary Sector**: This sector encompasses knowledge-based and information-based services. It includes research and development, information technology, consulting, and other intellectual services.The color that will be used is purple
+
+    5. **Quinary Sector**: This sector is part of the tertiary sector but specifically focuses on high-level decision-making services, top-level management, and government policies. It includes corporate executives, senior officials, and other similar leadership roles.
+    These sectors cover a wide range of economic activities and are essential for the functioning of the global economy.The color that will be used is gold
+
+  - Two are modes available, either the dark mode or the white mode, this is mostly for users' preference and those having eyes problems.
+
+- **Typography:** Use of legible and professional fonts to ensure readability across all devices.
+
+- **Icons and Graphics:** Intuitive icons and graphics to guide users and enhance the visual appeal.
+
+- **White Space:** Effective use of white space to avoid clutter and make the interface more user-friendly.
+
+## 5.4 User Interaction Design
+User interaction design focuses on how users interact with the app and the ease of use:
+
+- **Navigation:** Clear and straightforward navigation paths to help users find what they need quickly.
+
+- **Forms and Inputs:** User-friendly forms with clear labels, input fields, and validation messages.
+
+- **Feedback:** Immediate feedback on user actions, such as form submissions, to confirm successful actions or highlight errors.
+
+- **Animations and Transitions:** Subtle animations and transitions to enhance the user experience without being distracting.
+
+
+# 6. Technical Architecture
 The technical architecture outlines the overall structure and the technologies used to build and run the application. This section provides a high-level view, avoiding deep technical details to keep it accessible to a wider audience.
 
-## 5.1 Front-End
+## 6.1 Front-End
 - **Technologies:** For the technology that will be used to build the front-end part of the project, we will have to use Flutter and Dart. Dart is a programming language used to write Flutter apps. On the other hand, Flutter is a UI toolkit from Google for building natively compiled mobile, web, and desktop applications from a single code base.
 
 - **Responsive Design:** The user interface will be built using a responsive design tool, known as FIGMA, it will help to ensure that the app looks and works well on various screen sizes and orientations.
 
 
-## 5.2 Back-End
-- **Technologies Used:** Dart is working on both Front-End and Back-End, so for the logical part of the app, Dart will be used to handle that.
+## 6.2 Back-End
+- **Technologies Used:**  PHP will be used to handle the backend of the application.
 
 - **Back-End Framework:** The sever-side logic is handle by a robust backend framework that manages data processing, user authentication, and business logic.
 
@@ -576,16 +776,16 @@ The technical architecture outlines the overall structure and the technologies u
 
 
 
-# 6. Development and Testing Plan
+# 7. Development and Testing Plan
 The Development and Testing Plan outlines the approach, methodologies, and processes to be followed during the development and testing phases of the recruitment app. This plan ensures that the project progresses smoothly, meets its objectives, and delivers a high-quality product.
 
-## 6.1 Development Phases
+## 7.1 Development Phases
 **1. Requirements Gathering:** Collect detailed requirements from stakeholders, including feature specifications and user stories.
 
 **2. Design Phase:**
-- **UI/UX Design:** Create wireframes and prototypes for the user interface.
+  - **UI/UX Design:** Create wireframes and prototypes for the user interface.
 
-- **Architecture Design:** Define the overall system architecture, including the client-side, server-side, and database design.
+  - **Architecture Design:** Define the overall system architecture, including the client-side, server-side, and database design.
 
 **3. Implementation Phase:**
 - **Frontend Development:** Develop the user interface using modern web and mobile development frameworks.
@@ -603,7 +803,7 @@ The Development and Testing Plan outlines the approach, methodologies, and proce
 
 - **User Acceptance Testing (UAT):** Perform testing with actual users(team members) to gather feedback and ensure the app meets their needs.
 
-## 6.3 Testing Strategies
+## 7.2 Testing Strategies
 - **Automated Testing:** Implement automated testing for unit and integration tests to ensure consistent and repeatable test coverage.
 
 - **Manual Testing:** Conduct manual testing for UI/UX, exploratory testing, and user acceptance testing to identify issues that automated tests might miss.
@@ -613,13 +813,13 @@ The Development and Testing Plan outlines the approach, methodologies, and proce
 - **Security Testing:** Perform security assessments to identify and address vulnerabilities, ensuring data protection and compliance with regulations.
 
 
-## 6.4 Quality Assurance (QA) Processes
+## 7.3 Quality Assurance (QA) Processes
 - **Code Reviews:** Conduct regular code reviews to ensure code quality, consistency, and adherence to best practices.
 
 - **Defect Tracking:** Use a defect tracking system to log, prioritize, and track issues until they are resolved.
 
 
-## 6.5 Roles and Responsibilities
+## 7.4 Roles and Responsibilities
 - **Project Manager:** Oversees the project, ensures timelines are met, and communicates with stakeholders.
 
 - **Product Owner or Program Manager:** Represents the stakeholders, prioritizes the backlog, and ensures the product meets user needs.
@@ -630,7 +830,7 @@ The Development and Testing Plan outlines the approach, methodologies, and proce
 
 - **UI/UX Designers:** Design the user interface and user experience.
 
-## 6.7 Duration and  Milestones
+## 7.5 Duration and  Milestones
 **1. Duration Timeline:**
 
 | Milestones                                                 | Duration time   |
@@ -653,15 +853,13 @@ The Development and Testing Plan outlines the approach, methodologies, and proce
 - **M6:** Completion of the system testing.
 - **M7:** Completion of the User Manual document.
 
-# 7. Maintenance
+# 8. Maintenance
 The Maintenance section outlines the strategies and processes for ensuring its ongoing reliability and performance. This section covers the steps for an ongoing maintenance activities.
 
-## 7.1 Maintenance Plan
+## 8.1 Maintenance Plan
 **1. Regular Updates:** Schedule regular updates to add new features, improve existing functionalities, and fix bugs.
 
 - **Bug Fixes:** Address any reported bugs promptly to maintain a high-quality user experience.
-
-- **Security Patches:** Release security patches regularly to protect against vulnerabilities.
 
 **2. Performance Monitoring:**
 - **Performance Tuning:** Continuously analyze performance data to identify bottlenecks and optimize the app for better performance.
@@ -677,16 +875,90 @@ The Maintenance section outlines the strategies and processes for ensuring its o
 
 - **User Documentation:** Provide user manuals, guides, and tutorials to help users understand and make the most of the app's features.
 
-# 8. Risks and Mitigation
+# 9. Risks and Mitigation
 
-- **Summary:** Identify potential risks and their mitigation.
-- **Detail:__ List risks (e.g., security breaches, performance issues) and corresponding mitigation strategies.
+The Risk and Mitigation section identifies potential risks that could impact the project and outlines strategies to mitigate these risks. This proactive approach ensures that potential issues are addressed early, minimizing their impact on the project's success.
 
-9. Glossary
+## 9.1 Risk Identification
+The following are key risks associated with the development and deployment of the recruitment app:
 
-<sup id="f1"></sup> skills matrix is a  document or a defined list that outlines the specific skills or competencies that are required for a particular job role or that a candidate possesses.[↩](#a1)
+### 1. Technical Risks:
+- **System Downtime:** Unplanned outages or downtime can affect user experience and business operations.
 
-<sup id="f2"></sup> NB is an abbreviation for the Latin phrase "Nota Bene", which translates to "note well" in English. It is used to draw the reader's attention to a particular point or detail. [↩](#a2)
+- **Data Loss:** Data corruption or loss during migration or due to system failures.
+
+- **Security Vulnerabilities:** Threats from cyber-attacks or data breaches.
+
+### 2. Operational Risks:
+- **Resource Availability:** Unavailability of key team members or resources can delay project timelines.
+
+### 3. Project Management Risks:
+- **Scope Creep:** Uncontrolled changes or additions to the project scope.
+
+- **Timeline Delays:** Delays in meeting project milestones and deadlines.
+
+
+### 4. User Adoption Risks:
+- **Low User Engagement:** The app may not attract or retain users as expected.
+
+- **Usability Issues:** Users may find the app difficult to navigate or use.
+
+
+### 5. Compliance Risks:
+   - **Regulatory Non-Compliance:** Failure to comply with data protection and privacy regulations (e.g., GDPR).
+
+
+
+## 9.2 Mitigation Strategies
+
+Each identified risk is paired with strategies to mitigate or manage the risk effectively:
+
+### 1. Technical Risks:
+- **1. System Downtime:**
+   - **Mitigation:** Implement robust monitoring and alert systems to detect issues early. Use load balancers and redundant systems to ensure high availability.
+
+- **2. Data Loss:**
+     - **Mitigation:** Perform regular backups and verify data integrity. Implement a robust data recovery plan.
+
+- **3. Security Vulnerabilities:**
+   - **Mitigation:** Conduct regular security audits and vulnerability assessments. Implement encryption, and secure coding practices.
+
+### 2. Operational Risks:
+- **1. Resource Availability:**
+   - **Mitigation:** Cross-train team members and maintain a buffer of additional resources. Use project management tools to track resource allocation and availability.
+
+### 3. Project Management Risks:
+- **1. Scope Creep:**
+   - **Mitigation:** Establish a clear project scope and change management process. Prioritize features and changes based on their impact and feasibility.
+
+- **2. Timeline Delays:**
+   - **Mitigation:** Break the project into manageable sprints with defined milestones. Regularly review progress and adjust plans as needed.
+
+### 4. User Adoption Risks:
+- **1. Low User Engagement:**
+   - **Mitigation:** Conduct market research to understand user needs and preferences. Implement feedback loops to continuously improve the app based on user input.
+
+- **2. Usability Issues:**
+   - **Mitigation:** Perform usability testing with real users and iterate on the design based on their feedback. Provide comprehensive user guides and support.
+
+**5. Compliance Risks:**
+- **Regulatory Non-Compliance:**
+ - **Mitigation:** Stay updated on relevant regulations and ensure the app’s policies and procedures comply. Conduct regular compliance audits.
+
+## 9.3 Risk Management Process
+- **1.Risk Assessment:** Regularly assess and review potential risks throughout the project lifecycle.
+
+- **2. Risk Monitoring:** Continuously monitor identified risks and track the effectiveness of mitigation strategies.
+
+- **3. Risk Reporting:** Maintain a risk register to document identified risks, their impact, mitigation strategies, and status. Report on risk status in regular project updates to stakeholders.
+
+- **4. Contingency Planning:** Develop contingency plans for high-impact risks to ensure quick and effective responses when risks materialize.
+
+# 10.  Glossary
+
+<sup id="f1">1</sup> skills matrix is a  document or a defined list that outlines the specific skills or competencies that are required for a particular job role or that a candidate possesses.[↩](#a1)
+
+<sup id="f2">2</sup> NB is an abbreviation for the Latin phrase "Nota Bene", which translates to "note well" in English. It is used to draw the reader's attention to a particular point or detail. [↩](#a2)
 
 <sup id="f1">^</sup> GDPR (General Data Protection Regulation): This is a regulation in EU law that protects the privacy and personal data of EU citizens. It gives individuals control over their personal data and simplifies the regulatory environment for international business. Key aspects of GDPR include the right to access your own data, the right to be forgotten (data erasure), and the requirement for organizations to obtain consent before collecting or processing personal data. [↩](#a1^)
 
