@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
-import 'dart:html';
 
 import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +12,13 @@ class CandidatePage extends StatefulWidget {
 }
 
 class _CandidatePageState extends State<CandidatePage> {
+  String? fn;
+  String? ln;
+  String? ph;
+  String? em;
+  String? ci;
+  String? pa;
+
   void register(String FirstName, String LastName, String Phone, String Email, String City, String Password)async{
     final response = await http.post(Uri.parse('https://adopt1candidat.000webhostapp.com/adoptacandidat/register.php'), body: {
          "FirstName":FirstName,
@@ -24,7 +29,7 @@ class _CandidatePageState extends State<CandidatePage> {
          "Password":Password,
     });
     if(response.statusCode == 200){
-      var data = jsonDecode(response.body);
+      var data = response.body;
       print(data);
     }
   }
@@ -33,6 +38,7 @@ class _CandidatePageState extends State<CandidatePage> {
 
   final _firstNameFocusNode = FocusNode();
   final _lastNameFocusNode = FocusNode();
+  final _lastEmailFocusNode = FocusNode();
   final _phoneFocusNode = FocusNode();
   final _addressFocusNode = FocusNode();
   final _passwordFocusNode = FocusNode();
@@ -88,6 +94,11 @@ class _CandidatePageState extends State<CandidatePage> {
                 children: [
                   Expanded(
                     child: TextField(
+                      onChanged: (String val){
+                        setState(() {
+                          fn = val;
+                        });
+                      },
                       focusNode: _firstNameFocusNode,
                       textInputAction: TextInputAction.next,
                       onSubmitted: (_) {
@@ -109,6 +120,11 @@ class _CandidatePageState extends State<CandidatePage> {
                   SizedBox(width: 10),
                   Expanded(
                     child: TextField(
+                      onChanged: (String val){
+                        setState(() {
+                          ln = val;
+                        });
+                      },
                       focusNode: _lastNameFocusNode,
                       textInputAction: TextInputAction.next,
                       onSubmitted: (_) {
@@ -130,7 +146,43 @@ class _CandidatePageState extends State<CandidatePage> {
                 ],
               ),
               SizedBox(height: 20),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: TextField(
+                      onChanged: (String val){
+                        setState(() {
+                          em = val;
+                        });
+                      },
+                      focusNode: _lastEmailFocusNode,
+                      textInputAction: TextInputAction.next,
+                      onSubmitted: (_) {
+                        FocusScope.of(context).requestFocus(_phoneFocusNode);
+                      },
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: TextStyle(color: Colors.grey[400]),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
               TextField(
+                onChanged: (String val){
+                  setState(() {
+                    ph = val;
+                  });
+                },
                 focusNode: _phoneFocusNode,
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.phone,
@@ -151,6 +203,11 @@ class _CandidatePageState extends State<CandidatePage> {
               ),
               SizedBox(height: 20),
               TextField(
+                onChanged: (String val){
+                  setState(() {
+                    ci = val;
+                  });
+                },
                 focusNode: _addressFocusNode,
                 textInputAction: TextInputAction.next,
                 onSubmitted: (_) {
@@ -170,6 +227,11 @@ class _CandidatePageState extends State<CandidatePage> {
               ),
               SizedBox(height: 20),
               TextField(
+                onChanged: (String val){
+                  setState(() {
+                    pa = val;
+                  });
+                },
                 focusNode: _passwordFocusNode,
                 textInputAction: TextInputAction.next,
                 onSubmitted: (_) {
@@ -231,7 +293,7 @@ class _CandidatePageState extends State<CandidatePage> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    register(FirstName, LastName, Phone, Email, City, Password);
+                    register(fn!, ln!, ph!, em!, ci!, pa!);
                     Navigator.push(
                       context, 
                       MaterialPageRoute(
