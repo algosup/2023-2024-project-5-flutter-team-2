@@ -132,7 +132,7 @@
 
 # UML Diagram for Recruitment App
 
-## Class Diagram
+## Detailed Class Diagram
 
 ```plaintext
 +----------------+              +-----------------+               +-------------------+
