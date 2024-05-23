@@ -14,9 +14,8 @@
 
 ###
 
-<img src="image-7.png" alt="alt text" width="150"> 
+<img src="image-7.png" alt="alt text" width="150">                **Visual Code**
 
-**Visual Code**
 
 <img src="image-2.png" alt="alt text" width="150">
 
