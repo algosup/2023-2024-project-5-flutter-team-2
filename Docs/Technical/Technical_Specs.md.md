@@ -30,6 +30,12 @@
 </div>
 
 
+
+
+
+
+
+
 To develop a mobile app in Flutter that connects companies with employees in a manner similar to Tinder, you will need a combination of libraries to handle various functionalities like UI, state management, backend services, real-time communication, and more. Here’s a comprehensive list of the main libraries you should use:
 
 ![alt text](image-5.png)
