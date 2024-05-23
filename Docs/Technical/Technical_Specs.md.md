@@ -6,36 +6,34 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/05/23 |
 
-### Tools and Software Used
+### Tools and Software used
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
-  
-  <div style="text-align: center;">
-    <img src="image-12.png" alt="Tool Image" width="200">
-    <p>Visual Code</p>
-  </div>
-  
-  <div style="text-align: center;">
-    <img src="image-2.png" alt="Visual Code" width="200">
-    <p><strong>Figma</strong></p>
-  </div>
-  
-  <div style="text-align: center;">
-    <img src="image-3.png" alt="Figma" width="200">
-    <p><strong>Flutter</strong></p>
-  </div>
-  
-  <div style="text-align: center;">
-    <img src="image-8.png" alt="Flutter" width="200">
-    <p><strong>Git</strong></p>
-  </div>
-  
-  <div style="text-align: center;">
-    <img src="image-9.png" alt="Git" width="200">
-    <p><strong>Dart</strong></p>
-  </div>
-  
- 
+### <img src="image-4.png" alt="alt text" width="150">
+
+
+
+###
+
+<img src="image-7.png" alt="alt text" width="150">                **Visual Code**
+
+
+<img src="image-2.png" alt="alt text" width="150">
+
+**Figma**
+
+<img src="image-3.png" alt="alt text" width="150">
+
+**Flutter**
+
+<img src="image-8.png" alt="alt text" width="150">
+
+**Git**
+
+<img src="image-9.png" alt="alt text" width="150">
+
+**Dart**
+
+
 
 To develop a mobile app in Flutter that connects companies with employees in a manner similar to Tinder, you will need a combination of libraries to handle various functionalities like UI, state management, backend services, real-time communication, and more. Here’s a comprehensive list of the main libraries you should use:
 
