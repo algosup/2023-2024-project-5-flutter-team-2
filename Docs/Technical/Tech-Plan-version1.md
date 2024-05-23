@@ -116,9 +116,13 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 **Week 6**: Post-launch support and feature enhancements.
 
 #### 6. Team Structure
-- **Project Manager**: Oversee project progress, manage timelines and resources.
-- **Flutter Developers**: 2 developers skilled in Flutter for cross-platform mobile development.
-- **QA Engineers**: 1 tester for unit, integration, and user acceptance testing.
-- **UI/UX Designer**: Design user-friendly interfaces and ensure a consistent user experience.
+
+| Photo                                                                                                                                     | Name            | Role              | LinkedIn                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ----------------- | ------------------------------------------------------------------ |
+| [<img src="https://avatars.githubusercontent.com/u/91249965?s=400&u=12ebc6578a0969df1430d721d04a795af5860868&v=4" width="80px"  height="80px">](https://github.com/PaulNowak36)    | Paul NOWAK    | Project Manager   | [LinkedIn](https://www.linkedin.com/in/paul-nowak-0757a61a7/)          |
+| [<img src="https://avatars.githubusercontent.com/u/122369054?v=4" width="80px"  height="80px">](https://github.com/Bistrel2002)          | Vivien Bistrel TSANGUE CHOUNGOU    | Program Manager   | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/)    |
+| [<img src="https://avatars.githubusercontent.com/u/160007182?v=4" width="80px"  height="80px">](https://github.com/seiv007) | Mouatassime SEIV | Technical Leader  | [LinkedIn](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) |
+| [<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="80px"  height="80px">](https://github.com/Amakran2003)        | Abderrazaq MAKRAN      | Technical Writer  | [LinkedIn](https://www.linkedin.com/in/abderrazaq-makran/)      |
+| [<img src="https://avatars.githubusercontent.com/u/145991354?v=4" width="80px"  height="80px">](https://github.com/mathislebel)          | Mathis LEBEL   | Quality Assurance | [LinkedIn](https://www.linkedin.com/in/mathis-lebel-429114293/)   |
 
 This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.
