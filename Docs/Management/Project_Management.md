@@ -32,15 +32,24 @@ At the second warning of the week, the project manager is in the right to requir
 
 At the third warning of the week, the project manager will report to any member of the ALGOSUP main school staff, Franck, Natasha or Jean-Philippe, about the student. They could have the possibility to summon the student at their office.
 
-### Secondary rules
+### AI use
+In this project, we tolerate the use of AI enhanced tools such as CHATGPT, but any use of them should be reported to the Project Manager. Indeed it's important to be aware of any work completed through AI so we could review their veracity and avoid to overuse it to not decrease the documentation's quality.
+
+As a matter of fact, each document modified using AI should always be reviewed entirely by a human person.
+
+The advised use cases of AI are the following:
+
+- Getting advices from **CharGPT** on how to write a certain document, and balancing their use alongside our personal experience.
+- Checking the grammar and vocabulary of a document/text.
+- Restructuring a plan depending on the user's conditions.
+
+### Other rules
 
 These rules are additionary advices to ensure the organization of this project.
 
 **Secondary rule n°1:** No one has to work or update the main branch without the supervision of the Project Manager.
 
-**Secondary rule n°2:** Any use of any AI-enhanced tool such as ChatGPT must be reported to the Project Manager.
-
-**Secondary rule n°3:** Any work committed outside project class should be reported to the Project Manager.
+**Secondary rule n°2:** Any work committed outside project class should be reported to the Project Manager.
 
 In general, any breaking of these rules shouldn't lead to a warning, but it could create potential roadblocks for the project's progression.
 
@@ -48,11 +57,9 @@ In general, any breaking of these rules shouldn't lead to a warning, but it coul
 
 Meetings are organized regularly to discuss about the project progress:
 
-    - At the end of the project class (around 12.25 am or 4.55 pm), the project manager will discuss with the whole team to update the task list, and to gather information for filling the project report. He will need to know on what work each member has contributed and other discoveries.
-    
-    - At the end of each week, each student must fill a survey made by the Project Manager to retrieve their personal moods for a certain week.
-
-    - If necessary, a meeting outside project time (either at the ALGOSUP school or through Discord) can be organized. Depending on the team's progress, the Project Manager has the final word on the meeting's schedule.
+- At the end of the project class (around 12.25 am or 4.55 pm), the project manager will discuss with the whole team to update the task list, and to gather information for filling the project report. He will need to know on what work each member has contributed and other discoveries.    
+- At the end of each week, each student must fill a survey made by the Project Manager to retrieve their personal moods for a certain week.
+- If necessary, a meeting outside project time (either at the ALGOSUP school or through Discord) can be organized. Depending on the team's progress, the Project Manager has the final word on the meeting's schedule.
 
 ## Task Schedule
 
@@ -65,12 +72,6 @@ A task schedule has been created to gather all tasks required for the developmen
 An file must be created to show the Key Performance Indicators (KPIs) with graphics to show their progress. Furthermore, a retro-planning graphic will show the progress of each task per week, and how they are organized. There will be a comparison between the expected outcome and the actual outcome.
 
 [KPIs](TBD) <br>
-
-## Risk Mitigation Plan
-
-To anticipate future problems, a risk management plan must be created to list the risks and assumptions that could be met during the project:
-
-[Risk Mitigation Plan](TBD)
 
 ## Weekly Reports
 
