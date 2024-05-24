@@ -18,7 +18,18 @@ In this project, the client want us to create the prototype of the app with the 
 
 ## Technologies Used
 
+- **Visual Studios Code** is a code editor software used for developing the project's code.
+- **Flutter** is a source framework used to create multi-platformed applications with the Dart programming language.
+
 ## Documentation
+
+This is the list of the important documents related to our project:
+
+- [Project_Management] (TBD)
+- [Functional_Specifications] (TBD)
+- [Technical_Specifications] (TBD)
+- [User_Manual] (TBD)
+- [Testing_Plan] (TBD)
 
 ## Project Team
 
