@@ -25,7 +25,7 @@ In this project, the client want us to create the prototype of the app with the 
 
 This is the list of the important documents related to our project:
 
-- [Project_Management] (TBD)
+- [Project_Management](Docs/Management/Project_Management.md)
 - [Functional_Specifications] (TBD)
 - [Technical_Specifications] (TBD)
 - [User_Manual] (TBD)
