@@ -16,7 +16,7 @@
   - [1.3 Stakeholders](#13-stakeholders)
   - [1.4 Scope](#14-scope)
   - [1.5 Deliverables](#15-deliverables)
-- [2. Functional Requirements](#2-functional-requirements)
+- [2. **Functional Requirements**](#2-functional-requirements)
   - [2.1 User Profiles](#21-user-profiles)
   - [2.2 Candidate Module](#22-candidate-module)
     - [1. Registration and Login](#1-registration-and-login)
@@ -54,14 +54,20 @@
       - [Matching Criteria](#matching-criteria)
       - [Algorithm Workflow](#algorithm-workflow)
       - [Technology and Techniques](#technology-and-techniques-1)
-- [3. Use Case \& Personas](#3-use-case--personas)
+- [3. **Use Case \& Personas**](#3-use-case--personas)
   - [3.1 Use Case](#31-use-case)
+  - [Case 1](#case-1)
     - [1 Main Success Scenario:](#1-main-success-scenario)
     - [2 Alternate Scenarios:](#2-alternate-scenarios)
     - [3 Postconditions:](#3-postconditions)
     - [4 Exceptions:](#4-exceptions)
+  - [Case 2](#case-2)
+    - [1 Main Success Scenario:](#1-main-success-scenario-1)
+    - [2 Alternate Scenarios:](#2-alternate-scenarios-1)
+    - [3 Postconditions:](#3-postconditions-1)
+    - [4 Exceptions:](#4-exceptions-1)
   - [3.2 Personas](#32-personas)
-- [4. Non-Functional Requirements](#4-non-functional-requirements)
+- [4. **Non-Functional Requirements**](#4-non-functional-requirements)
   - [4.1 Performance Requirements](#41-performance-requirements)
   - [4.2 Reliability and Availability](#42-reliability-and-availability)
   - [4.3 Security](#43-security)
@@ -70,24 +76,24 @@
   - [4.6 Portability](#46-portability)
   - [4.7 Backup and Recovery](#47-backup-and-recovery)
   - [4.8 Compliance and Legal Requirements](#48-compliance-and-legal-requirements)
-- [5. User Interface Design](#5-user-interface-design)
+- [5. **User Interface Design**](#5-user-interface-design)
   - [5.1 Design Principles](#51-design-principles)
   - [5.2 Main Components](#52-main-components)
   - [5.3 Visual Design Elements](#53-visual-design-elements)
   - [5.4 User Interaction Design](#54-user-interaction-design)
-- [6. Technical Architecture](#6-technical-architecture)
+- [6. **Technical Architecture**](#6-technical-architecture)
   - [6.1 Front-End](#61-front-end)
   - [6.2 Back-End](#62-back-end)
-- [7. Development and Testing Plan](#7-development-and-testing-plan)
+- [7. **Development and Testing Plan**](#7-development-and-testing-plan)
   - [7.1 Development Phases](#71-development-phases)
   - [7.2 Testing Strategies](#72-testing-strategies)
   - [7.3 Quality Assurance (QA) Processes](#73-quality-assurance-qa-processes)
   - [7.4 Roles and Responsibilities](#74-roles-and-responsibilities)
   - [7.5 Duration and  Milestones](#75-duration-and--milestones)
-- [8. Maintenance](#8-maintenance)
+- [8. **Maintenance**](#8-maintenance)
   - [8.1 Maintenance Plan](#81-maintenance-plan)
 - [9. Risks and Mitigation](#9-risks-and-mitigation)
-  - [9.1 Risk Identification](#91-risk-identification)
+  - [9.1 **Risk Identification**](#91-risk-identification)
     - [1. Technical Risks:](#1-technical-risks)
     - [2. Operational Risks:](#2-operational-risks)
     - [3. Project Management Risks:](#3-project-management-risks)
@@ -99,7 +105,7 @@
     - [3. Project Management Risks:](#3-project-management-risks-1)
     - [4. User Adoption Risks:](#4-user-adoption-risks-1)
   - [9.3 Risk Management Process](#93-risk-management-process)
-- [10.  Glossary](#10--glossary)
+- [10.  **Glossary**](#10--glossary)
 
 
 </details>
@@ -172,13 +178,13 @@ The key points of the Adopte un Candidat concept are as follows:
 | User Manual              | PDF                | 14/06/2024   |
 
 
-# 2. Functional Requirements
+# 2. **Functional Requirements**
 ## 2.1 User Profiles
 
 1. **Basic Information**
     - ***Fields:***
       - Full Name
-      - Contact Information(Email Address, Phone Number)
+      - Contact Information (Email Address, Phone Number)
       - Location (City, Country)
       - Industry
       - Phone Number
@@ -196,7 +202,7 @@ The key points of the Adopte un Candidat concept are as follows:
 
 3. **SoftSkills**
    - ***Features:***
-     - Users can select their soft skills from a predefined list and can also add a skill that doesn't appears on the list(e.g., communication, teamwork, leadership, time management).
+     - Users can select their soft skills from a predefined list and can also add a skill that doesn't appears on the list (e.g., communication, teamwork, leadership, time management).
 
 4. **Preferences**
    - ***Fields:***
@@ -206,6 +212,7 @@ The key points of the Adopte un Candidat concept are as follows:
      - Job preference
 
 5. **Swiping**
+The following information will be seen by the user depending on the profile the user has chosen. This information will allow the user to send a match or not send a match to the profile he found interesting or not
    - ***Features:***
      - Name
      - Description
@@ -513,8 +520,43 @@ The Matching Algorithm is designed to connect job seekers and employers by prior
 By detailing these aspects, these provide a clear and comprehensive understanding of the Matching Algorithm, its functionality, and its importance in the recruitment app.
 
 
-# 3. Use Case & Personas
+# 3. **Use Case & Personas**
 ## 3.1 Use Case
+
+## Case 1
+- **Title:** Job Posting Process
+- **Primary Actor:** Employer
+-  **Goal:** To successfully find employees through the recruitment app
+- **Preconditions:**
+  1. The employer is registered and logged into the app.
+
+  2.  The employer has completed their profile, including the needed soft skills, the post, the sector of activity, the size of the company, the location(s), and the company description.
+
+### 1 Main Success Scenario:
+1. **Jobs posting:**
+   - The employer will create a job with all the necessary descriptions and will post it.
+
+2. **View candidates profile:**
+   - The employer will see a list of employees who match the job he posted.
+
+3. **Profile details**
+  - The employer will click on the candidate's profile he sees and will see all the information about him.
+
+4. **Validation:**
+- The employer will match when he finds that a profile matches completely the company’s needs
+
+### 2 Alternate Scenarios:
+- **Incomplete Profile:**
+  - If the employer's profile is incomplete, the app prompts the employer to complete their profile before applying.
+
+### 3 Postconditions:
+- The candidate receives the employer’s match on his notification bar.
+
+### 4 Exceptions:
+- **Invalid Data:** If the application form contains invalid data, the app prompts the employer to correct it before submission.
+
+
+## Case 2
 - **Title:** Job Application Process
 - **Primary Actor:** Candidate
 - **Goal:** To successfully apply for a job through the recruitment app.
@@ -597,7 +639,7 @@ By detailing these aspects, these provide a clear and comprehensive understandin
 These personas help in understanding the key users of the recruitment app and their specific needs, guiding the design and functionality of the app to ensure it meets their expectations effectively.
 
 
-# 4. Non-Functional Requirements
+# 4. **Non-Functional Requirements**
 
 Non-functional requirements (NFRs) define the system's operational characteristics and constraints, focusing on how the system performs rather than what it performs. These requirements are crucial for ensuring the overall quality, usability, and reliability of the system. Here’s a detailed breakdown of what to include in the Non-Functional Requirements section:
 
@@ -658,7 +700,7 @@ Non-functional requirements (NFRs) define the system's operational characteristi
 
 
 
-# 5. User Interface Design
+# 5. **User Interface Design**
 
 The User Interface (UI)<sup id="a10">[10](#f10)</sup>   design is a critical component of the recruitment app, aimed at providing an intuitive, engaging, and user-friendly experience for both candidates and employers. This section outlines the principles, structure, and features of the UI design.
 
@@ -668,10 +710,10 @@ The UI design of the recruitment app(ADOPTE 1 CANDIDAT) is guided by the followi
 - **User-Centric Design:** Focus on the needs, preferences, and behaviors of the users to ensure the interface is intuitive and easy to navigate.
 
 - **Consistency:** Maintain consistency in design elements, such as fonts, colors, and layouts, to provide a cohesive user experience, and concerning the color pallets, the following colors will be used.
-  - Dark blue: #0D1B2A
-  - Neutral Gray : #808080
-  - White : #FFFFFF
-  - Yellow orange : #FFA500
+  - **Dark blue: #0D1B2A**
+  - **Neutral Gray : #808080**
+  - **White : #FFFFFF**
+  - **Yellow orange : #FFA500**
 
 - **Accessibility:** Ensure the app is accessible to all users, including those with disabilities, by following accessibility standards (e.g., WCAG).
 
@@ -684,11 +726,11 @@ The UI design consists of several main components, each serving a specific purpo
 1. **Home Screen:**
    - **Navigation Bar:** Provides easy access to the main sections of the app, such as the Dashboard(Swiping board), Profile, Notification, FAQ, and Messages.
   
-   -  **Swiping Dashboard:** Help the user to make a left or right swipe, and a left  or right button.
-      -  **Swiping left:** If the User don't like a profile, he will have to swipe left.
-      -  **Swiping right:** If the user don't like a profile, he will have to swipe right.
-      -  **Left button:** If the user want to refresh the Swiping dashboard he can click on the refresh button.
-      -  **Right button:** If the user want to like a job, he will click on the start button.
+   -  **Swiping Dashboard:** Help the user to make a left or right swipe and a left or right button.
+      -  **Swiping left:** If the User doesn't like a profile, he will have to swipe left.
+      -  **Swiping right:** If the user doesn’t like a profile, he will have to swipe right.
+      -  **Left button:** If the user wants to refresh the Swiping dashboard he can click on the refresh button.
+      -  **Right button:** If the user wants to like a job, he will click on the star button.
 
    -  The image below illustrates how the Home page will look like
 <img src="images/swipe.png" align="center">
@@ -721,7 +763,7 @@ The UI design consists of several main components, each serving a specific purpo
 <img src="images/message.png" align="center">
 
 
-5. **Setting System:**  On the setting system, information about, data privacy, general usage, disconnect, app updates and other information.
+5. **Settings System:**  On the setting system, information about, data privacy, general usage, disconnect, app updates and other information.
 
 <img src="images/settings.png" align="center">
 
@@ -733,22 +775,24 @@ The UI design consists of several main components, each serving a specific purpo
 The visual design elements contribute to the overall look and feel of the app:
 
 - **Color Scheme:** A professional and modern color palette that aligns with the app’s branding. Use contrasting colors for readability and emphasis. The following colors will be used on the app.
-  - Dark blue: #0D1B2A
-  - Neutral Gray : #808080
-  - White : #FFFFFF
-  - Yellow orange : #FFA500
+  - **Dark blue: #0D1B2A**
+  - **Neutral Gray : #808080**
+  - **White : #FFFFFF**
+  - **Yellow orange : #FFA500**
 
-          Then on the swiping board different color pallets will be used depending on the sector of activities
-    1. **Primary Sector**: This sector involves the extraction and harvesting of natural resources. It includes industries such as agriculture, fishing, forestry, and mining. The color that will be used is green.
 
-    2. **Secondary Sector**: This sector focuses on transforming raw materials into finished or semi-finished products. It includes manufacturing, construction, and industrial production. The color that will be used is blue
 
-    3. **Tertiary Sector**: Also known as the service sector, it includes industries that provide services rather than physical goods. This includes retail, transportation, financial services, education, healthcare, and hospitality. The color that will be used is yellow
+    Then on the swiping board different color pallets will be used depending on the sector of activities
+    1. **Primary Sector**: This sector involves the extraction and harvesting of natural resources. It includes industries such as agriculture, fishing, forestry, and mining. The color that will be used is ***green***.
 
-    4. **Quaternary Sector**: This sector encompasses knowledge-based and information-based services. It includes research and development, information technology, consulting, and other intellectual services.The color that will be used is purple
+    2. **Secondary Sector**: This sector focuses on transforming raw materials into finished or semi-finished products. It includes manufacturing, construction, and industrial production. The color that will be used is ***blue***
+
+    3. **Tertiary Sector**: Also known as the service sector, it includes industries that provide services rather than physical goods. This includes retail, transportation, financial services, education, healthcare, and hospitality. The color that will be used is ***yellow***
+
+    4. **Quaternary Sector**: This sector encompasses knowledge-based and information-based services. It includes research and development, information technology, consulting, and other intellectual services.The color that will be used is ***purple***
 
     5. **Quinary Sector**: This sector is part of the tertiary sector but specifically focuses on high-level decision-making services, top-level management, and government policies. It includes corporate executives, senior officials, and other similar leadership roles.
-    These sectors cover a wide range of economic activities and are essential for the functioning of the global economy.The color that will be used is gold
+    These sectors cover a wide range of economic activities and are essential for the functioning of the global economy.The color that will be used is ***gold***
 
   - Two are modes available, either the dark mode or the white mode, this is mostly for users' preference and those having eyes problems.
 
@@ -770,7 +814,7 @@ User interaction design focuses on how users interact with the app and the ease 
 - **Animations and Transitions:** Subtle animations and transitions to enhance the user experience without being distracting.
 
 
-# 6. Technical Architecture
+# 6. **Technical Architecture**
 The technical architecture outlines the overall structure and the technologies used to build and run the application. This section provides a high-level view, avoiding deep technical details to keep it accessible to a wider audience.
 
 ## 6.1 Front-End 
@@ -788,7 +832,7 @@ The technical architecture outlines the overall structure and the technologies u
 
 
 
-# 7. Development and Testing Plan
+# 7. **Development and Testing Plan**
 The Development and Testing Plan outlines the approach, methodologies, and processes to be followed during the development and testing phases of the recruitment app. This plan ensures that the project progresses smoothly, meets its objectives, and delivers a high-quality product.
 
 ## 7.1 Development Phases
@@ -865,7 +909,7 @@ The Development and Testing Plan outlines the approach, methodologies, and proce
 - **M6:** Completion of the system testing.
 - **M7:** Completion of the User Manual document.
 
-# 8. Maintenance
+# 8. **Maintenance**
 The Maintenance section outlines the strategies and processes for ensuring its ongoing reliability and performance. This section covers the steps for an ongoing maintenance activities.
 
 ## 8.1 Maintenance Plan
@@ -891,7 +935,7 @@ The Maintenance section outlines the strategies and processes for ensuring its o
 
 The Risk and Mitigation section identifies potential risks that could impact the project and outlines strategies to mitigate these risks. This proactive approach ensures that potential issues are addressed early, minimizing their impact on the project's success.
 
-## 9.1 Risk Identification
+## 9.1 **Risk Identification**
 The following are key risks associated with the development and deployment of the recruitment app:
 
 ### 1. Technical Risks:
@@ -966,7 +1010,7 @@ Each identified risk is paired with strategies to mitigate or manage the risk ef
 
 - **4. Contingency Planning:** Develop contingency plans for high-impact risks to ensure quick and effective responses when risks materialize.
 
-# 10.  Glossary
+# 10.  **Glossary**
 
 <sup id="f1">1</sup> Soft skills are interpersonal or people skills that relate to the way you communicate, collaborate, and work with others. [↩](#a1)
  
