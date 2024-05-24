@@ -1,7 +1,6 @@
 import 'package:adoptacandidate/SwipePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:swipe_cards/swipe_cards.dart';
 
 void main() {
   runApp(MyApp());

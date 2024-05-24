@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:adoptacandidate/Status.dart';
 import 'package:adoptacandidate/widgets/Color.dart';
 import 'package:adoptacandidate/widgets/DelayAnimation.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -13,23 +10,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  void login(String email, String password) async {
-    final response = await http.get(Uri.parse('https://adopt1candidat.000webhostapp.com/adoptacandidat/connection.php'));
-    if (response.statusCode == 200) {
-      debugPrint(response.body); // Afficher la réponse brute pour débogage
-      try {
-        var data = json.decode(response.body);
-        debugPrint(data.toString());
-      } catch (e) {
-        debugPrint('Erreur lors du décodage JSON: $e');
-      }
-    } else {
-      debugPrint('Erreur serveur: ${response.statusCode}');
-    }
-  }
-
-  bool _obscureText = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +61,6 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        login("", "");
                         Navigator.push(
                           context,
                           MaterialPageRoute(

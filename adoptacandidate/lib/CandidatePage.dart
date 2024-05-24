@@ -1,10 +1,8 @@
-import 'dart:convert';
-
 import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http ;
 
 class CandidatePage extends StatefulWidget {
   @override
@@ -12,27 +10,7 @@ class CandidatePage extends StatefulWidget {
 }
 
 class _CandidatePageState extends State<CandidatePage> {
-  String? fn;
-  String? ln;
-  String? ph;
-  String? em;
-  String? ci;
-  String? pa;
 
-  void register(String FirstName, String LastName, String Phone, String Email, String City, String Password)async{
-    final response = await http.post(Uri.parse('https://adopt1candidat.000webhostapp.com/adoptacandidat/register.php'), body: {
-         "FirstName":FirstName,
-         "LastName":LastName,
-         "Phone":Phone,
-         "Email":Email,
-         "City":City,
-         "Password":Password,
-    });
-    if(response.statusCode == 200){
-      var data = response.body;
-      print(data);
-    }
-  }
   bool _obscureText1 = true;
   bool _obscureText2 = true;
 
@@ -96,7 +74,7 @@ class _CandidatePageState extends State<CandidatePage> {
                     child: TextField(
                       onChanged: (String val){
                         setState(() {
-                          fn = val;
+                          val;
                         });
                       },
                       focusNode: _firstNameFocusNode,
@@ -122,7 +100,7 @@ class _CandidatePageState extends State<CandidatePage> {
                     child: TextField(
                       onChanged: (String val){
                         setState(() {
-                          ln = val;
+                         val;
                         });
                       },
                       focusNode: _lastNameFocusNode,
@@ -153,7 +131,7 @@ class _CandidatePageState extends State<CandidatePage> {
                     child: TextField(
                       onChanged: (String val){
                         setState(() {
-                          em = val;
+                          val;
                         });
                       },
                       focusNode: _lastEmailFocusNode,
@@ -180,7 +158,7 @@ class _CandidatePageState extends State<CandidatePage> {
               TextField(
                 onChanged: (String val){
                   setState(() {
-                    ph = val;
+                     val;
                   });
                 },
                 focusNode: _phoneFocusNode,
@@ -205,7 +183,7 @@ class _CandidatePageState extends State<CandidatePage> {
               TextField(
                 onChanged: (String val){
                   setState(() {
-                    ci = val;
+                     val;
                   });
                 },
                 focusNode: _addressFocusNode,
@@ -229,7 +207,7 @@ class _CandidatePageState extends State<CandidatePage> {
               TextField(
                 onChanged: (String val){
                   setState(() {
-                    pa = val;
+                    val;
                   });
                 },
                 focusNode: _passwordFocusNode,
@@ -293,7 +271,6 @@ class _CandidatePageState extends State<CandidatePage> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    register(fn!, ln!, ph!, em!, ci!, pa!);
                     Navigator.push(
                       context, 
                       MaterialPageRoute(
@@ -328,5 +305,3 @@ void main() {
     home: CandidatePage(),
   ));
 }
-
-
