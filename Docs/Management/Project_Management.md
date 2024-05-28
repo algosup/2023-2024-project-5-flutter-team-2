@@ -39,7 +39,7 @@ As a matter of fact, each document modified using AI should always be reviewed e
 
 The advised use cases of AI are the following:
 
-- Getting advices from **CharGPT** on how to write a certain document, and balancing their use alongside our personal experience.
+- Getting advices from **ChatGPT** on how to write a certain document, and balancing their use alongside our personal experience.
 - Checking the grammar and vocabulary of a document/text.
 - Restructuring a plan depending on the user's conditions.
 
@@ -71,14 +71,14 @@ A task schedule has been created to gather all tasks required for the developmen
 
 An file must be created to show the Key Performance Indicators (KPIs) with graphics to show their progress. Furthermore, a retro-planning graphic will show the progress of each task per week, and how they are organized. There will be a comparison between the expected outcome and the actual outcome.
 
-[KPIs](TBD) <br>
+[KPIs](https://algosup-my.sharepoint.com/:x:/r/personal/paul_nowak_algosup_com/_layouts/15/Doc.aspx?sourcedoc=%7B843f6aef-ca81-43b4-99e6-e7c8e5cbdb99%7D&action=edit&wdPreviousSession=15fa5aee-48ca-b0a8-5de6-a39414cadb41) <br>
 
 ## Weekly Reports
 
 These reports contain details about the development of this project, such has the achievements accomplished, the observations made, the problems encountered or a review of the week.
 
 [Week 1](https://algosup-my.sharepoint.com/:w:/p/paul_nowak/ETm7dUzIPcJNmiFoINfnm5IBpVKucoD2aSVN9uJbbRnGww?e=u9iPS0) <br> 
-[Week 2](TBD) <br> 
+[Week 2](https://algosup-my.sharepoint.com/:w:/p/paul_nowak/EYkiv_tV319MnYOl5pPQCykBoubeQwlXh8pGH82ST9qVTg?e=TFGhCe) <br> 
 [Week 3](TBD) <br> 
 [Week 4](TBD) <br> 
 [Week 5](TBD) <br> 
