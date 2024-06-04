@@ -6,7 +6,112 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/06/04  |
 
-<img src="image-6.png" alt="alt text" width="250">
+# Adopte Un Candidat - Technical Plan Summary
+![alt text](image-13.png)
+
+## Project Overview
+Adopte Un Candidat is a cross-platform mobile recruitment application developed using Flutter. The app focuses on connecting companies with candidates through a "Tinder-style" matching process, emphasizing soft skills. The plan details the processes, technologies, tools, and implementation phases.
+
+## User Authentication Workflow
+
+### Processes
+1. **Login**
+   - API: `api/login [POST]`
+   - Options: Forgotten password, registration
+
+2. **Registration**
+   - API: `api/register [POST]`
+   - Username validation: `api/username/:username [GET]`
+
+3. **Password Recovery**
+   - API: `api/motdepasse [POST]`
+
+### Decision Points
+- Success checks for login, registration, and password recovery actions.
+
+## Candidate Information Management Workflow
+
+### Processes
+1. **Home/Menu**
+   - Local storage for session management
+
+2. **Company Search List**
+   - Search candidates and view profiles
+   - API: `api/private/candidate? [GET]`
+
+3. **Candidate Profile View**
+   - API: `api/private/profile/:id [GET]`
+   - Chat initiation from profile view
+
+4. **Candidate Information**
+   - API for fetching and updating: `api/private/profile/:id [GET]`, `api/private/profile/:id [POST]`
+   - Document upload: `api/insc_upload [POST]`
+
+5. **Candidate Settings**
+   - APIs for updating password, email, profile pictures: `api/private/password/:id [PUT]`, `api/private/email/:id [PUT]`, `api/private/settings [PUT]`
+
+## Tools and Technologies
+
+### Figma
+- **Advantages**: Cloud-based, real-time collaboration, cross-platform compatibility.
+- **Disadvantages**: Internet-dependent, potential performance issues with large projects.
+
+### Flutter
+- **Advantages**: Fast development, rich set of pre-designed widgets, strong performance.
+- **Disadvantages**: Large app sizes, limited third-party libraries, native feature support.
+
+## Project Implementation Plan
+
+### Objectives
+- Develop a user-friendly, secure recruitment app.
+- Implement features for user authentication, profile management, soft skills matching, messaging, and data anonymization.
+
+### Architecture
+- **Models**: Data structures for users, profiles, messages, and skills.
+- **Services**: Simulated services for authentication, profile management, matching, and messaging.
+- **State Management**: Provider, Riverpod, or Bloc.
+- **UI Components**: Modular and reusable components.
+
+### Phases
+1. **Requirements and Planning**
+2. **Project Setup**
+3. **UI Development**
+4. **State Management and Local Storage**
+5. **Integration and Testing**
+6. **Deployment**
+7. **Post-Launch Support**
+
+## Team Structure
+
+| Photo                                                                 | Name                 | Role               | LinkedIn                                                |
+| --------------------------------------------------------------------- | -------------------- | ------------------ | ------------------------------------------------------- |
+| ![Paul NOWAK](https://avatars.githubusercontent.com/u/91249965?s=400) | Paul NOWAK           | Project Manager    | [LinkedIn](https://www.linkedin.com/in/paul-nowak-0757a61a7/) |
+| ![Vivien Bistrel TSANGUE CHOUNGOU](https://avatars.githubusercontent.com/u/122369054?v=4) | Vivien Bistrel TSANGUE CHOUNGOU | Program Manager    | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/) |
+| ![Mouatassime SEIV](https://avatars.githubusercontent.com/u/160007182?v=4) | Mouatassime SEIV     | Technical Leader   | [LinkedIn](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) |
+| ![Abderrazaq MAKRAN](https://avatars.githubusercontent.com/u/145991267?v=4) | Abderrazaq MAKRAN    | Technical Writer   | [LinkedIn](https://www.linkedin.com/in/abderrazaq-makran/) |
+| ![Mathis LEBEL](https://avatars.githubusercontent.com/u/145991354?v=4) | Mathis LEBEL         | Quality Assurance  | [LinkedIn](https://www.linkedin.com/in/mathis-lebel-429114293/) |
+
+## Tools Used
+- **Figma**
+- **Visual Studio Code**
+- **Flutter**
+- **Git**
+
+## Libraries for Flutter Development
+1. **Flutter SDK**: Core framework.
+2. **Provider/Riverpod**: State management.
+3. **Dio/http**: Networking.
+
+## Tech Plan Highlights
+- **Cross-platform**: One codebase for iOS and Android.
+- **Hot reload**: Fast development and testing.
+- **Pre-designed widgets**: Extensive and customizable.
+- **Local storage**: Hive or SharedPreferences.
+- **Mock services**: Simulate backend interactions.
+
+This technical plan ensures a well-structured approach for developing and deploying the Adopte Un Candidat application, focusing on efficient development, user-friendly interfaces, and secure data handling.
+
+<img src="image-6.png" alt="alt text" width="200">
 
 ### This diagram is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
 
