@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/candidate_Profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
@@ -19,6 +20,8 @@ class SwipePage extends StatelessWidget {
     ),
   );
 
+  SwipePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,13 +39,17 @@ class SwipePage extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.person, color: Colors.white),
+                  icon: const Icon(Icons.person, color: Colors.white),
                   onPressed: () {
                     // Add profile button action
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CandidateProfile()));
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.message, color: Colors.white),
+                  icon: const Icon(Icons.message, color: Colors.white),
                   onPressed: () {
                     // Add message button action
                   },
@@ -52,13 +59,13 @@ class SwipePage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: Color(0xFF0D1B2A),
+      backgroundColor: const Color(0xFF0D1B2A),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: Center(
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.6,
                 child: SwipeCards(
                   matchEngine: _matchEngine,
@@ -67,7 +74,7 @@ class SwipePage extends StatelessWidget {
                   },
                   onStackFinished: () {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Vous avez fini toutes les cartes')),
+                      const SnackBar(content: Text('Vous avez fini toutes les cartes')),
                     );
                   },
                   itemChanged: (SwipeItem item, int index) {
@@ -82,9 +89,9 @@ class SwipePage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            color: Color(0xFF0D1B2A),
-            child: Row(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            color: const Color(0xFF0D1B2A),
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Icon(Icons.refresh, color: Colors.grey),
@@ -103,49 +110,49 @@ class SwipePage extends StatelessWidget {
 class JobCard extends StatelessWidget {
   final int index;
 
-  JobCard({required this.index});
+  const JobCard({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       elevation: 5,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'CDI/CDD',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Industrie'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Image.asset(
               'images/factory.png',
               height: 100,
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Employer polyvalent',
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 10),
-            Row(
+            const SizedBox(height: 10),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.location_on, color: Colors.grey),
@@ -158,7 +165,7 @@ class JobCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
       ),
