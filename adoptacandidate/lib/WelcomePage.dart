@@ -144,7 +144,7 @@ class WelcomePage extends StatelessWidget {
                       child: Text(
                         'Continuer avec un email'.tr,
                         style: GoogleFonts.roboto(
-                          fontSize: 18,
+                          fontSize: 17,
                           color: Colors.white,
                         ),
                       ),
@@ -167,7 +167,7 @@ class WelcomePage extends StatelessWidget {
                     Text(
                       'ou'.tr,
                       style: GoogleFonts.roboto(
-                        fontSize: 16,
+                        fontSize: 17,
                         color: Colors.white,
                         height: 0.9,
                       ),

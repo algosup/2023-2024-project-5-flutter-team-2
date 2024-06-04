@@ -339,7 +339,10 @@ class _CandidatePageState extends State<CandidatePage> {
 
                     child: Text(
                       'Créer Un Compte'.tr,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                      ),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFFFA500),

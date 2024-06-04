@@ -129,7 +129,10 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text(
                         'Connexion'.tr,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                        ),
                       ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFFFA500),

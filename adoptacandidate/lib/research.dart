@@ -181,7 +181,10 @@ class BottomButton extends StatelessWidget {
                 padding: const EdgeInsets.all(17.0),
                 child: Text(
                   'Valider'.tr, // Texte du bouton
-                  style: TextStyle(color: Colors.white), // Couleur du texte du bouton
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                  ), // Couleur du texte du bouton
                 ),
               ), // Texte du bouton
             ),

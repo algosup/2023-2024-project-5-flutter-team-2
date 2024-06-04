@@ -119,7 +119,7 @@ class _SoftSkillsState extends State<SoftSkills> {
                       child: Text(
                         'Valider'.tr,
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 17,
                             color: Colors.white
                         ), // Couleur du texte en blanc
                       ),
