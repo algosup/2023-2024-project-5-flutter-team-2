@@ -1,4 +1,4 @@
-import 'package:adoptacandidate/widgets/language.dart';
+import 'widgets/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'WelcomePage.dart';

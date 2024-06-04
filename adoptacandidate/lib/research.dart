@@ -1,5 +1,5 @@
-import 'package:adoptacandidate/MySituation.dart';
-import 'package:adoptacandidate/widgets/Color.dart';
+import 'MySituation.dart';
+import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +18,7 @@ class Research extends StatelessWidget {
           },
         ),
         title: Text(
-          'Ma Recherche',
+          'Ma Recherche'.tr,
           style: TextStyle(color: Colors.white),
         ),
         actions: [
@@ -45,18 +45,18 @@ class _MySearchPageState extends State<MySearchPage> {
   String? selectedLocalite;
 
   List<String> metiers = [
-    'Développeur Full Stack',
-    'Ingénieur DevOps',
-    'Designer UI/UX',
-    'Data Scientist',
+    'Développeur Full Stack'.tr,
+    'Ingénieur DevOps'.tr,
+    'Designer UI/UX'.tr,
+    'Data Scientist'.tr,
     // Ajoutez d'autres métiers ici selon vos besoins
   ];
 
   List<String> localites = [
-    'Paris',
-    'Lyon',
-    'Marseille',
-    'Toulouse',
+    'Paris'.tr,
+    'Lyon'.tr,
+    'Marseille'.tr,
+    'Toulouse'.tr,
     // Ajoutez d'autres localités ici selon vos besoins
   ];
 
@@ -69,7 +69,7 @@ class _MySearchPageState extends State<MySearchPage> {
         children: [
           SizedBox(height: 20),
           Text(
-            'Métier recherché',
+            'Métier recherché'.tr,
             style: TextStyle(color: Colors.white),
           ),
           DropdownButton<String>(
@@ -90,7 +90,7 @@ class _MySearchPageState extends State<MySearchPage> {
           ),
           SizedBox(height: 20),
           Text(
-            'Localité recherchée',
+            'Localité recherchée'.tr,
             style: TextStyle(color: Colors.white),
           ),
           DropdownButton<String>(
@@ -111,7 +111,7 @@ class _MySearchPageState extends State<MySearchPage> {
           ),
           SizedBox(height: 20),
           Text(
-            'Type(s) de contrat',
+            'Type(s) de contrat'.tr,
             style: TextStyle(color: Colors.white),
           ),
           ContractTypeSelector(),
@@ -128,12 +128,12 @@ class ContractTypeSelector extends StatefulWidget {
 
 class _ContractTypeSelectorState extends State<ContractTypeSelector> {
   Map<String, bool> contractTypes = {
-    'CDI': false,
-    'CDD': false,
-    'Stage': false,
-    'Alternance': false,
-    'Intérim': false,
-    'Indépendant/ Freelance': false,
+    'CDI'.tr: false,
+    'CDD'.tr: false,
+    'Stage'.tr: false,
+    'Alternance'.tr: false,
+    'Intérim'.tr: false,
+    'Indépendant/ Freelance'.tr: false,
   };
 
   @override
@@ -163,21 +163,28 @@ class BottomButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context, 
-                MaterialPageRoute(
-                  builder: (context) => MySituation()));
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor:yellow, // Couleur de fond du bouton
-              shadowColor: Colors.white, // Couleur du texte du bouton
+          //
+          Container(
+            margin: EdgeInsets.only(bottom: 60),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MySituation()));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor:Color(0xFFFFA500), // Couleur de fond du bouton
+                shadowColor: Colors.white, // Couleur du texte du bouton
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(17.0),
+                child: Text(
+                  'Valider'.tr, // Texte du bouton
+                  style: TextStyle(color: Colors.white), // Couleur du texte du bouton
+                ),
+              ), // Texte du bouton
             ),
-            child: Text(
-              'Mon Bouton',
-              style: TextStyle(color: Colors.white), // Couleur du texte du bouton
-            ), // Texte du bouton
           ),
         ],
       ),

@@ -1,4 +1,4 @@
-import 'package:adoptacandidate/softskills.dart';
+import 'softskills.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -18,6 +18,7 @@ class _CandidatePageState extends State<CandidatePage> {
   final _lastNameFocusNode = FocusNode();
   final _lastEmailFocusNode = FocusNode();
   final _phoneFocusNode = FocusNode();
+  final _town = FocusNode();
   final _addressFocusNode = FocusNode();
   final _passwordFocusNode = FocusNode();
   final _confirmPasswordFocusNode = FocusNode();
@@ -27,6 +28,7 @@ class _CandidatePageState extends State<CandidatePage> {
     _firstNameFocusNode.dispose();
     _lastNameFocusNode.dispose();
     _phoneFocusNode.dispose();
+    _town.dispose();
     _addressFocusNode.dispose();
     _passwordFocusNode.dispose();
     _confirmPasswordFocusNode.dispose();
@@ -52,6 +54,7 @@ class _CandidatePageState extends State<CandidatePage> {
           ),
         ],
       ),
+
       backgroundColor: Color(0xFF0D1B2A),
       body: SingleChildScrollView(
         child: Padding(
@@ -60,14 +63,16 @@ class _CandidatePageState extends State<CandidatePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Créer Un Compte',
+                'Créer Un Compte'.tr,
                 style: GoogleFonts.roboto(
                   fontSize: 30,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
+
               SizedBox(height: 20),
+
               Row(
                 children: [
                   Expanded(
@@ -84,18 +89,22 @@ class _CandidatePageState extends State<CandidatePage> {
                       },
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        labelText: 'Prénom',
+                        labelText: 'Prénom'.tr,
                         labelStyle: TextStyle(color: Colors.grey[400]),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(15),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                     ),
                   ),
+
                   SizedBox(width: 10),
+
                   Expanded(
                     child: TextField(
                       onChanged: (String val){
@@ -106,55 +115,56 @@ class _CandidatePageState extends State<CandidatePage> {
                       focusNode: _lastNameFocusNode,
                       textInputAction: TextInputAction.next,
                       onSubmitted: (_) {
-                        FocusScope.of(context).requestFocus(_phoneFocusNode);
+                        FocusScope.of(context).requestFocus(_lastEmailFocusNode);
                       },
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        labelText: 'Nom',
+                        labelText: 'Nom'.tr,
                         labelStyle: TextStyle(color: Colors.grey[400]),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(15),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
+
               SizedBox(height: 20),
-              Row(
-                children: [
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: TextField(
-                      onChanged: (String val){
-                        setState(() {
-                          val;
-                        });
-                      },
-                      focusNode: _lastEmailFocusNode,
-                      textInputAction: TextInputAction.next,
-                      onSubmitted: (_) {
-                        FocusScope.of(context).requestFocus(_phoneFocusNode);
-                      },
-                      style: TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
-                        labelText: 'Email',
-                        labelStyle: TextStyle(color: Colors.grey[400]),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
+
+               TextField(
+                  onChanged: (String val){
+                    setState(() {
+                      val;
+                    });
+                  },
+                  focusNode: _lastEmailFocusNode,
+                  textInputAction: TextInputAction.next,
+                  onSubmitted: (_) {
+                    FocusScope.of(context).requestFocus(_phoneFocusNode);
+                  },
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Votre Email'.tr,
+                    labelStyle: TextStyle(color: Colors.grey[400]),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                ],
-              ),
+                ),
+
               SizedBox(height: 20),
+
               TextField(
                 onChanged: (String val){
                   setState(() {
@@ -165,21 +175,54 @@ class _CandidatePageState extends State<CandidatePage> {
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.phone,
                 onSubmitted: (_) {
+                  FocusScope.of(context).requestFocus(_town);
+                },
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  labelText: 'Numéro De Téléphone'.tr,
+                  labelStyle: TextStyle(color: Colors.grey[400]),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              TextField(
+                onChanged: (String val){
+                  setState(() {
+                     val;
+                  });
+                },
+                focusNode: _town,
+                textInputAction: TextInputAction.next,
+                onSubmitted: (_) {
                   FocusScope.of(context).requestFocus(_addressFocusNode);
                 },
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  labelText: 'Numéro De Téléphone',
+                  labelText: 'Ville'.tr,
                   labelStyle: TextStyle(color: Colors.grey[400]),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
               ),
+
+
               SizedBox(height: 20),
+
               TextField(
                 onChanged: (String val){
                   setState(() {
@@ -193,17 +236,21 @@ class _CandidatePageState extends State<CandidatePage> {
                 },
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  labelText: 'Addresse Postale',
+                  labelText: 'Addresse Postale'.tr,
                   labelStyle: TextStyle(color: Colors.grey[400]),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
               ),
+
               SizedBox(height: 20),
+
               TextField(
                 onChanged: (String val){
                   setState(() {
@@ -218,17 +265,19 @@ class _CandidatePageState extends State<CandidatePage> {
                 obscureText: _obscureText1,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  labelText: 'Mot De Passe',
+                  labelText: 'Mot de passe'.tr,
                   labelStyle: TextStyle(color: Colors.grey[400]),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscureText1 ? Icons.visibility : Icons.visibility_off,
+                      _obscureText1 ? Icons.visibility_off : Icons.visibility,
                       color: Colors.white,
                     ),
                     onPressed: () {
@@ -239,24 +288,28 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
+
               SizedBox(height: 20),
+
               TextField(
                 focusNode: _confirmPasswordFocusNode,
                 textInputAction: TextInputAction.done,
                 obscureText: _obscureText2,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  labelText: 'Confirmer votre mot de passe',
+                  labelText: 'Confirmer Le Mot De Passe'.tr,
                   labelStyle: TextStyle(color: Colors.grey[400]),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscureText2 ? Icons.visibility : Icons.visibility_off,
+                      _obscureText2 ? Icons.visibility_off : Icons.visibility,
                       color: Colors.white,
                     ),
                     onPressed: () {
@@ -267,27 +320,33 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
+
               SizedBox(height: 20),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context, 
-                      MaterialPageRoute(
-                        builder: 
-                        (context) => SoftSkills()
+
+              Container(
+                margin: EdgeInsets.only(top: 60),
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                          (context) => SoftSkills()
                         )
-                        );
-                  },
-                  child: Text(
-                    'Créer Mon Compte',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFB500),
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                      );
+                    },
+
+                    child: Text(
+                      'Créer Un Compte'.tr,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFFFA500),
+                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
                     ),
                   ),
                 ),

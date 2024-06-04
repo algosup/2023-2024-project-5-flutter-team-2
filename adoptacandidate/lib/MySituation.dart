@@ -51,13 +51,16 @@ class MySituation extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white30,
+          ),
           onPressed: () {
             Get.back();
           },
         ),
         title: Text(
-          'Ma Situation',
+          'Ma Situation'.tr,
           style: TextStyle(color: Colors.white),
         ),
         actions: [
@@ -75,13 +78,13 @@ class MySituation extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Métier(s) recherché(s) (3 choix max)',
+                'Métier(s) recherché(s) (3 choix max)'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 10),
               DropdownButton<String>(
                 isExpanded: true,
-                items: <String>['Développeur', 'Ingénieur', 'Designer', 'Analyste'].map((String value) {
+                items: <String>['Développeur'.tr, 'Ingénieur'.tr, 'Designer'.tr, 'Analyste'.tr].map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value, style: TextStyle(color: Colors.white)),
@@ -94,25 +97,25 @@ class MySituation extends StatelessWidget {
                 },
                 dropdownColor: Color(0xFF1C3A59),
                 style: TextStyle(color: Colors.white),
-                icon: Icon(Icons.arrow_forward, color: Colors.white),
+                icon: Icon(Icons.arrow_forward, color: Colors.white30),
                 underline: Container(
                   height: 2,
-                  color: Colors.white,
+                  color: Colors.white30,
                 ),
                 value: null,
               ),
               SizedBox(height: 20),
               Text(
-                'Métiers sélectionnés:',
+                'Métiers sélectionnés:'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               Obx(() => Text(
                 '${controller.selectedJobs}',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Color(0xFFFFA500)),
               )),
               SizedBox(height: 20),
               Text(
-                'Situation actuelle',
+                'Situation actuelle'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 10),
@@ -120,11 +123,15 @@ class MySituation extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text('En poste', style: TextStyle(color: Colors.white)),
+                    child: Text(
+                        'En poste'.tr,
+                        style: TextStyle(color: Colors.white)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text('Sans emploi', style: TextStyle(color: Colors.white)),
+                    child: Text(
+                        'Sans emploi'.tr,
+                        style: TextStyle(color: Colors.white)),
                   ),
                 ],
                 isSelected: [controller.isEmployed.value, !controller.isEmployed.value],
@@ -133,13 +140,13 @@ class MySituation extends StatelessWidget {
                 },
                 color: Colors.white,
                 selectedColor: Colors.white,
-                fillColor: Color(0xFF1C3A59),
+                fillColor: Color(0xFFFFA500),
                 borderColor: Color(0xFF1C3A59),
                 borderRadius: BorderRadius.circular(8.0),
               )),
               SizedBox(height: 20),
               Text(
-                'Disponibilité',
+                'Disponibilité'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 10),
@@ -147,11 +154,15 @@ class MySituation extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text('Immédiate', style: TextStyle(color: Colors.white)),
+                    child: Text(
+                        'Immédiate'.tr,
+                        style: TextStyle(color: Colors.white)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text('À convenir', style: TextStyle(color: Colors.white)),
+                    child: Text(
+                        'À convenir'.tr,
+                        style: TextStyle(color: Colors.white)),
                   ),
                 ],
                 isSelected: [controller.isAvailableImmediately.value, !controller.isAvailableImmediately.value],
@@ -160,19 +171,19 @@ class MySituation extends StatelessWidget {
                 },
                 color: Colors.white,
                 selectedColor: Colors.white,
-                fillColor: Color(0xFF1C3A59),
+                fillColor: Color(0xFFFFA500),
                 borderColor: Color(0xFF1C3A59),
                 borderRadius: BorderRadius.circular(8.0),
               )),
               SizedBox(height: 20),
               Text(
-                "Niveau d'expérience",
+                "Niveau d'expérience".tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 10),
               Obx(() => DropdownButton<String>(
                 isExpanded: true,
-                items: <String>['Junior', 'Intermédiaire', 'Senior'].map((String value) {
+                items: <String>['Junior'.tr, 'Intermédiaire'.tr, 'Senior'.tr].map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value, style: TextStyle(color: Colors.white)),
@@ -185,22 +196,22 @@ class MySituation extends StatelessWidget {
                 },
                 dropdownColor: Color(0xFF1C3A59),
                 style: TextStyle(color: Colors.white),
-                icon: Icon(Icons.arrow_forward, color: Colors.white),
+                icon: Icon(Icons.arrow_forward, color: Colors.white30),
                 underline: Container(
                   height: 2,
-                  color: Colors.white,
+                  color: Colors.white30,
                 ),
                 value: controller.selectedExperience.value.isEmpty ? null : controller.selectedExperience.value,
               )),
               SizedBox(height: 20),
               Text(
-                'Niveau de qualification',
+                'Niveau de qualification'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(height: 10),
               Obx(() => DropdownButton<String>(
                 isExpanded: true,
-                items: <String>['Bac', 'Bac+2', 'Bac+3', 'Bac+5'].map((String value) {
+                items: <String>['Bac'.tr, 'Bac+2'.tr, 'Bac+3'.tr, 'Bac+5'.tr].map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value, style: TextStyle(color: Colors.white)),
@@ -213,32 +224,41 @@ class MySituation extends StatelessWidget {
                 },
                 dropdownColor: Color(0xFF1C3A59),
                 style: TextStyle(color: Colors.white),
-                icon: Icon(Icons.arrow_forward, color: Colors.white),
+                icon: Icon(Icons.arrow_forward, color: Colors.white30),
                 underline: Container(
                   height: 2,
-                  color: Colors.white,
+                  color: Colors.white30,
                 ),
                 value: controller.selectedQualification.value.isEmpty ? null : controller.selectedQualification.value,
               )),
               SizedBox(height: 20),
               Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context, 
-                      MaterialPageRoute(
-                        builder: (context) => SwipePage()));
-                    controller.saveSituation();
-                  },
-                  child: Text(
-                    'Enregistrer',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF1C3A59),
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  margin: EdgeInsets.only(top: 50),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => SwipePage()));
+                      controller.saveSituation();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFFFA500),
+                      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    child: Padding(
+                        padding: EdgeInsets.all(5),
+                      child: Text(
+                        'Enregistrer'.tr,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                        ),
+                      ),
                     ),
                   ),
                 ),

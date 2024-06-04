@@ -1,5 +1,5 @@
-import 'package:adoptacandidate/research.dart';
-import 'package:adoptacandidate/widgets/Color.dart';
+import 'research.dart';
+import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,14 +12,14 @@ class SoftSkills extends StatefulWidget {
 class _SoftSkillsState extends State<SoftSkills> {
   // Liste des compétences disponibles
   final List<String> skills = [
-    "Communication",
-    "Teamwork",
-    "Problem-solving",
-    "Time management",
-    "Adaptability",
-    "Critical thinking",
-    "Creativity",
-    "Leadership"
+    "Communication".tr,
+    "Travail d'équipe".tr,
+    "Résolution de problèmes".tr,
+    "Gestion du temps".tr,
+    "Adaptabilité".tr,
+    "Esprit critique".tr,
+    "Créativité".tr,
+    "Leadership".tr,
   ];
 
   // Map pour suivre l'état de sélection des compétences
@@ -60,7 +60,7 @@ class _SoftSkillsState extends State<SoftSkills> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Choisissez vos compétences',
+              'Choisissez vos compétences'.tr,
               style: GoogleFonts.lato(
                 textStyle: TextStyle(color: Colors.white, fontSize: 24),
               ),
@@ -87,35 +87,45 @@ class _SoftSkillsState extends State<SoftSkills> {
               ),
             ),
             SizedBox(height: 20),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context, 
-                    MaterialPageRoute(
-                      builder: (context) => Research(),
+            Container(
+              margin: EdgeInsets.only(bottom: 60),
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Research(),
+                        ),
+                        );
+                    List<String> selected = selectedSkills.entries
+                        .where((entry) => entry.value)
+                        .map((entry) => entry.key)
+                        .toList();
+                    Get.snackbar(
+                      'Compétences sélectionnées',
+                      selected.isNotEmpty ? selected.join(', ') : 'Aucune sélectionnée',
+                      snackPosition: SnackPosition.BOTTOM,
+                      backgroundColor: Colors.black,
+                      colorText: Colors.white,
+                    );
+                  },
+
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFFFA500),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(17.0),
+                      child: Text(
+                        'Valider'.tr,
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white
+                        ), // Couleur du texte en blanc
                       ),
-                      );
-                  List<String> selected = selectedSkills.entries
-                      .where((entry) => entry.value)
-                      .map((entry) => entry.key)
-                      .toList();
-                  Get.snackbar(
-                    'Compétences sélectionnées',
-                    selected.isNotEmpty ? selected.join(', ') : 'Aucune sélectionnée',
-                    snackPosition: SnackPosition.BOTTOM,
-                    backgroundColor: Colors.black,
-                    colorText: Colors.white,
-                  );
-                },
-                child: Text(
-                  'Valider',
-                  style: TextStyle(color: Colors.white), // Couleur du texte en blanc
+                    ),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: yellow,
-                ),
-              ),
             ),
           ],
         ),

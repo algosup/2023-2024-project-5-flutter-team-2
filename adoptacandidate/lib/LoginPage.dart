@@ -1,8 +1,9 @@
+import 'package:adoptacandidate/SwipePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:adoptacandidate/Status.dart';
-import 'package:adoptacandidate/widgets/Color.dart';
-import 'package:adoptacandidate/widgets/DelayAnimation.dart';
+import 'Status.dart';
+import 'widgets/Color.dart';
+import 'widgets/DelayAnimation.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -36,11 +37,11 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             children: [
               DelayedAnimation(
-                delay: 1500,
+                delay: 150,
                 child: TextField(
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    labelText: 'Your Email',
+                    labelText: 'Votre Email'.tr,
                     labelStyle: TextStyle(
                       color: Colors.grey[400],
                     ),
@@ -53,9 +54,67 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
+
+              SizedBox(height: 30),
+
+              DelayedAnimation(
+                delay: 150,
+                child: TextField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Mot de passe'.tr,
+                    labelStyle: TextStyle(
+                      color: Colors.grey[400],
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              DelayedAnimation(
+                delay: 150,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    TextButton(
+                      onPressed: (){
+                        //switch to the next widget
+                      },
+                      child: Text(
+                        'Mot de passe oublié'.tr,
+                        style: TextStyle(color: Color(0xFFFFA500)),
+                      ),
+                    ),
+
+                    SizedBox(width: 130),
+                    TextButton(
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Status(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "s'inscrire".tr,
+                        style: TextStyle(color: Color(0xFFFFA500)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               SizedBox(height: 20),
               DelayedAnimation(
-                delay: 2000,
+                delay: 500,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -64,16 +123,16 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Status()
+                              builder: (context) => SwipePage()
                           )
                         );
                       },
                       child: Text(
-                        'Login'.tr,
+                        'Connexion'.tr,
                         style: TextStyle(color: Colors.white),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: yellow,
+                        backgroundColor: Color(0xFFFFA500),
                         padding: EdgeInsets.symmetric(horizontal: 50),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

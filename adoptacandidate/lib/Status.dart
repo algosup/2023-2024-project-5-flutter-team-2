@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:adoptacandidate/widgets/Color.dart';
 import 'package:adoptacandidate/widgets/DelayAnimation.dart';
-import 'package:adoptacandidate/widgets/language.dart';
 import 'CandidatePage.dart';  // Assurez-vous d'importer les pages nouvellement créées
 import 'RecruiterPage.dart';
 
@@ -41,7 +40,7 @@ class _StatusState extends State<Status> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'De quel profil êtes-vous ?\nÊtes-vous un :',
+              'De quel profil êtes-vous ?.\nÊtes-vous un :'.tr,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
@@ -49,9 +48,9 @@ class _StatusState extends State<Status> {
             ),
             SizedBox(height: 20),
             RadioListTile<String>(
-              activeColor: Color(0xFFFFB500),
+              activeColor: Color(0xFFFFA500),
               title: Text(
-                'Candidat',
+                'Candidat'.tr,
                 style: TextStyle(color: Colors.white),
               ),
               value: 'Candidat',
@@ -63,9 +62,9 @@ class _StatusState extends State<Status> {
               },
             ),
             RadioListTile<String>(
-              activeColor: Color(0xFFFFB500),
+              activeColor: Color(0xFFFFA500),
               title: Text(
-                'Recruteur',
+                'Recruteur'.tr,
                 style: TextStyle(color: Colors.white),
               ),
               value: 'Recruteur',
@@ -88,23 +87,23 @@ class _StatusState extends State<Status> {
                   } else {
                     // Afficher un message d'erreur ou une notification
                     Get.snackbar(
-                      'Erreur',
-                      'Veuillez sélectionner un profil',
+                      'Erreur'.tr,
+                      'Veuillez sélectionner un profil'.tr,
                       backgroundColor: Colors.red,
                       colorText: Colors.white,
                     );
                   }
                 },
                 child: Text(
-                  'Continuer',
+                  'Continuer'.tr,
                   style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFFFB500),
+                  backgroundColor: Color(0xFFFFA500),
                   padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   textStyle: TextStyle(fontSize: 16),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
               ),

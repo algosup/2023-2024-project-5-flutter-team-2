@@ -27,7 +27,7 @@ class SwipePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        
+
           children: [
             Image.asset(
               'images/logo.png',
@@ -67,7 +67,7 @@ class SwipePage extends StatelessWidget {
                   },
                   onStackFinished: () {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('You have finished all the cards')),
+                      SnackBar(content: Text('Vous avez fini toutes les cartes')),
                     );
                   },
                   itemChanged: (SwipeItem item, int index) {
@@ -126,7 +126,7 @@ class JobCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Industrie',
+              'Industrie'.tr,
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.grey,

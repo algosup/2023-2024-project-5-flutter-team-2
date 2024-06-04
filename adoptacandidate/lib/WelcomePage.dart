@@ -1,13 +1,15 @@
-import 'package:adoptacandidate/LoginPage.dart';
+import 'LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
-import 'package:adoptacandidate/widgets/language.dart';
+import 'widgets/language.dart';
 
 class WelcomePage extends StatelessWidget {
+
+  bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  
+    return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -23,17 +25,19 @@ class WelcomePage extends StatelessWidget {
               DropdownMenuItem(
                 child: Text('Français'),
                 value: 'fr FR',
-              ),            ], 
+              ),            ],
             onChanged: (value) {
                Get.updateLocale(Locale(value.toString()));
             },
-                ),
-             Container(
-                height: 90,
-                child: Image.asset('images/logo.png'),
-              ),
-        ],
+          ),
+
+          Container(
+            height: 90,
+            child: Image.asset('images/logo.png'),
+          ),
+       ],
       ),
+
       backgroundColor: Color(0xFF0D1B2A),
       body: SingleChildScrollView(
         child: Container(
@@ -42,9 +46,9 @@ class WelcomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Logo en haut à gauche
-             
+
               SizedBox(height: 20),
-              
+
               // Centrer les autres éléments
               Center(
                 child: Column(
@@ -60,7 +64,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-                    
+
                     // Texte "Bienvenue sur Adopte 1 Candidat"
                     Container(
                       padding: EdgeInsets.all(10),
@@ -69,7 +73,7 @@ class WelcomePage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'welcome'.tr,
+                            'Bienvenue Sur'.tr,
                             style: GoogleFonts.smoochSans(
                               fontSize: 60,
                               color: Colors.white,
@@ -77,10 +81,11 @@ class WelcomePage extends StatelessWidget {
                               height: 0.9,
                             ),
                           ),
+
                           Row(
                             children: [
                               Text(
-                                'adopt'.tr,
+                                'Adopte'.tr,
                                 style: GoogleFonts.smoochSans(
                                   fontSize: 60,
                                   color: Color(0xFFFFA500),
@@ -88,11 +93,12 @@ class WelcomePage extends StatelessWidget {
                                   height: 0.9,
                                 ),
                               ),
+                              SizedBox(width: 7),
                               Text(
                                 '1',
                                 style: GoogleFonts.smoochSans(
                                   fontSize: 60,
-                                  color: Colors.white,
+                                  color: Color(0xFF808080),
                                   fontWeight: FontWeight.bold,
                                   height: 0.9,
                                 ),
@@ -100,16 +106,17 @@ class WelcomePage extends StatelessWidget {
                             ],
                           ),
                           Text(
-                            'candidate'.tr,
+                            'Candidat'.tr,
                             style: GoogleFonts.smoochSans(
                               fontSize: 60,
-                              color: Color(0xFFFFB500),
+                              color: Color(0xFFFFA500),
                               fontWeight: FontWeight.bold,
                               height: 0.9,
                             ),
                           ),
+                          SizedBox(height: 10),
                           Text(
-                            'connection'.tr,
+                            'Inscrivez-vous gratuitement ou connectez-vous'.tr,
                             style: GoogleFonts.roboto(
                               fontSize: 13,
                               color: Colors.white,
@@ -119,53 +126,55 @@ class WelcomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    
+
                     SizedBox(height: 20),
-                    
+
                     // Bouton "Continuer avec un email"
                     ElevatedButton(
                       onPressed: () {
-                         Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                         builder: (context) => LoginPage(),
-                        ),
+                       Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                           builder: (context) => LoginPage(),
+                          ),
                         );
                       },
+
+                      //language Continuer avec un email
                       child: Text(
-                        'email'.tr,
+                        'Continuer avec un email'.tr,
                         style: GoogleFonts.roboto(
-                          fontSize: 16,
+                          fontSize: 18,
                           color: Colors.white,
                         ),
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                          Color(0xFFFFB500),
+                          Color(0xFFFFA500),
                         ),
                         padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                           EdgeInsets.symmetric(
                             vertical: 10,
-                            horizontal: 40,
+                            horizontal: 70,
                           ),
                         ),
                       ),
                     ),
-                    
+
                     SizedBox(height: 20),
-                    
+
                     // Texte "ou"
                     Text(
-                      'choice'.tr,
+                      'ou'.tr,
                       style: GoogleFonts.roboto(
                         fontSize: 16,
                         color: Colors.white,
                         height: 0.9,
                       ),
                     ),
-                    
+
                     SizedBox(height: 20),
-                    
+
                     // Boutons des réseaux sociaux
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -175,8 +184,8 @@ class WelcomePage extends StatelessWidget {
                             // Logique de connexion Google
                           },
                           icon: Container(
-                            width: 50.0,
-                            height: 50.0,
+                            width: 80.0,
+                            height: 80.0,
                             child: Image.asset('images/google.png'),
                           ),
                           iconSize: 40,
@@ -187,8 +196,8 @@ class WelcomePage extends StatelessWidget {
                             // Logique de connexion Apple
                           },
                           icon: Container(
-                            width: 50.0,
-                            height: 50.0,
+                            width: 80.0,
+                            height: 80.0,
                             child: Image.asset('images/apple.png'),
                           ),
                           iconSize: 40,
@@ -199,8 +208,8 @@ class WelcomePage extends StatelessWidget {
                             // Logique de connexion Facebook
                           },
                           icon: Container(
-                            width: 50.0,
-                            height: 50.0,
+                            width: 80.0,
+                            height: 80.0,
                             child: Image.asset('images/facebook.png'),
                           ),
                           iconSize: 40,
