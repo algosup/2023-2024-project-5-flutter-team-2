@@ -1,10 +1,11 @@
-import 'MySituation.dart';
-import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import 'MySituation.dart';
 
 class Research extends StatelessWidget {
+  const Research({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,30 +13,32 @@ class Research extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Get.back();
           },
         ),
         title: Text(
           'Ma Recherche'.tr,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
         actions: [
-          Container(
+          SizedBox(
             height: 90,
             child: Image.asset('images/logo.png'),
           ),
         ],
       ),
-      backgroundColor: Color(0xFF0D1B2A),
-      body: MySearchPage(),
-      bottomNavigationBar: BottomButton(), // Ajout du bouton en bas de l'écran
+      backgroundColor: const Color(0xFF0D1B2A),
+      body: const MySearchPage(),
+      bottomNavigationBar: const BottomButton(), // Ajout du bouton en bas de l'écran
     );
   }
 }
 
 class MySearchPage extends StatefulWidget {
+  const MySearchPage({super.key});
+
   @override
   _MySearchPageState createState() => _MySearchPageState();
 }
@@ -62,66 +65,70 @@ class _MySearchPageState extends State<MySearchPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 20),
-          Text(
-            'Métier recherché'.tr,
-            style: TextStyle(color: Colors.white),
-          ),
-          DropdownButton<String>(
-            value: selectedMetier,
-            onChanged: (String? newValue) {
-              setState(() {
-                selectedMetier = newValue;
-              });
-            },
-            dropdownColor: Colors.black, // Fond du dropdown en noir
-            style: TextStyle(color: Colors.white), // Texte en blanc
-            items: metiers.map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-          SizedBox(height: 20),
-          Text(
-            'Localité recherchée'.tr,
-            style: TextStyle(color: Colors.white),
-          ),
-          DropdownButton<String>(
-            value: selectedLocalite,
-            onChanged: (String? newValue) {
-              setState(() {
-                selectedLocalite = newValue;
-              });
-            },
-            dropdownColor: Colors.black, // Fond du dropdown en noir
-            style: TextStyle(color: Colors.white), // Texte en blanc
-            items: localites.map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-          SizedBox(height: 20),
-          Text(
-            'Type(s) de contrat'.tr,
-            style: TextStyle(color: Colors.white),
-          ),
-          ContractTypeSelector(),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 20),
+            Text(
+              'Métier recherché'.tr,
+              style: const TextStyle(color: Colors.white),
+            ),
+            DropdownButton<String>(
+              value: selectedMetier,
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedMetier = newValue;
+                });
+              },
+              dropdownColor: Colors.black, // Fond du dropdown en noir
+              style: const TextStyle(color: Colors.white), // Texte en blanc
+              items: metiers.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'Localité recherchée'.tr,
+              style: const TextStyle(color: Colors.white),
+            ),
+            DropdownButton<String>(
+              value: selectedLocalite,
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedLocalite = newValue;
+                });
+              },
+              dropdownColor: Colors.black, // Fond du dropdown en noir
+              style: const TextStyle(color: Colors.white), // Texte en blanc
+              items: localites.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'Type(s) de contrat'.tr,
+              style: const TextStyle(color: Colors.white),
+            ),
+            const ContractTypeSelector(),
+          ],
+        ),
       ),
     );
   }
 }
 
 class ContractTypeSelector extends StatefulWidget {
+  const ContractTypeSelector({super.key});
+
   @override
   _ContractTypeSelectorState createState() => _ContractTypeSelectorState();
 }
@@ -141,7 +148,7 @@ class _ContractTypeSelectorState extends State<ContractTypeSelector> {
     return Column(
       children: contractTypes.keys.map((String key) {
         return CheckboxListTile(
-          title: Text(key, style: TextStyle(color: Colors.white)),
+          title: Text(key, style: const TextStyle(color: Colors.white)),
           value: contractTypes[key],
           onChanged: (bool? value) {
             setState(() {
@@ -155,17 +162,19 @@ class _ContractTypeSelectorState extends State<ContractTypeSelector> {
 }
 
 class BottomButton extends StatelessWidget {
+  const BottomButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
-      color: Color(0xFF0D1B2A), // Couleur de fond du bouton
+      padding: const EdgeInsets.all(16.0),
+      color: const Color(0xFF0D1B2A), // Couleur de fond du bouton
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //
           Container(
-            margin: EdgeInsets.only(bottom: 60),
+            margin: const EdgeInsets.only(bottom: 30),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -174,14 +183,14 @@ class BottomButton extends StatelessWidget {
                     builder: (context) => MySituation()));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor:Color(0xFFFFA500), // Couleur de fond du bouton
+                backgroundColor:const Color(0xFFFFA500), // Couleur de fond du bouton
                 shadowColor: Colors.white, // Couleur du texte du bouton
               ),
               child: Padding(
                 padding: const EdgeInsets.all(17.0),
                 child: Text(
                   'Valider'.tr, // Texte du bouton
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
                   ), // Couleur du texte du bouton
