@@ -6,6 +6,33 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/06/04  |
 
+
+### Table of Contents
+
+1. [Adopte Un Candidat - Technical Plan Summary](#adopte-un-candidat---technical-plan-summary)
+    - [Project Overview](#project-overview)
+    - [User Authentication Workflow](#user-authentication-workflow)
+        - [Processes](#processes)
+        - [Decision Points](#decision-points)
+    - [Candidate Information Management Workflow](#candidate-information-management-workflow)
+        - [Processes](#processes-1)
+    - [Tools and Technologies](#tools-and-technologies)
+        - [Figma](#figma)
+        - [Flutter](#flutter)
+    - [Project Implementation Plan](#project-implementation-plan)
+        - [Objectives](#objectives)
+        - [Architecture](#architecture)
+        - [Phases](#phases)
+    - [Team Structure](#team-structure)
+    - [Tools Used](#tools-used)
+    - [Libraries for Flutter Development](#libraries-for-flutter-development)
+    - [Tech Plan Highlights](#tech-plan-highlights)
+    - [Diagram](#diagramm)
+    - [Project Timeline](#project-timeline)
+    - [Glossary](#Glossary)
+  
+
+
 # Adopte Un Candidat - Technical Plan Summary
 ![alt text](image-13.png)
 
@@ -15,7 +42,7 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 ## User Authentication Workflow
 
 ### Processes
-1. **Login**
+1. **Login**s
    - API: `api/login [POST]`
    - Options: Forgotten password, registration
 
@@ -113,7 +140,9 @@ This technical plan ensures a well-structured approach for developing and deploy
 
 <img src="image-6.png" alt="alt text" width="200">
 
-### This diagram is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
+### diagramm
+
+This is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
 
 1 - Password and logins
 
@@ -218,21 +247,6 @@ This flowchart illustrates the user journey within an application focusing on ca
 4. They can manage their settings, including updating their password, email, and profile pictures.
 
 This flowchart provides a comprehensive view of the interactions within the application, focusing on candidate management and user settings, detailing the API calls involved and how user data is handled and stored.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Mandatory Tools for the Project :
@@ -383,7 +397,8 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 - Collect user feedback and iterate on features.
 - Implement additional features based on user needs and market trends.
 
-#### 5. Project Timeline
+#### . :Project Timeline
+
 **Week 1**: Requirements gathering, planning, and design.
 
 **Week 2-3**: Project setup, UI development, and state management.
@@ -394,17 +409,24 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 
 **Week 6**: Post-launch support and feature enhancements.
 
-#### 6. Team Structure
-
-| Photo                                                                                                                                     | Name            | Role              | LinkedIn                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ----------------- | ------------------------------------------------------------------ |
-| [<img src="https://avatars.githubusercontent.com/u/91249965?s=400&u=12ebc6578a0969df1430d721d04a795af5860868&v=4" width="80px"  height="80px">](https://github.com/PaulNowak36)    | Paul NOWAK    | Project Manager   | [LinkedIn](https://www.linkedin.com/in/paul-nowak-0757a61a7/)          |
-| [<img src="https://avatars.githubusercontent.com/u/122369054?v=4" width="80px"  height="80px">](https://github.com/Bistrel2002)          | Vivien Bistrel TSANGUE CHOUNGOU    | Program Manager   | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/)    |
-| [<img src="https://avatars.githubusercontent.com/u/160007182?v=4" width="80px"  height="80px">](https://github.com/seiv007) | Mouatassime SEIV | Technical Leader  | [LinkedIn](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) |
-| [<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="80px"  height="80px">](https://github.com/Amakran2003)        | Abderrazaq MAKRAN      | Technical Writer  | [LinkedIn](https://www.linkedin.com/in/abderrazaq-makran/)      |
-| [<img src="https://avatars.githubusercontent.com/u/145991354?v=4" width="80px"  height="80px">](https://github.com/mathislebel)          | Mathis LEBEL   | Quality Assurance | [LinkedIn](https://www.linkedin.com/in/mathis-lebel-429114293/)   |
-
 **This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.**
+
+# Glossary
+
+| Term                          | Definition                                                                                       |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| **API (Application Programming Interface)** | A set of rules and definitions that allow software applications to communicate with each other. |
+| **Bloc**                      | A state management library for Flutter that helps manage complex state and business logic.        |
+| **Dio**                       | A powerful HTTP client for Dart, used in Flutter applications for making network requests.        |
+| **Figma**                     | A cloud-based design tool used for creating user interfaces and collaborating in real time.       |
+| **Firebase Authentication**   | A service that provides backend services for easy and secure user authentication.                 |
+| **Flutter**                   | An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. |
+| **Hive**                      | A lightweight and fast key-value database written in pure Dart for Flutter applications.          |
+| **Provider**                  | A state management library for Flutter used to handle and manage application state efficiently.   |
+| **Riverpod**                  | An improved version of the Provider state management library offering a more robust and flexible way to manage state in Flutter applications. |
+| **SharedPreferences**         | A Flutter plugin that provides a way to store simple data in the form of key-value pairs locally. |
+| **UI (User Interface)**       | The means by which a user interacts with a computer, software, or application, often focusing on the look and feel. |
+| **UX (User Experience)**      | The overall experience a user has when interacting with a product or system, emphasizing ease of use and efficiency. |
 
 
 ### Tools used during the project
