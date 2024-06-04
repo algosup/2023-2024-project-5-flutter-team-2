@@ -6,7 +6,6 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/06/04  |
 
-
 ### Table of Contents
 
 1. [Adopte Un Candidat - Technical Plan Summary](#adopte-un-candidat---technical-plan-summary)
@@ -411,23 +410,6 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 
 **This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.**
 
-# Glossary
-
-| Term                          | Definition                                                                                       |
-|-------------------------------|--------------------------------------------------------------------------------------------------|
-| **API (Application Programming Interface)** | A set of rules and definitions that allow software applications to communicate with each other. |
-| **Bloc**                      | A state management library for Flutter that helps manage complex state and business logic.        |
-| **Dio**                       | A powerful HTTP client for Dart, used in Flutter applications for making network requests.        |
-| **Figma**                     | A cloud-based design tool used for creating user interfaces and collaborating in real time.       |
-| **Firebase Authentication**   | A service that provides backend services for easy and secure user authentication.                 |
-| **Flutter**                   | An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. |
-| **Hive**                      | A lightweight and fast key-value database written in pure Dart for Flutter applications.          |
-| **Provider**                  | A state management library for Flutter used to handle and manage application state efficiently.   |
-| **Riverpod**                  | An improved version of the Provider state management library offering a more robust and flexible way to manage state in Flutter applications. |
-| **SharedPreferences**         | A Flutter plugin that provides a way to store simple data in the form of key-value pairs locally. |
-| **UI (User Interface)**       | The means by which a user interacts with a computer, software, or application, often focusing on the look and feel. |
-| **UX (User Experience)**      | The overall experience a user has when interacting with a product or system, emphasizing ease of use and efficiency. |
-
 
 ### Tools used during the project
 
@@ -586,6 +568,24 @@ class SwipeScreen extends StatelessWidget {
 ```
 
 By following these steps and using these libraries, you can create a robust and feature-rich mobile app in Flutter that connects companies with employees in a manner similar to Tinder.
+
+
+#### Glossary
+
+| Term                          | Definition                                                                                       |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| **API (Application Programming Interface)** | A set of rules and definitions that allow software applications to communicate with each other. |
+| **Bloc**                      | A state management library for Flutter that helps manage complex state and business logic.        |
+| **Dio**                       | A powerful HTTP client for Dart, used in Flutter applications for making network requests.        |
+| **Figma**                     | A cloud-based design tool used for creating user interfaces and collaborating in real time.       |
+| **Firebase Authentication**   | A service that provides backend services for easy and secure user authentication.                 |
+| **Flutter**                   | An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. |
+| **Hive**                      | A lightweight and fast key-value database written in pure Dart for Flutter applications.          |
+| **Provider**                  | A state management library for Flutter used to handle and manage application state efficiently.   |
+| **Riverpod**                  | An improved version of the Provider state management library offering a more robust and flexible way to manage state in Flutter applications. |
+| **SharedPreferences**         | A Flutter plugin that provides a way to store simple data in the form of key-value pairs locally. |
+| **UI (User Interface)**       | The means by which a user interacts with a computer, software, or application, often focusing on the look and feel. |
+| **UX (User Experience)**      | The overall experience a user has when interacting with a product or system, emphasizing ease of use and efficiency. |
 
  
 # UML Diagram for ADOPTE CANDIDATE App
@@ -778,4 +778,4 @@ By following these steps and using these libraries, you can create a robust and 
                                                                     |--------------|
                                                                     | + sendMessage()|
                                                                     | + viewMessageThread()|
-                                                                    +----------------+
+                                                                    +----------------+                                                             
