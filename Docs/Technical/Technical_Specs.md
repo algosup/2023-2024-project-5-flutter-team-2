@@ -6,7 +6,10 @@
 | Creation Date     | 2024/05/21  |
 | Last Update Date  | 2024/06/04  |
 
-### Table of Contents
+
+# Table of Contents
+
+ <img src="image-14.png" alt="alt text" width="200">
 
 1. [Adopte Un Candidat - Technical Plan Summary](#adopte-un-candidat---technical-plan-summary)
     - [Project Overview](#project-overview)
@@ -26,10 +29,42 @@
     - [Tools Used](#tools-used)
     - [Libraries for Flutter Development](#libraries-for-flutter-development)
     - [Tech Plan Highlights](#tech-plan-highlights)
-    - [Diagram](#diagramm)
+    - [Diagram](#diagram)
     - [Project Timeline](#project-timeline)
-    - [Glossary](#Glossary)
-  
+    - [Glossary](#glossary)
+2. [Project Scope and Objectives](#project-scope-and-objectives)
+    - [Objectives](#objectives-1)
+    - [Scope](#scope)
+3. [Technology Stack](#technology-stack)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+    - [Services and Tools](#services-and-tools)
+4. [Architecture Design](#architecture-design)
+    - [App Structure](#app-structure)
+    - [Data Flow](#data-flow)
+5. [Implementation Plan](#implementation-plan)
+    - [Phase 1: Requirements and Planning](#phase-1-requirements-and-planning)
+    - [Phase 2: Project Setup](#phase-2-project-setup)
+    - [Phase 3: UI Development](#phase-3-ui-development)
+    - [Phase 4: State Management and Local Storage](#phase-4-state-management-and-local-storage)
+    - [Phase 5: Integration and Testing](#phase-5-integration-and-testing)
+    - [Phase 6: Deployment](#phase-6-deployment)
+    - [Phase 7: Post-Launch Support](#phase-7-post-launch-support)
+6. [User Authentication Workflow (Detailed)](#user-authentication-workflow-detailed)
+    - [Processes](#processes-2)
+    - [Decision Points](#decision-points-1)
+7. [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
+    - [Processes](#processes-3)
+8. [Detailed Tools and Technologies](#detailed-tools-and-technologies)
+    - [Figma](#figma-1)
+    - [Flutter](#flutter-1)
+9. [Team Structure (Detailed)](#team-structure-detailed)
+10. [Tools Used (Detailed)](#tools-used-detailed)
+11. [Libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
+12. [Tech Plan Highlights (Detailed)](#tech-plan-highlights-detailed)
+13. [Diagram (Detailed)](#diagram-detailed)
+14. [Full Project Timeline](#full-project-timeline)
+
 
 
 # Adopte Un Candidat - Technical Plan Summary
@@ -778,4 +813,4 @@ By following these steps and using these libraries, you can create a robust and 
                                                                     |--------------|
                                                                     | + sendMessage()|
                                                                     | + viewMessageThread()|
-                                                                    +----------------+                                                             
+                                                                    +----------------+
