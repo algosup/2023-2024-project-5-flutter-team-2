@@ -1,11 +1,10 @@
+import 'MySituation.dart';
+import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'MySituation.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Research extends StatelessWidget {
-  const Research({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,32 +12,30 @@ class Research extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Get.back();
           },
         ),
         title: Text(
           'Ma Recherche'.tr,
-          style: const TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white),
         ),
         actions: [
-          SizedBox(
+          Container(
             height: 90,
             child: Image.asset('images/logo.png'),
           ),
         ],
       ),
-      backgroundColor: const Color(0xFF0D1B2A),
-      body: const MySearchPage(),
-      bottomNavigationBar: const BottomButton(), // Ajout du bouton en bas de l'écran
+      backgroundColor: Color(0xFF0D1B2A),
+      body: MySearchPage(),
+      bottomNavigationBar: BottomButton(), // Ajout du bouton en bas de l'écran
     );
   }
 }
 
 class MySearchPage extends StatefulWidget {
-  const MySearchPage({super.key});
-
   @override
   _MySearchPageState createState() => _MySearchPageState();
 }
@@ -71,10 +68,10 @@ class _MySearchPageState extends State<MySearchPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             Text(
               'Métier recherché'.tr,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white),
             ),
             DropdownButton<String>(
               value: selectedMetier,
@@ -84,7 +81,7 @@ class _MySearchPageState extends State<MySearchPage> {
                 });
               },
               dropdownColor: Colors.black, // Fond du dropdown en noir
-              style: const TextStyle(color: Colors.white), // Texte en blanc
+              style: TextStyle(color: Colors.white), // Texte en blanc
               items: metiers.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -92,10 +89,10 @@ class _MySearchPageState extends State<MySearchPage> {
                 );
               }).toList(),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             Text(
               'Localité recherchée'.tr,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white),
             ),
             DropdownButton<String>(
               value: selectedLocalite,
@@ -105,7 +102,7 @@ class _MySearchPageState extends State<MySearchPage> {
                 });
               },
               dropdownColor: Colors.black, // Fond du dropdown en noir
-              style: const TextStyle(color: Colors.white), // Texte en blanc
+              style: TextStyle(color: Colors.white), // Texte en blanc
               items: localites.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -113,12 +110,12 @@ class _MySearchPageState extends State<MySearchPage> {
                 );
               }).toList(),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             Text(
               'Type(s) de contrat'.tr,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white),
             ),
-            const ContractTypeSelector(),
+            ContractTypeSelector(),
           ],
         ),
       ),
@@ -127,8 +124,6 @@ class _MySearchPageState extends State<MySearchPage> {
 }
 
 class ContractTypeSelector extends StatefulWidget {
-  const ContractTypeSelector({super.key});
-
   @override
   _ContractTypeSelectorState createState() => _ContractTypeSelectorState();
 }
@@ -148,7 +143,7 @@ class _ContractTypeSelectorState extends State<ContractTypeSelector> {
     return Column(
       children: contractTypes.keys.map((String key) {
         return CheckboxListTile(
-          title: Text(key, style: const TextStyle(color: Colors.white)),
+          title: Text(key, style: TextStyle(color: Colors.white)),
           value: contractTypes[key],
           onChanged: (bool? value) {
             setState(() {
@@ -162,37 +157,36 @@ class _ContractTypeSelectorState extends State<ContractTypeSelector> {
 }
 
 class BottomButton extends StatelessWidget {
-  const BottomButton({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
-      color: const Color(0xFF0D1B2A), // Couleur de fond du bouton
+      padding: EdgeInsets.all(16.0),
+      color: Color(0xFF0D1B2A), // Couleur de fond du bouton
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //
           Container(
-            margin: const EdgeInsets.only(bottom: 30),
+            margin: EdgeInsets.only(bottom: 30),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MySituation()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MySituation()));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor:const Color(0xFFFFA500), // Couleur de fond du bouton
+                backgroundColor:Color(0xFFFFA500), // Couleur de fond du bouton
                 shadowColor: Colors.white, // Couleur du texte du bouton
+                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(17.0),
+                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                 child: Text(
                   'Valider'.tr, // Texte du bouton
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
                   ), // Couleur du texte du bouton
                 ),
               ), // Texte du bouton

@@ -127,18 +127,21 @@ class _LoginPageState extends State<LoginPage> {
                           )
                         );
                       },
-                      child: Text(
-                        'Connexion'.tr,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 17,
-                        ),
-                      ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFFFA500),
-                        padding: EdgeInsets.symmetric(horizontal: 50),
+                        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 5),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                        child: Text(
+                          'Connexion'.tr,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                          ),
                         ),
                       ),
                     ),

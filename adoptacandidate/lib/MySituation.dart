@@ -109,9 +109,22 @@ class MySituation extends StatelessWidget {
                 'Métiers sélectionnés:'.tr,
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
-              Obx(() => Text(
-                '${controller.selectedJobs}',
-                style: TextStyle(color: Color(0xFFFFA500)),
+              Obx(() => Wrap(
+                spacing: 8.0, // gap between adjacent chips
+                runSpacing: 4.0, // gap between lines
+                children: controller.selectedJobs.map((String job) {
+                  return GestureDetector(
+                    onTap: () {
+                      controller.selectedJobs.remove(job);
+                    },
+                    child: Chip(
+                      label: Text(
+                        job,
+                        style: TextStyle(color: Color(0xFFFFA500)),
+                      ),
+                    ),
+                  );
+                }).toList(),
               )),
               SizedBox(height: 20),
               Text(
@@ -245,13 +258,13 @@ class MySituation extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFFFA500),
-                      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     child: Padding(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: Text(
                         'Enregistrer'.tr,
                         style: TextStyle(

@@ -346,7 +346,7 @@ class _CandidatePageState extends State<CandidatePage> {
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFFFA500),
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),

@@ -5,6 +5,7 @@ import 'package:adoptacandidate/widgets/Color.dart';
 import 'package:adoptacandidate/widgets/DelayAnimation.dart';
 import 'CandidatePage.dart';  // Assurez-vous d'importer les pages nouvellement créées
 import 'RecruiterPage.dart';
+import 'sector.dart';
 
 class Status extends StatefulWidget {
   @override
@@ -83,7 +84,7 @@ class _StatusState extends State<Status> {
                   if (_selectedProfile == 'Candidat') {
                     Get.to(CandidatePage());
                   } else if (_selectedProfile == 'Recruteur') {
-                    Get.to(RecruiterPage());
+                    Get.to(const Sector());
                   } else {
                     // Afficher un message d'erreur ou une notification
                     Get.snackbar(
@@ -94,19 +95,21 @@ class _StatusState extends State<Status> {
                     );
                   }
                 },
-                child: Text(
-                  'Continuer'.tr,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                  ),
-                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFFFFA500),
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                  textStyle: TextStyle(fontSize: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 35, vertical: 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                  child: Text(
+                    'Continuer'.tr,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                    ),
                   ),
                 ),
               ),

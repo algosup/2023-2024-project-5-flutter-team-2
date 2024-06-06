@@ -292,25 +292,31 @@ class _RecruiterPageState extends State<RecruiterPage> {
                 SizedBox(height: 20),
 
                 Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder:
-                                  (context) => SoftSkills()
-                          )
-                      );
-                    },
-                    child: Text(
-                      'Créer Un Compte',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFFFA500),
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder:
+                                    (context) => SoftSkills()
+                            )
+                        );
+                      },
+                      child: Text(
+                        'Créer Un Compte',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFFFA500),
+                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                       ),
                     ),
                   ),

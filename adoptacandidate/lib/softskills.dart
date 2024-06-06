@@ -97,14 +97,14 @@ class _SoftSkillsState extends State<SoftSkills> {
                       MaterialPageRoute(
                         builder: (context) => Research(),
                         ),
-                        );
+                      );
                     List<String> selected = selectedSkills.entries
                         .where((entry) => entry.value)
                         .map((entry) => entry.key)
                         .toList();
                     Get.snackbar(
-                      'Compétences sélectionnées',
-                      selected.isNotEmpty ? selected.join(', ') : 'Aucune sélectionnée',
+                      'Compétences sélectionnées'.tr,
+                      selected.isNotEmpty ? selected.join(', ') : 'Aucune sélectionnée'.tr,
                       snackPosition: SnackPosition.BOTTOM,
                       backgroundColor: Colors.black,
                       colorText: Colors.white,
@@ -113,9 +113,10 @@ class _SoftSkillsState extends State<SoftSkills> {
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFFFFA500),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(17.0),
+                    padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: Text(
                         'Valider'.tr,
                         style: TextStyle(

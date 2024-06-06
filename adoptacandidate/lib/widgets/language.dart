@@ -85,6 +85,9 @@ class Language extends Translations{
       'Nom De L\'entreprise': 'Company Name',
       'Taille De L\'entreprise': 'Company Size',
       'Valider': 'Validate',
+      'Dans quel secteur êtes-vous ?': 'In which sector are you ?',
+      'Compétences sélectionnées': 'Selected skills',
+      'Aucune sélectionnée' : 'None selected',
 
   },
 
@@ -167,6 +170,9 @@ class Language extends Translations{
       'Nom De L\'entreprise': 'Nom De L\'entreprise',
       'Taille De L\'entreprise': 'Taille De L\'entreprise',
       'Valider': 'Valider',
+      'Dans quel secteur êtes-vous ?': 'Dans quel secteur êtes-vous ?',
+      'Compétences sélectionnées': 'Compétences sélectionnées',
+      'Aucune sélectionnée' : 'Aucune sélectionnée',
     },
   };
 }

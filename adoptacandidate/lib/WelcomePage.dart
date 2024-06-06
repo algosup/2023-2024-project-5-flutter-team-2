@@ -30,9 +30,9 @@ class WelcomePage extends StatelessWidget {
                Get.updateLocale(Locale(value.toString()));
             },
           ),
-
+          SizedBox(width: 20),
           Container(
-            height: 90,
+            height: 60,
             child: Image.asset('images/logo.png'),
           ),
        ],

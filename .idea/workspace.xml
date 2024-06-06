@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/2023-2024-project-5-flutter-team-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/ios/Podfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/ios/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/macos/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/Notification.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/adobe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/convert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/images/notif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" afterDir="false" />
@@ -26,12 +22,9 @@
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/WelcomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/WelcomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" afterDir="false" />
     </list>
