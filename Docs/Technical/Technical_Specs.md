@@ -4,12 +4,11 @@
 | ----------------- | ----------- |
 | Document Owner    | Mouatassime Seiv|
 | Creation Date     | 2024/05/21  |
-| Last Update Date  | 2024/06/04  |
+| Last Update Date  | 2024/06/06  |
 
+ <img src="image-14.png" alt="alt text" width="80">
 
 # Table of Contents
-
- <img src="image-14.png" alt="alt text" width="200">
 
 1. [Adopte Un Candidat - Technical Plan Summary](#adopte-un-candidat---technical-plan-summary)
     - [Project Overview](#project-overview)
@@ -431,7 +430,7 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 - Collect user feedback and iterate on features.
 - Implement additional features based on user needs and market trends.
 
-#### . :Project Timeline
+#### full-project-timeline
 
 **Week 1**: Requirements gathering, planning, and design.
 
@@ -747,7 +746,7 @@ By following these steps and using these libraries, you can create a robust and 
 
 # UML Diagram for Recruitment App
 
-## Detailed Class Diagram
+## diagram-detailed
 
 ```plaintext
 +----------------+              +-----------------+               +-------------------+
