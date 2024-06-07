@@ -156,12 +156,12 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 - **Flutter**
 - **Git**
 
-# libraries-for-flutter-development-detailed
+# libraries-for-flutter-development
 1. **Flutter SDK**: Core framework.
 2. **Provider/Riverpod**: State management.
 3. **Dio/http**: Networking.
 
- # tech-plan-highlights-detailed
+ # tech-plan-highlights
 - **Cross-platform**: One codebase for iOS and Android.
 - **Hot reload**: Fast development and testing.
 - **Pre-designed widgets**: Extensive and customizable.
@@ -172,7 +172,7 @@ This technical plan ensures a well-structured approach for developing and deploy
 
 <img src="image-6.png" alt="alt text" width="200">
 
-### diagramm
+# diagram
 
 This is a flowchart that outlines the processes and interactions within a web application, particularly focusing on user authentication, candidate information management, and settings. Here's a step-by-step breakdown:
 
@@ -188,6 +188,17 @@ This is a flowchart that outlines the processes and interactions within a web ap
 
 ![alt text](image.png)
 
+# project-timeline
+
+**Week 1**: Requirements gathering, planning, and design.
+
+**Week 2-3**: Project setup, UI development, and state management.
+
+**Week 4**: Integration and testing.
+
+**Week 5**: Deployment preparation and app store submissions.
+
+**Week 6**: Post-launch support and feature enhancements.
 
 
 ### Start
@@ -432,18 +443,6 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 - Monitor application performance and error logs.
 - Collect user feedback and iterate on features.
 - Implement additional features based on user needs and market trends.
-
-#### full-project-timeline
-
-**Week 1**: Requirements gathering, planning, and design.
-
-**Week 2-3**: Project setup, UI development, and state management.
-
-**Week 4**: Integration and testing.
-
-**Week 5**: Deployment preparation and app store submissions.
-
-**Week 6**: Post-launch support and feature enhancements.
 
 **This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.**
 
