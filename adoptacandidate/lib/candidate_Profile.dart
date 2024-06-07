@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CandidateProfile extends StatelessWidget {
   const CandidateProfile({super.key});
@@ -9,23 +8,23 @@ class CandidateProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.grey,
+        leading: const BackButton(color: Colors.white),
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(
-              onPressed: () {
-                Get.back();
-              },
-              icon: const Icon(Icons.arrow_back, color: Colors.white),
-            ),
             Image.asset(
               'images/logo.png',
-              height: 50,
+              height: 60,
+              alignment: Alignment.centerLeft,
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.settings, color: Colors.white),
+              icon: const Icon(
+                Icons.settings,
+                color: Colors.white,
+                size: 40,
+              ),
             ),
           ],
         ),
@@ -37,52 +36,64 @@ class CandidateProfile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 200,
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      Icon(
-                        Icons.person_pin,
-                        size: 150,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.person_pin,
+                      size: 140,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Bonjour GADIN',
+                      style: TextStyle(
                         color: Colors.white,
+                        fontSize: 20,
                       ),
-                      Text(
-                        'Bonjour GADIN',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
+                    ),
+                    Text(
+                      'Ingénieur Informatique',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
                       ),
-                      Text(
-                        'Ingénieur Informatique',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
+
+                Spacer(
+                    flex:
+                        4), // Adjust the flex value to control the space above the containers
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ProfileBox(
+                      text: 'Ma recherche',
+                      icon: Icons.saved_search_rounded,
+                    ),
+                    ProfileBox(
+                      text: 'Ma situation',
+                      icon: Icons.location_on,
+                    ),
+                  ],
                 ),
                 Spacer(
                     flex:
-                        2), // Adjust the flex value to control the space above the containers
+                        1), // Adjust the flex value to control the space below the containers
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ProfileBox(text: 'Ma recherche', icon: Icons.saved_search_rounded,),
-                    ProfileBox(text: 'Ma situation', icon: Icons.location_on,),
+                    ProfileBox(
+                      text: 'Mes competences',
+                      icon: Icons.fact_check,
+                    ),
+                    ProfileBox(
+                      text: 'Mes infos persos',
+                      icon: Icons.info,
+                    ),
                   ],
                 ),
-                Spacer(flex:2), // Adjust the flex value to control the space below the containers
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ProfileBox(text: 'Mes competences', icon: Icons.fact_check,),
-                    ProfileBox(text: 'Ma situation', icon: Icons.info,),
-                  ],
-                ),
-                Spacer(flex:5),
+                Spacer(flex: 5),
               ],
             ),
           ),
@@ -104,7 +115,7 @@ class ProfileBox extends StatelessWidget {
       height: 100,
       width: 150,
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey,
         borderRadius: BorderRadius.all(Radius.circular(20)),
       ),
       child: Column(
