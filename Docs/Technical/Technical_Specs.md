@@ -61,7 +61,6 @@
 10. [Tools Used (Detailed)](#tools-used-detailed)
 11. [Libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
 12. [Tech Plan Highlights (Detailed)](#tech-plan-highlights-detailed)
-13. [Diagram (Detailed)](#diagram-detailed)
 14. [Full Project Timeline](#full-project-timeline)
 
 
@@ -141,7 +140,7 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 6. **Deployment**
 7. **Post-Launch Support**
 
-# team-structure-detailed
+# team-structure
 
 | Photo                                                                 | Name                 | Role               | LinkedIn                                                |
 | --------------------------------------------------------------------- | -------------------- | ------------------ | ------------------------------------------------------- |
