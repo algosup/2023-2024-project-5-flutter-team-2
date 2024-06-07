@@ -30,18 +30,23 @@
     - [Tech Plan Highlights](#tech-plan-highlights)
     - [Diagram](#diagram)
     - [Project Timeline](#project-timeline)
+
     - [Glossary](#glossary)
-2. [Project Scope and Objectives](#project-scope-and-objectives)
+    
+    . [Detailed Tools and Technologies](#detailed-tools-and-technologies)
+    - [Figma](#figma-1)
+    - [Flutter](#flutter-1)
+3. [Project Scope and Objectives](#project-scope-and-objectives)
     - [Objectives](#objectives-1)
     - [Scope](#scope)
-3. [Technology Stack](#technology-stack)
+4. [Technology Stack](#technology-stack)
     - [Frontend](#frontend)
     - [Backend](#backend)
     - [Services and Tools](#services-and-tools)
-4. [Architecture Design](#architecture-design)
+5. [Architecture Design](#architecture-design)
     - [App Structure](#app-structure)
     - [Data Flow](#data-flow)
-5. [Implementation Plan](#implementation-plan)
+6. [Implementation Plan](#implementation-plan)
     - [Phase 1: Requirements and Planning](#phase-1-requirements-and-planning)
     - [Phase 2: Project Setup](#phase-2-project-setup)
     - [Phase 3: UI Development](#phase-3-ui-development)
@@ -49,14 +54,11 @@
     - [Phase 5: Integration and Testing](#phase-5-integration-and-testing)
     - [Phase 6: Deployment](#phase-6-deployment)
     - [Phase 7: Post-Launch Support](#phase-7-post-launch-support)
-6. [User Authentication Workflow (Detailed)](#user-authentication-workflow-detailed)
+7. [User Authentication Workflow (Detailed)](#user-authentication-workflow-detailed)
     - [Processes](#processes-2)
     - [Decision Points](#decision-points-1)
-7. [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
+8. [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
     - [Processes](#processes-3)
-8. [Detailed Tools and Technologies](#detailed-tools-and-technologies)
-    - [Figma](#figma-1)
-    - [Flutter](#flutter-1)
 9. [Team Structure (Detailed)](#team-structure-detailed)
 10. [Tools Used (Detailed)](#tools-used-detailed)
 11. [Libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
@@ -199,6 +201,23 @@ This is a flowchart that outlines the processes and interactions within a web ap
 **Week 5**: Deployment preparation and app store submissions.
 
 **Week 6**: Post-launch support and feature enhancements.
+
+#### Glossary
+
+| Term                          | Definition                                                                                       |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| **API (Application Programming Interface)** | A set of rules and definitions that allow software applications to communicate with each other. |
+| **Bloc**                      | A state management library for Flutter that helps manage complex state and business logic.        |
+| **Dio**                       | A powerful HTTP client for Dart, used in Flutter applications for making network requests.        |
+| **Figma**                     | A cloud-based design tool used for creating user interfaces and collaborating in real time.       |
+| **Firebase Authentication**   | A service that provides backend services for easy and secure user authentication.                 |
+| **Flutter**                   | An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. |
+| **Hive**                      | A lightweight and fast key-value database written in pure Dart for Flutter applications.          |
+| **Provider**                  | A state management library for Flutter used to handle and manage application state efficiently.   |
+| **Riverpod**                  | An improved version of the Provider state management library offering a more robust and flexible way to manage state in Flutter applications. |
+| **SharedPreferences**         | A Flutter plugin that provides a way to store simple data in the form of key-value pairs locally. |
+| **UI (User Interface)**       | The means by which a user interacts with a computer, software, or application, often focusing on the look and feel. |
+| **UX (User Experience)**      | The overall experience a user has when interacting with a product or system, emphasizing ease of use and efficiency. |
 
 
 ### Start
@@ -604,24 +623,6 @@ class SwipeScreen extends StatelessWidget {
 ```
 
 By following these steps and using these libraries, you can create a robust and feature-rich mobile app in Flutter that connects companies with employees in a manner similar to Tinder.
-
-
-#### Glossary
-
-| Term                          | Definition                                                                                       |
-|-------------------------------|--------------------------------------------------------------------------------------------------|
-| **API (Application Programming Interface)** | A set of rules and definitions that allow software applications to communicate with each other. |
-| **Bloc**                      | A state management library for Flutter that helps manage complex state and business logic.        |
-| **Dio**                       | A powerful HTTP client for Dart, used in Flutter applications for making network requests.        |
-| **Figma**                     | A cloud-based design tool used for creating user interfaces and collaborating in real time.       |
-| **Firebase Authentication**   | A service that provides backend services for easy and secure user authentication.                 |
-| **Flutter**                   | An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. |
-| **Hive**                      | A lightweight and fast key-value database written in pure Dart for Flutter applications.          |
-| **Provider**                  | A state management library for Flutter used to handle and manage application state efficiently.   |
-| **Riverpod**                  | An improved version of the Provider state management library offering a more robust and flexible way to manage state in Flutter applications. |
-| **SharedPreferences**         | A Flutter plugin that provides a way to store simple data in the form of key-value pairs locally. |
-| **UI (User Interface)**       | The means by which a user interacts with a computer, software, or application, often focusing on the look and feel. |
-| **UX (User Experience)**      | The overall experience a user has when interacting with a product or system, emphasizing ease of use and efficiency. |
 
  
 # UML Diagram for ADOPTE CANDIDATE App
