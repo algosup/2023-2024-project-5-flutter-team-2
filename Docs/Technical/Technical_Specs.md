@@ -4,7 +4,7 @@
 | ----------------- | ----------- |
 | Document Owner    | Mouatassime Seiv|
 | Creation Date     | 2024/05/21  |
-| Last Update Date  | 2024/06/06  |
+| Last Update Date  | 2024/06/07  |
 
  <img src="image-14.png" alt="alt text" width="80">
 
@@ -30,10 +30,11 @@
     - [Tech Plan Highlights](#tech-plan-highlights)
     - [Diagram](#diagram)
     - [Project Timeline](#project-timeline)
-
     - [Glossary](#glossary)
 
-    . [Detailed Tools and Technologies](#detailed-tools-and-technologies)
+    - . [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
+
+     [Detailed Tools and Technologies](#detailed-tools-and-technologies)
     - [Figma](#figma-1)
     - [Flutter](#flutter-1)
 3. [Project Scope and Objectives](#project-scope-and-objectives)
@@ -43,39 +44,30 @@
     - [Frontend](#frontend)
     - [Backend](#backend)
     - [Services and Tools](#services-and-tools)
-5. [Architecture Design](#architecture-design)
+5.  [Architecture Design](#architecture-design)
     - [App Structure](#app-structure)
     - [Data Flow](#data-flow)
-6. [Implementation Plan](#implementation-plan)
-    - [Phase 1: Requirements and Planning](#phase-1-requirements-and-planning)
-    - [Phase 2: Project Setup](#phase-2-project-setup)
-    - [Phase 3: UI Development](#phase-3-ui-development)
-    - [Phase 4: State Management and Local Storage](#phase-4-state-management-and-local-storage)
-    - [Phase 5: Integration and Testing](#phase-5-integration-and-testing)
-    - [Phase 6: Deployment](#phase-6-deployment)
-    - [Phase 7: Post-Launch Support](#phase-7-post-launch-support)
-7. [User Authentication Workflow (Detailed)](#user-authentication-workflow-detailed)
-    - [Processes](#processes-2)
+6.  - [Implementation Plan ( from Phase 1 to 7)](#implementation-plan)
+7.
+    - [Processes register](#processes-register)
     - [Decision Points](#decision-points-1)
-8. [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
-    - [Processes](#processes-3)
+    - [Processes password](#processes-password)
 9. [Team Structure (Detailed)](#team-structure-detailed)
 10. [Tools Used (Detailed)](#tools-used-detailed)
-11. [Libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
-12. [Tech Plan Highlights (Detailed)](#tech-plan-highlights-detailed)
-14. [Full Project Timeline](#full-project-timeline)
+11. [libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
+12. [UML-Diagram-detailed](#Diagram-detailed)
 
 
 
-# Adopte Un Candidat - Technical Plan Summary
+## Adopte Un Candidat - Technical Plan Summary
 ![alt text](image-13.png)
 
-## Project Overview
+### Project Overview
 Adopte Un Candidat is a cross-platform mobile recruitment application developed using Flutter. The app focuses on connecting companies with candidates through a "Tinder-style" matching process, emphasizing soft skills. The plan details the processes, technologies, tools, and implementation phases.
 
-## User Authentication Workflow
+### User Authentication Workflow
 
-### Processes
+#### Processes
 1. **Login**s
    - API: `api/login [POST]`
    - Options: Forgotten password, registration
@@ -87,12 +79,12 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 3. **Password Recovery**
    - API: `api/motdepasse [POST]`
 
-### Decision Points
+#### Decision Points
 - Success checks for login, registration, and password recovery actions.
 
 ## Candidate Information Management Workflow
 
-### Processes
+#### Processes
 1. **Home/Menu**
    - Local storage for session management
 
@@ -111,29 +103,29 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 5. **Candidate Settings**
    - APIs for updating password, email, profile pictures: `api/private/password/:id [PUT]`, `api/private/email/:id [PUT]`, `api/private/settings [PUT]`
 
-## Tools and Technologies
+### Tools and Technologies
 
-### Figma
+#### Figma
 - **Advantages**: Cloud-based, real-time collaboration, cross-platform compatibility.
 - **Disadvantages**: Internet-dependent, potential performance issues with large projects.
 
-### Flutter
+#### Flutter
 - **Advantages**: Fast development, rich set of pre-designed widgets, strong performance.
 - **Disadvantages**: Large app sizes, limited third-party libraries, native feature support.
 
 ## Project Implementation Plan
 
-### Objectives
+#### Objectives
 - Develop a user-friendly, secure recruitment app.
 - Implement features for user authentication, profile management, soft skills matching, messaging, and data anonymization.
 
-### Architecture
+#### Architecture
 - **Models**: Data structures for users, profiles, messages, and skills.
 - **Services**: Simulated services for authentication, profile management, matching, and messaging.
 - **State Management**: Provider, Riverpod, or Bloc.
 - **UI Components**: Modular and reusable components.
 
-### Phases
+#### Phases
 1. **Requirements and Planning**
 2. **Project Setup**
 3. **UI Development**
@@ -142,7 +134,7 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 6. **Deployment**
 7. **Post-Launch Support**
 
-# team-structure
+## Team-structure
 
 | Photo                                                                 | Name                 | Role               | LinkedIn                                                |
 | --------------------------------------------------------------------- | -------------------- | ------------------ | ------------------------------------------------------- |
@@ -158,12 +150,12 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 - **Flutter**
 - **Git**
 
-# libraries-for-flutter-development
+## Libraries-for-flutter-development
 1. **Flutter SDK**: Core framework.
 2. **Provider/Riverpod**: State management.
 3. **Dio/http**: Networking.
 
- # tech-plan-highlights
+ ## Tech-plan-highlights
 - **Cross-platform**: One codebase for iOS and Android.
 - **Hot reload**: Fast development and testing.
 - **Pre-designed widgets**: Extensive and customizable.
@@ -232,13 +224,13 @@ This is a flowchart that outlines the processes and interactions within a web ap
    - If successful, the user proceeds to the next step (not shown in this flowchart, likely the home page or dashboard).
    - If unsuccessful, the user remains at the login screen and may retry logging in or use other options like password recovery.
 
-### processes-2
+### processes-register
 4. **REGISTER**: New users can create an account.
    - The system validates the uniqueness of the username via the `api/username/:username [GET]` API call.
    - If the username is unique, the system creates the account using the `api/register [POST]` API call.
    - Upon successful registration, the user receives a success message at the login page and can proceed to log in.
 
-# processes-3
+# processes-password
 
 5. **FORGOTTEN PASSWORD**: If the user forgets their password, they can initiate a password recovery process.
    - The user submits a request via the `api/motdepasse [POST]` API call.
@@ -313,9 +305,9 @@ This flowchart illustrates the user journey within an application focusing on ca
 This flowchart provides a comprehensive view of the interactions within the application, focusing on candidate management and user settings, detailing the API calls involved and how user data is handled and stored.
 
 
-# detailed-tools-and-technologies:
+# Detailed-tools-and-technologies
 
-# figma-1
+## Figma-1
 ### 
                              FIGMA :
 
@@ -348,7 +340,7 @@ Figma is a graphics editing and prototyping program . Figma is mainly used for d
 | **Frequent updates and new features**                         | **Complexity in handling design systems**              |
 | Regularly updated with new features and improvements          | Managing and updating large design systems can be challenging |
 
-# flutter-1
+## Flutter-1
 ### 
 
                             Flutter: 
@@ -385,13 +377,13 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 ### Tech Plan for Adopte Un Candidat Using Flutter (Frontend Only)
 
 # Project Scope and Objectives
-# objectives-1:
+## Objectives-1:
 - Develop a cross-platform mobile recruitment application using Flutter.
 - Implement a "Tinder-style" matching process focusing on soft skills.
 - Ensure the anonymization of candidates and companies.
 - Provide features for messaging, profile management, and secure data handling.
 
-# scope:
+## Scope:
 - User Authentication (Registration, Login, Password Recovery)
 - Candidate and Company Profile Management
 - Soft Skills Selection and Matching Algorithm
@@ -399,7 +391,7 @@ Flutter uses the programming language Dart and compiles into machine code. Host 
 - Anonymization and Data Security
 - Multi-platform Accessibility (iOS and Android)
 
-# technology-stack
+# Technology-stack
 # Frontend:
 - **Mobile App**: Flutter
 
@@ -616,10 +608,10 @@ Ensure you have navigation set up to transition between different screens (home,
 This is a simplified version of creating a Tinder-style app in Flutter. Depending on your specific requirements, you may need to add more features and fine-tune the UI and UX.
 
 
-# Backend:
+## Backend:
 - **Not Included**: Mock data and local storage will simulate backend functionality.
 
-# services-and-tools:
+## Services-and-tools:
 - **Local Storage**: Hive or SharedPreferences for persistent local storage.
 - **State Management**: Provider, Riverpod, or Bloc.
 - **Network Requests**: Dio or http package (for future backend integration).
@@ -627,59 +619,64 @@ This is a simplified version of creating a Tinder-style app in Flutter. Dependin
 - **Push Notifications**: Firebase Cloud Messaging (FCM) for notifications.
 - **UI Design**: Figma and Flutter for UI/UX design and prototyping.
 
-3. # architecture-design
-# App Structure :
+3. ## Architecture-design
+## App Structure :
 - **Models**: Data structures for users, profiles, messages, and skills.
 - **Services**: Simulated services for authentication, profile management, matching, and messaging.
 - **State Management**: Provider, Riverpod, or Bloc to manage application state.
 - **UI Components**: Modular and reusable components for different parts of the app.
 
-# Data Flow:
+## Data Flow:
 1. **Local Storage**: Store user data, profiles, and messages locally.
 2. **State Management**: Manage the application state using a chosen state management solution.
 3. **Mock Services**: Simulate backend responses and interactions.
 4. **UI Components**: Render data and handle user interactions.
 
-# Implementation-plan
-# Phase 1: Requirements and Planning
+
+
+# Implementation-Plan
+
+### Phase 1: Requirements and Planning
 - Define detailed requirements and use cases.
 - Create technical specifications and user stories.
 - Design UI/UX mockups using Figma.
 
-# Phase 2: Project Setup
+### Phase 2: Project Setup
 - Set up the Flutter project structure.
 - Install necessary packages (Provider, Riverpod, Bloc, Dio, etc.).
 
-# Phase 3: UI Development
+### Phase 3: UI Development
 - Implement authentication screens (login, registration, password recovery).
 - Develop user profile management and soft skills selection UI.
 - Create the matching interface inspired by Tinder's swipe functionality.
 - Implement messaging functionality.
 
-# Phase 4: State Management and Local Storage
+### Phase 4: State Management and Local Storage
 - Set up state management using Provider, Riverpod, or Bloc.
 - Implement local storage using Hive or SharedPreferences.
 - Simulate backend services for authentication, profile management, matching, and messaging.
 
-# Phase 5: Integration and Testing
+### Phase 5: Integration and Testing
 - Integrate UI components with state management and local storage.
 - Perform unit and integration testing for each module.
 - Conduct user acceptance testing (UAT) to ensure all functionalities meet requirements.
 
-# Phase 6: Deployment
+### Phase 6: Deployment
 - Prepare the app for deployment on Google Play Store and Apple App Store.
 - Set up Firebase Cloud Messaging for push notifications.
 - Configure app permissions and settings for both iOS and Android.
 
-# Phase 7: Post-Launch Support
+### Phase 7: Post-Launch Support
 - Monitor application performance and error logs.
 - Collect user feedback and iterate on features.
 - Implement additional features based on user needs and market trends.
 
+
+
 **This tech plan outlines the development, testing, and deployment strategy for the Adopte Un Candidat project using Flutter. The focus is on creating a user-friendly and secure recruitment application, with UI/UX designs and prototypes created using Figma.**
 
 
-# tools-used-detailed
+## Tools-used-detailed
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
 
@@ -702,6 +699,9 @@ This is a simplified version of creating a Tinder-style app in Flutter. Dependin
   </div>
 </div>
 
+
+
+ ## Libraries-for-flutter-development-detailed
 
 ### To develop a mobile app in Flutter that connects companies with employees in a manner similar to Tinder, you will need a combination of libraries to handle various functionalities like UI, state management, backend services, real-time communication, and more. Here’s a comprehensive list of the main libraries you should use:
 
@@ -840,9 +840,9 @@ By following these steps and using these libraries, you can create a robust and 
  
 # UML Diagram for ADOPTE CANDIDATE App
 
-## Class Diagram Components
+### Class Diagram Components
 
-### User
+#### User
 
 | Attribute      | Type   | Description                     |
 |----------------|--------|---------------------------------|
@@ -958,11 +958,9 @@ By following these steps and using these libraries, you can create a robust and 
 ---
 
 
-## 2 ##
+## UML Diagram for Recruitment App
 
-# UML Diagram for Recruitment App
-
-## diagram-detailed
+### Diagram-detailed
 
 ```plaintext
 +----------------+              +-----------------+               +-------------------+
