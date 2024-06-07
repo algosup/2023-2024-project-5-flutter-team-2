@@ -31,7 +31,7 @@
     - [Diagram](#diagram)
     - [Project Timeline](#project-timeline)
     - [Glossary](#glossary)
-   
+    - [Start and login process](#start)
     - [Processes register](#processes-register)
     - [Decision Points](#decision-points-1)
     - [Processes password](#processes-password)
@@ -183,7 +183,7 @@ This is a flowchart that outlines the processes and interactions within a web ap
 
 ![alt text](image.png)
 
-# project-timeline
+# Project-timeline
 
 **Week 1**: Requirements gathering, planning, and design.
 
@@ -231,7 +231,7 @@ This is a flowchart that outlines the processes and interactions within a web ap
    - If the username is unique, the system creates the account using the `api/register [POST]` API call.
    - Upon successful registration, the user receives a success message at the login page and can proceed to log in.
 
-# processes-password
+## processes-password
 
 5. **FORGOTTEN PASSWORD**: If the user forgets their password, they can initiate a password recovery process.
    - The user submits a request via the `api/motdepasse [POST]` API call.
@@ -251,7 +251,7 @@ This is a flowchart that outlines the processes and interactions within a web ap
 Overall, this flowchart provides a clear map of the user authentication workflow, including the necessary steps for logging in, registering, and recovering a forgotten password, along with the relevant API interactions.
 
 
-# Candidate-information-management-workflow-detailed
+## Candidate-information-management-workflow-detailed
 
 ## Second part 
 
