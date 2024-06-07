@@ -1,7 +1,6 @@
 # Test Case Archive for "ADOPT 1 CANDIDATE" 
 
-![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Python Logo](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) ![Selenium Logo](https://img.shields.io/badge/-Selenium-43B02A?logo=selenium&logoColor=white) ![TestRail Logo](https://img.shields.io/badge/-TestRail-1399D6?logo=testrail&logoColor=white)
-
+![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) 
 ## Syntax for adding a test case (example)
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
