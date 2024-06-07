@@ -31,6 +31,10 @@
     - [Diagram](#diagram)
     - [Project Timeline](#project-timeline)
     - [Glossary](#glossary)
+   
+    - [Processes register](#processes-register)
+    - [Decision Points](#decision-points-1)
+    - [Processes password](#processes-password)
 
     - . [Candidate Information Management Workflow (Detailed)](#candidate-information-management-workflow-detailed)
 
@@ -48,10 +52,6 @@
     - [App Structure](#app-structure)
     - [Data Flow](#data-flow)
 6.  - [Implementation Plan ( from Phase 1 to 7)](#implementation-plan)
-7.
-    - [Processes register](#processes-register)
-    - [Decision Points](#decision-points-1)
-    - [Processes password](#processes-password)
 9. [Team Structure (Detailed)](#team-structure-detailed)
 10. [Tools Used (Detailed)](#tools-used-detailed)
 11. [libraries for Flutter Development (Detailed)](#libraries-for-flutter-development-detailed)
