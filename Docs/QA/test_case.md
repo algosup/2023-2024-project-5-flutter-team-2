@@ -22,37 +22,37 @@
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Candidate Registration |Verifies the successful registration of a new candidate |🟠High |2024/06/10 |Test case created |✅Pass |[GitHub Issue #1](https://github.com/adopt1candidate/test-cases/issues/1)|
+|Candidate Registration |Verifies the successful registration of a new candidate |🟠High |2024/06/10 |Test case created |✅Pass |[GitHub Issue #1](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/2)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Candidate Profile Creation |Verifies the successful creation of a candidate profile |🟠High |2024/06/11 |Test case created |✅Pass |[GitHub Issue #2](https://github.com/adopt1candidate/test-cases/issues/2)|
+|Candidate Profile Creation |Verifies the successful creation of a candidate profile |🟠High |2024/06/11 |Test case created |✅Pass |[GitHub Issue #2](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/3)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Job Alert Subscription |Verifies the successful subscription to job alerts |🟠High |2024/06/12 |Test case created |✅Pass |[GitHub Issue #3](https://github.com/adopt1candidate/test-cases/issues/3)|
+|Job Alert Subscription |Verifies the successful subscription to job alerts |🟠High |2024/06/12 |Test case created |✅Pass |[GitHub Issue #3](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/4)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Application to Job Listing |Verifies the successful application to a job listing |🟠High |2024/06/13 |Test case created |✅Pass |[GitHub Issue #4](https://github.com/adopt1candidate/test-cases/issues/4)|
+|Application to Job Listing |Verifies the successful application to a job listing |🟠High |2024/06/13 |Test case created |✅Pass |[GitHub Issue #4](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/5)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Messaging Feature |Verifies the successful messaging feature between candidates and employers |🟠High |2024/06/14 |Test case created |✅Pass |[GitHub Issue #5](https://github.com/adopt1candidate/test-cases/issues/5)|
+|Messaging Feature |Verifies the successful messaging feature between candidates and employers |🟠High |2024/06/14 |Test case created |✅Pass |[GitHub Issue #5](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/6)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Profile Update |Verifies the successful update of candidate profile information |🟠High |2024/06/15 |Test case created |✅Pass |[GitHub Issue #6](https://github.com/adopt1candidate/test-cases/issues/6)|
+|Profile Update |Verifies the successful update of candidate profile information |🟠High |2024/06/15 |Test case created |✅Pass |[GitHub Issue #6](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/7)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Search Candidates |Verifies the successful search functionality for candidates by employers |🟠High |2024/06/16 |Test case created |⏳Not Tested |[GitHub Issue #7](https://github.com/adopt1candidate/test-cases/issues/7)|
+|Search Candidates |Verifies the successful search functionality for candidates by employers |🟠High |2024/06/16 |Test case created |⏳Not Tested |[GitHub Issue #7](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/8)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Notification Management |Verifies the successful management of notifications within the application |🟠High |2024/06/17 |Test case created |⏳Not Tested |[GitHub Issue #8](https://github.com/adopt1candidate/test-cases/issues/8)|
+|Notification Management |Verifies the successful management of notifications within the application |🟠High |2024/06/17 |Test case created |⏳Not Tested |[GitHub Issue #8](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/9)|
 
 | Test Case | Description | Priority | Date | State & Change | Status | GitHub Issue |
 | --------- | ----------- | -------- | ---- | -------------- | ------ | ------------ |
-|Settings Configuration |Verifies the successful configuration of application settings and preferences |🟠High |2024/06/18 |Test case created |⏳Not Tested |[GitHub Issue #9](https://github.com/adopt1candidate/test-cases/issues/9)|
+|Settings Configuration |Verifies the successful configuration of application settings and preferences |🟠High |2024/06/18 |Test case created |⏳Not Tested |[GitHub Issue #9](https://github.com/algosup/2023-2024-project-5-flutter-team-2/issues/10)|
 
