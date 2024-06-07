@@ -138,11 +138,12 @@ Adopte Un Candidat is a cross-platform mobile recruitment application developed 
 
 | Photo                                                                 | Name                 | Role               | LinkedIn                                                |
 | --------------------------------------------------------------------- | -------------------- | ------------------ | ------------------------------------------------------- |
-| ![Paul NOWAK](https://avatars.githubusercontent.com/u/91249965?s=400) | Paul NOWAK           | Project Manager    | [LinkedIn](https://www.linkedin.com/in/paul-nowak-0757a61a7/) |
-| ![Vivien Bistrel TSANGUE CHOUNGOU](https://avatars.githubusercontent.com/u/122369054?v=4) | Vivien Bistrel TSANGUE CHOUNGOU | Program Manager    | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/) |
-| ![Mouatassime SEIV](https://avatars.githubusercontent.com/u/160007182?v=4) | Mouatassime SEIV     | Technical Leader   | [LinkedIn](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) |
-| ![Abderrazaq MAKRAN](https://avatars.githubusercontent.com/u/145991267?v=4) | Abderrazaq MAKRAN    | Technical Writer   | [LinkedIn](https://www.linkedin.com/in/abderrazaq-makran/) |
-| ![Mathis LEBEL](https://avatars.githubusercontent.com/u/145991354?v=4) | Mathis LEBEL         | Quality Assurance  | [LinkedIn](https://www.linkedin.com/in/mathis-lebel-429114293/) |
+| ![Paul NOWAK](https://avatars.githubusercontent.com/u/91249965?s=200) | Paul NOWAK           | Project Manager    | [LinkedIn](https://www.linkedin.com/in/paul-nowak-0757a61a7/) |
+| ![Vivien Bistrel TSANGUE CHOUNGOU](https://avatars.githubusercontent.com/u/122369054?s=200) | Vivien Bistrel TSANGUE CHOUNGOU | Program Manager    | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/) |
+| ![Mouatassime SEIV](https://avatars.githubusercontent.com/u/160007182?s=200) | Mouatassime SEIV     | Technical Leader   | [LinkedIn](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) |
+| ![Abderrazaq MAKRAN](https://avatars.githubusercontent.com/u/145991267?s=200) | Abderrazaq MAKRAN    | Technical Writer   | [LinkedIn](https://www.linkedin.com/in/abderrazaq-makran/) |
+| ![Mathis LEBEL](https://avatars.githubusercontent.com/u/145991354?s=200) | Mathis LEBEL         | Quality Assurance  | [LinkedIn](https://www.linkedin.com/in/mathis-lebel-429114293/) |
+
 
 ## Tools Used
 - **Figma**
