@@ -2,7 +2,7 @@ import 'LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
-import 'widgets/language.dart';
+
 
 class WelcomePage extends StatelessWidget {
 
