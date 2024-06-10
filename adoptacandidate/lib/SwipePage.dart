@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -49,7 +50,12 @@ class _SwipePageState extends State<SwipePage> {
               child: IconButton(
                 icon: Icon(Icons.person, color: Colors.white),
                 onPressed: () {
-
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Candidateprofile(),
+                      ),
+                  );
                 },
               ),
             ),

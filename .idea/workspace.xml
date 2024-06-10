@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/WelcomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/WelcomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +19,13 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

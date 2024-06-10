@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ class _SettingsState extends State<Settings> {
         ),
         backgroundColor: Color(0xFF0D1B2A),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () {
             Get.back();
           },
@@ -240,6 +241,8 @@ class _SettingsState extends State<Settings> {
       ),
     );
   }
+
+
 
   GestureDetector buildSettings (BuildContext context, String title){
     return GestureDetector(
