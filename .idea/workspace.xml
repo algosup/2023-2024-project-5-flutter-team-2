@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

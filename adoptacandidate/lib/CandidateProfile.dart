@@ -79,7 +79,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                          icon: Icon(
                            Icons.search_rounded,
                            size: 60,
-                           color: Colors.black54,
+                           color: Colors.white,
                          ), onPressedCallback: () {
                            Get.to(Research());
                      },
@@ -90,7 +90,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                        icon: Icon(
                          Icons.access_time_rounded,
                          size: 60,
-                         color: Colors.black54,
+                         color: Colors.white,
                        ), onPressedCallback: () {
                          Get.to(MySituation());
                      },
@@ -109,7 +109,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                      icon: Icon(
                        Icons.dataset,
                        size: 60,
-                       color: Colors.black54,
+                       color: Colors.white,
                      ), onPressedCallback: () {
                        Get.to(SoftSkills());
                    },
@@ -121,7 +121,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                      icon: Icon(
                        Icons.perm_device_info_outlined,
                        size: 60,
-                       color: Colors.black54,
+                       color: Colors.white,
                      ),
                      onPressedCallback: () {
                        Get.to(CandidatesInfo());
@@ -163,7 +163,7 @@ class Profile extends StatelessWidget {
                   Text(
                     'Bonjour [Nom de l\'utilisateur]',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -172,7 +172,7 @@ class Profile extends StatelessWidget {
                     child: Text(
                       'Domain de l\'utilisateur',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 18
                       ),
                     ),
@@ -250,7 +250,7 @@ class _profileCandidateState extends State<profileCandidate> {
             child: TextButton(
               style: TextButton.styleFrom(
                 backgroundColor: Colors.grey[700],
-                foregroundColor: Colors.black,
+                foregroundColor: Colors.white,
               ),
               onPressed: widget.onPressedCallback,
               child: Column(
