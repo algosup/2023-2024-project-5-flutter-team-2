@@ -1,5 +1,6 @@
 import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:adoptacandidate/message.dart';
+import 'package:adoptacandidate/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -7,6 +8,8 @@ import 'package:swipe_cards/swipe_cards.dart';
 
 
 class SwipePage extends StatefulWidget {
+  const SwipePage({super.key});
+
   @override
   State<SwipePage> createState() => _SwipePageState();
 }
@@ -21,11 +24,16 @@ class _SwipePageState extends State<SwipePage> {
     setState(() {
       _selectedIndex = index;
       if(_selectedIndex == 0){
-        var route = MaterialPageRoute(builder: (BuildContext  context) => SwipePage());
+        var route = MaterialPageRoute(builder: (BuildContext  context) => const SwipePage());
         //Navigator.of(context).push(route);
       }
       else if(_selectedIndex == 1){
-        var route = MaterialPageRoute(builder: (BuildContext context) => MessageSystem());
+        var route = MaterialPageRoute(builder: (BuildContext context) => const MessageSystem());
+        Navigator.of(context).push(route);
+      }
+
+      else if(_selectedIndex == 2){
+        var route = MaterialPageRoute(builder: (BuildContext context) => const NotificationsPage());
         Navigator.of(context).push(route);
       }
     });
@@ -58,21 +66,21 @@ class _SwipePageState extends State<SwipePage> {
 
           children: [
             Container(
-              margin: EdgeInsets.only(left: 5),
+              margin: const EdgeInsets.only(left: 5),
               child: IconButton(
-                icon: Icon(Icons.person, color: Colors.white),
+                icon: const Icon(Icons.person, color: Colors.white),
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Candidateprofile(),
+                          builder: (context) => const Candidateprofile(),
                       ),
                   );
                 },
               ),
             ),
             IconButton(
-              icon: Icon(Icons.question_answer, color: Colors.white),
+              icon: const Icon(Icons.question_answer, color: Colors.white),
               onPressed: () {
                 // Add message button action
               },
@@ -80,14 +88,14 @@ class _SwipePageState extends State<SwipePage> {
           ],
         ),
       ),
-      backgroundColor: Color(0xFF0D1B2A),
+      backgroundColor: const Color(0xFF0D1B2A),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
               child: Center(
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.6,
                   child: SwipeCards(
                     matchEngine: _matchEngine,
@@ -111,9 +119,9 @@ class _SwipePageState extends State<SwipePage> {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              color: Color(0xFF0D1B2A),
-              child: Row(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              color: const Color(0xFF0D1B2A),
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Icon(Icons.refresh, color: Colors.grey),
@@ -150,7 +158,7 @@ class _SwipePageState extends State<SwipePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFFFFA500),
+        selectedItemColor: const Color(0xFFFFA500),
         onTap: _onItemTapped,
       ),
     );
@@ -160,49 +168,49 @@ class _SwipePageState extends State<SwipePage> {
 class JobCard extends StatelessWidget {
   final int index;
 
-  JobCard({required this.index});
+  const JobCard({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       elevation: 5,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'CDI/CDD'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Industrie'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Image.asset(
               'images/factory.png',
               height: 100,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'Employer polyvalent'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 10),
-            Row(
+            const SizedBox(height: 10),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.location_on, color: Colors.grey),
@@ -215,7 +223,7 @@ class JobCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
       ),
