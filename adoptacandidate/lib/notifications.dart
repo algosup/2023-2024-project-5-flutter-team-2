@@ -28,27 +28,31 @@ class _NotificationsPageState extends State<NotificationsPage> {
         // Optionally, you can add other widgets like actions, leading, etc.
       ),
       backgroundColor: const Color(0xFF0D1B2A),
-      body: const Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                '30 Likes',
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                'Envoyer',
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                'Favoris',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          )
-        ],
+      body: Container(
+        margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+        child: const Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  '30 Likes',
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  'Envoyer',
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  'Favoris',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
+      
     );
   }
 }
