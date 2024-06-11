@@ -1,8 +1,9 @@
-import 'softskills.dart';
+import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class CandidatePage extends StatefulWidget {
   @override
@@ -10,29 +11,85 @@ class CandidatePage extends StatefulWidget {
 }
 
 class _CandidatePageState extends State<CandidatePage> {
-
   bool _obscureText1 = true;
   bool _obscureText2 = true;
 
+  final _firstNameController = TextEditingController();
+  final _lastNameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _townController = TextEditingController();
+  final _addressController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+
   final _firstNameFocusNode = FocusNode();
   final _lastNameFocusNode = FocusNode();
-  final _lastEmailFocusNode = FocusNode();
+  final _emailFocusNode = FocusNode();
   final _phoneFocusNode = FocusNode();
-  final _town = FocusNode();
+  final _townFocusNode = FocusNode();
   final _addressFocusNode = FocusNode();
   final _passwordFocusNode = FocusNode();
   final _confirmPasswordFocusNode = FocusNode();
 
   @override
   void dispose() {
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    _townController.dispose();
+    _addressController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+
     _firstNameFocusNode.dispose();
     _lastNameFocusNode.dispose();
+    _emailFocusNode.dispose();
     _phoneFocusNode.dispose();
-    _town.dispose();
+    _townFocusNode.dispose();
     _addressFocusNode.dispose();
     _passwordFocusNode.dispose();
     _confirmPasswordFocusNode.dispose();
     super.dispose();
+  }
+
+  Future<void> _submitForm() async {
+    final firstName = _firstNameController.text;
+    final lastName = _lastNameController.text;
+    final email = _emailController.text;
+    final phone = _phoneController.text;
+    final town = _townController.text;
+    final address = _addressController.text;
+    final password = _passwordController.text;
+
+    // Remplacez l'URL par celle de votre serveur PocketBase
+    final url = Uri.parse('http://10.0.2.2:8090/api/collections/users/records');
+
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'firstname': firstName,
+        'lastname': lastName,
+        'email': email,
+        'phone': phone,
+        'city': town,
+        'postal_adress': address,
+        'password': password,
+      }),
+    );
+
+    if (response.statusCode == 201) {
+      // Si la requête a réussi, naviguez vers la page suivante
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SoftSkills()),
+      );
+    } else {
+      // Si la requête a échoué, affichez un message d'erreur
+      print('Failed to create account');
+    }
   }
 
   @override
@@ -54,7 +111,6 @@ class _CandidatePageState extends State<CandidatePage> {
           ),
         ],
       ),
-
       backgroundColor: Color(0xFF0D1B2A),
       body: SingleChildScrollView(
         child: Padding(
@@ -70,18 +126,12 @@ class _CandidatePageState extends State<CandidatePage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               SizedBox(height: 20),
-
               Row(
                 children: [
                   Expanded(
                     child: TextField(
-                      onChanged: (String val){
-                        setState(() {
-                          val;
-                        });
-                      },
+                      controller: _firstNameController,
                       focusNode: _firstNameFocusNode,
                       textInputAction: TextInputAction.next,
                       onSubmitted: (_) {
@@ -102,20 +152,14 @@ class _CandidatePageState extends State<CandidatePage> {
                       ),
                     ),
                   ),
-
                   SizedBox(width: 10),
-
                   Expanded(
                     child: TextField(
-                      onChanged: (String val){
-                        setState(() {
-                         val;
-                        });
-                      },
+                      controller: _lastNameController,
                       focusNode: _lastNameFocusNode,
                       textInputAction: TextInputAction.next,
                       onSubmitted: (_) {
-                        FocusScope.of(context).requestFocus(_lastEmailFocusNode);
+                        FocusScope.of(context).requestFocus(_emailFocusNode);
                       },
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
@@ -134,48 +178,36 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ],
               ),
-
               SizedBox(height: 20),
-
-               TextField(
-                  onChanged: (String val){
-                    setState(() {
-                      val;
-                    });
-                  },
-                  focusNode: _lastEmailFocusNode,
-                  textInputAction: TextInputAction.next,
-                  onSubmitted: (_) {
-                    FocusScope.of(context).requestFocus(_phoneFocusNode);
-                  },
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    labelText: 'Votre Email'.tr,
-                    labelStyle: TextStyle(color: Colors.grey[400]),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
+              TextField(
+                controller: _emailController,
+                focusNode: _emailFocusNode,
+                textInputAction: TextInputAction.next,
+                onSubmitted: (_) {
+                  FocusScope.of(context).requestFocus(_phoneFocusNode);
+                },
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  labelText: 'Votre Email'.tr,
+                  labelStyle: TextStyle(color: Colors.grey[400]),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-
+              ),
               SizedBox(height: 20),
-
               TextField(
-                onChanged: (String val){
-                  setState(() {
-                     val;
-                  });
-                },
+                controller: _phoneController,
                 focusNode: _phoneFocusNode,
                 textInputAction: TextInputAction.next,
                 keyboardType: TextInputType.phone,
                 onSubmitted: (_) {
-                  FocusScope.of(context).requestFocus(_town);
+                  FocusScope.of(context).requestFocus(_townFocusNode);
                 },
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
@@ -191,16 +223,10 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
-
               TextField(
-                onChanged: (String val){
-                  setState(() {
-                     val;
-                  });
-                },
-                focusNode: _town,
+                controller: _townController,
+                focusNode: _townFocusNode,
                 textInputAction: TextInputAction.next,
                 onSubmitted: (_) {
                   FocusScope.of(context).requestFocus(_addressFocusNode);
@@ -219,16 +245,9 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
-
-
               SizedBox(height: 20),
-
               TextField(
-                onChanged: (String val){
-                  setState(() {
-                     val;
-                  });
-                },
+                controller: _addressController,
                 focusNode: _addressFocusNode,
                 textInputAction: TextInputAction.next,
                 onSubmitted: (_) {
@@ -236,7 +255,7 @@ class _CandidatePageState extends State<CandidatePage> {
                 },
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  labelText: 'Addresse Postale'.tr,
+                  labelText: 'Adresse Postale'.tr,
                   labelStyle: TextStyle(color: Colors.grey[400]),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
@@ -248,15 +267,9 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
-
               TextField(
-                onChanged: (String val){
-                  setState(() {
-                    val;
-                  });
-                },
+                controller: _passwordController,
                 focusNode: _passwordFocusNode,
                 textInputAction: TextInputAction.next,
                 onSubmitted: (_) {
@@ -288,10 +301,9 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
-
               TextField(
+                controller: _confirmPasswordController,
                 focusNode: _confirmPasswordFocusNode,
                 textInputAction: TextInputAction.done,
                 obscureText: _obscureText2,
@@ -320,28 +332,17 @@ class _CandidatePageState extends State<CandidatePage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
-
               Container(
                 margin: EdgeInsets.only(top: 60),
                 child: Center(
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder:
-                          (context) => SoftSkills()
-                        )
-                      );
-                    },
-
+                    onPressed: _submitForm,
                     child: Text(
                       'Créer Un Compte'.tr,
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
+                        color: Colors.white,
+                        fontSize: 17,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
