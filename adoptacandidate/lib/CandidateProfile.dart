@@ -6,6 +6,7 @@ import 'research.dart';
 import 'MySituation.dart';
 import 'softskills.dart';
 import 'CandidatesInfo.dart';
+import 'package:adoptacandidate/widgets/DelayAnimation.dart';
 
 
 class Candidateprofile extends StatefulWidget {
@@ -35,34 +36,41 @@ class _CandidateprofileState extends State<Candidateprofile> {
          title: Row(
            mainAxisAlignment: MainAxisAlignment.end,
            children: [
-             Container(
-               alignment: Alignment.topLeft,
-               margin: EdgeInsets.only(left: 5),
-               child: IconButton(
-                 icon: Icon(Icons.settings_outlined, color: Colors.white),
-                 onPressed: () {
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(
-                       builder: (context) => Settings(),
-                     ),
-                   );
-                 },
+             DelayedAnimation(
+               delay: 150,
+               child: Container(
+                 alignment: Alignment.topLeft,
+                 margin: EdgeInsets.only(left: 5),
+                 child: IconButton(
+                   icon: Icon(Icons.settings_outlined, color: Colors.white),
+                   onPressed: () {
+                     Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                         builder: (context) => Settings(),
+                       ),
+                     );
+                   },
+                 ),
                ),
              ),
            ],
          ),
 
-         leading: IconButton(
-           icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-           onPressed: () {
-             Get.back();
-           },
+         leading: DelayedAnimation(
+           delay: 150,
+           child: IconButton(
+             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+             onPressed: () {
+               Get.back();
+             },
+           ),
          ),
 
        ),
        backgroundColor: Color(0xFF0D1B2A),
-       body: Container(
+       body: DelayedAnimation(
+         delay: 15,
          child: Column(
            children: [
              Container(

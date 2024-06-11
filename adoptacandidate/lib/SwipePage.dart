@@ -1,4 +1,5 @@
 import 'package:adoptacandidate/CandidateProfile.dart';
+import 'package:adoptacandidate/message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -12,10 +13,21 @@ class SwipePage extends StatefulWidget {
 
 class _SwipePageState extends State<SwipePage> {
   int _selectedIndex = 0;
+  late final String swap;
+  late final String message;
+  late final String notif;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if(_selectedIndex == 0){
+        var route = MaterialPageRoute(builder: (BuildContext  context) => SwipePage());
+        //Navigator.of(context).push(route);
+      }
+      else if(_selectedIndex == 1){
+        var route = MaterialPageRoute(builder: (BuildContext context) => MessageSystem());
+        Navigator.of(context).push(route);
+      }
     });
   }
 
