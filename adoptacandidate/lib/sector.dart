@@ -5,6 +5,7 @@ import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'SettingsPage.dart';
 
 class Sector extends StatefulWidget {
   const Sector({super.key});
@@ -94,7 +95,7 @@ class _SectorState extends State<Sector> {
                   ),
                 ),
                 subtitle: Text(
-                  'Industries such as agriculture, fishing, forestry, and mining.'.tr,
+                  'Des industries telles que l\'agriculture, la pêche, la foresterie et l\'exploitation minière.'.tr,
                   style: TextStyle(
                       color: (click == false) ?  Colors.black : Colors.grey,
                       fontSize: 11
@@ -134,7 +135,7 @@ class _SectorState extends State<Sector> {
                   ),
                 ),
                 subtitle: Text(
-                  'Industries such as manufacturing, construction, and industrial production.'.tr,
+                  'Industries telles que la fabrication, la construction et la production industrielle.'.tr,
                   style: TextStyle(
                     color: (click2 == false) ?  Colors.black : Colors.grey,
                     fontSize: 11
@@ -173,7 +174,7 @@ class _SectorState extends State<Sector> {
                   ),
                 ),
                 subtitle: Text(
-                  'Industries such as retail, transportation, financial services, education, healthcare, and hospitality.'.tr,
+                  'Des secteurs tels que la vente au détail, les transports, les services financiers, l’éducation, la santé et l’hôtellerie.'.tr,
                   style: TextStyle(
                       color: (click3 == false) ?  Colors.black : Colors.grey,
                       fontSize: 11
@@ -212,7 +213,7 @@ class _SectorState extends State<Sector> {
                   ),
                 ),
                 subtitle: Text(
-                  'Industries such as development, information technology, consulting, and other intellectual services.'.tr,
+                  'Industries telles que le développement, les technologies de l’information, le conseil et d’autres services intellectuels.'.tr,
                   style: TextStyle(
                       color: (click4 == false) ?  Colors.black : Colors.grey,
                       fontSize: 11
@@ -243,6 +244,14 @@ class _SectorState extends State<Sector> {
                     selectedSectors[sectors[4]] = false;
                 });
               },
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: (click5 == true) ?  Color.fromRGBO(255, 255, 255, 0.2) : Color(0xFFFFD700),
+                padding: EdgeInsets.fromLTRB(18, 5, 0, 5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
               child: ListTile(
                 title: Text(
                   sectors[4],
@@ -251,19 +260,11 @@ class _SectorState extends State<Sector> {
                   ),
                 ),
                 subtitle: Text(
-                  'This sector focuses on top-level management and decision-making roles essential for the global economy.'.tr,
+                  'Ce secteur est sur les rôles de gestion et de prise de décision de haut niveau essentiels pour l’économie mondiale.'.tr,
                   style: TextStyle(
                       color: (click5 == false) ?  Colors.black : Colors.grey,
                       fontSize: 11
                   ),
-                ),
-              ),
-
-              style: ElevatedButton.styleFrom(
-                backgroundColor: (click5 == true) ?  Color.fromRGBO(255, 255, 255, 0.2) : Color(0xFFFFD700),
-                padding: EdgeInsets.fromLTRB(18, 5, 0, 5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),
@@ -273,7 +274,12 @@ class _SectorState extends State<Sector> {
           Container(
             child: ElevatedButton(
               onPressed: () {
-                Get.to(RecruiterPage());
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RecruiterPage(),
+                  ),
+                );
 
                 List<String> Selected = selectedSectors.entries
                     .where((entry) => entry.value)

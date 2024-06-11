@@ -2,7 +2,6 @@ import 'package:adoptacandidate/SwipePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Status.dart';
-import 'widgets/Color.dart';
 import 'widgets/DelayAnimation.dart';
 
 class LoginPage extends StatefulWidget {
@@ -93,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
 
-                    SizedBox(width: 130),
+                    SizedBox(width: 140),
                     TextButton(
                       onPressed: (){
                         Navigator.push(
