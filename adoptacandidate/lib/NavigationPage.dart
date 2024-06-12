@@ -1,5 +1,6 @@
 import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:adoptacandidate/message.dart';
+import 'package:adoptacandidate/notifications.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,7 +24,7 @@ class _MainNavigationState extends State<MainNavigation> {
   final List<Widget> _screens = [
     SwipePage(),
     MessageSystem(),
-    //Notification(),
+    NotificationsPage(),
   ];
 
   void _onPageChanged(int index) {
