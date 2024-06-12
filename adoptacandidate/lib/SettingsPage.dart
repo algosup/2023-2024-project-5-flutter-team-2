@@ -223,6 +223,7 @@ class _SettingsState extends State<Settings> {
                     Icons.delete_forever_outlined,
                     color: Colors.red,
                   ),
+
                   buildSettings(context, "Supprimer mon compte".tr),
                 ],
               ),

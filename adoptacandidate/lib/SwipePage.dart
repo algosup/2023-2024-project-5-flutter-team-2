@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 
-
+const String _url = "https://www.youtube.com/watch?v=zQuUIk8zIlE";
 class SwipePage extends StatefulWidget {
   const SwipePage({super.key});
 
@@ -36,12 +36,14 @@ class _SwipePageState extends State<SwipePage> {
         //elevation: 0,
         backgroundColor: Colors.transparent,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.start,
 
           children: [
             Container(
-              margin: const EdgeInsets.only(left: 5),
-              child: IconButton(
+              margin: const EdgeInsets.only(left: 0),
+              child:
+              IconButton(
+
                 icon: const Icon(Icons.person, color: Colors.white),
                 onPressed: () {
                   Navigator.push(
@@ -53,11 +55,26 @@ class _SwipePageState extends State<SwipePage> {
                 },
               ),
             ),
+            const SizedBox(width: 100),
+
             IconButton(
-              icon: const Icon(Icons.question_answer, color: Colors.white),
+              icon: const Icon(
+                  Icons.filter_list,
+                  color: Colors.white),
               onPressed: () {
-                // Add message button action
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Candidateprofile(),
+                  ),
+                );
               },
+            ),
+            IconButton(
+                icon: const Icon(
+                  Icons.help_center,
+                  color: Colors.white),
+                onPressed: _launchURL,
             ),
           ],
         ),
@@ -70,7 +87,7 @@ class _SwipePageState extends State<SwipePage> {
             Expanded(
               child: Center(
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.6,
+                  height: MediaQuery.of(context).size.height * 0.7,
                   child: SwipeCards(
                     matchEngine: _matchEngine,
                     itemBuilder: (BuildContext context, int index) {
@@ -93,7 +110,7 @@ class _SwipePageState extends State<SwipePage> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: const EdgeInsets.symmetric(vertical: 27),
               color: const Color(0xFF0D1B2A),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -108,6 +125,36 @@ class _SwipePageState extends State<SwipePage> {
           ],
         ),
       ),
+<<<<<<< Updated upstream
+=======
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              height: 20,
+                'images/convert.svg'
+            ),
+            label: 'Swap',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              height: 30,
+                'images/message.svg'),
+            label: 'Message',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              height: 30,
+                'images/Notification.svg'),
+            label: 'Notification',
+            backgroundColor: Colors.green,
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: const Color(0xFFFFA500),
+        onTap: _onItemTapped,
+      ),
+>>>>>>> Stashed changes
     );
   }
 }
@@ -120,9 +167,9 @@ class JobCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(23)),
       elevation: 5,
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 0),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -176,4 +223,8 @@ class JobCard extends StatelessWidget {
       ),
     );
   }
-} 
+}
+void _launchURL() async{
+  if (!await launch (_url)) throw 'could not launch $_url';
+
+}

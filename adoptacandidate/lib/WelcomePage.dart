@@ -143,10 +143,10 @@ class WelcomePage extends StatelessWidget {
                         );
                       },
                       style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all<Color>(
+                        backgroundColor: MaterialStateProperty.all<Color>(
                           const Color(0xFFFFA500),
                         ),
-                        padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
+                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                           const EdgeInsets.symmetric(
                             vertical: 10,
                             horizontal: 70,

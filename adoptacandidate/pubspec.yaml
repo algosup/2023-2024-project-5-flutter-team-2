@@ -41,9 +41,13 @@ dependencies:
   get: ^4.6.6
   swipe_cards: ^2.0.0+1
   http: ^1.2.1
-  win32: 5.5.0
+  win32: ^5.5.0
   flutter_svg: ^2.0.10+1
+<<<<<<< Updated upstream
   custom_clippers: ^2.0.0
+=======
+  url_launcher: ^6.3.0
+>>>>>>> Stashed changes
   ## flutter_icons: ^1.1.2
 
 
