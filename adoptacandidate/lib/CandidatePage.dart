@@ -126,7 +126,7 @@ class _CandidatePageState extends State<CandidatePage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(

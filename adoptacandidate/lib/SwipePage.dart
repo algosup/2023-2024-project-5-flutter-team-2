@@ -1,7 +1,5 @@
 import 'package:adoptacandidate/CandidateProfile.dart';
-import 'package:adoptacandidate/message.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 
@@ -12,24 +10,6 @@ class SwipePage extends StatefulWidget {
 }
 
 class _SwipePageState extends State<SwipePage> {
-  int _selectedIndex = 0;
-  late final String swap;
-  late final String message;
-  late final String notif;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      if(_selectedIndex == 0){
-        var route = MaterialPageRoute(builder: (BuildContext  context) => SwipePage());
-        //Navigator.of(context).push(route);
-      }
-      else if(_selectedIndex == 1){
-        var route = MaterialPageRoute(builder: (BuildContext context) => MessageSystem());
-        Navigator.of(context).push(route);
-      }
-    });
-  }
 
   final List<SwipeItem> _swipeItems = List.generate(
     6,
@@ -125,33 +105,6 @@ class _SwipePageState extends State<SwipePage> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 30,
-                'images/convert.svg'
-            ),
-            label: 'Swap',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 30,
-                'images/message.svg'),
-            label: 'Message',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 30,
-                'images/Notification.svg'),
-            label: 'Notification',
-            backgroundColor: Colors.green,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFFFFA500),
-        onTap: _onItemTapped,
       ),
     );
   }

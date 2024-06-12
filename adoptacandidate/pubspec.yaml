@@ -43,6 +43,7 @@ dependencies:
   http: ^1.2.1
   win32: ^5.5.1
   flutter_svg: ^2.0.10+1
+  custom_clippers: ^2.0.0
   ## flutter_icons: ^1.1.2
 
 
@@ -71,21 +72,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
-    - images/profile.jpg
-    - images/2.jpg
-    - images/3.jpg
-    - images/4.jpg
-    - images/5.jpg
-    - images/6.jpg
-    - images/7.jpg
-    - images/8.jpg
-    - images/9.jpg
-    - images/10.jpg
-    - images/11.jpg
-    - images/12.jpg
-    - images/13.jpg
-    - images/14.jpg
-    - images/15.jpg
+    - images/color.jpg
     
   #   - images/a_dot_ham.jpeg
 

@@ -1,10 +1,9 @@
+import 'package:adoptacandidate/ChatPage.dart';
+import 'package:adoptacandidate/NavigationPage.dart';
 import 'package:adoptacandidate/SwipePage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 
 class MessageSystem extends StatefulWidget {
   const MessageSystem({super.key});
@@ -31,21 +30,6 @@ class _MessageSystemState extends State<MessageSystem> {
     "images/14.jpg",
     "images/15.jpg",
   ];
-  int _selectedIndex = 1;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      if(_selectedIndex == 0){
-        var route = MaterialPageRoute(builder: (BuildContext  context) => SwipePage());
-        Navigator.of(context).push(route);
-      }
-      else if(_selectedIndex == 1){
-        var route = MaterialPageRoute(builder: (BuildContext context) => MessageSystem());
-        Navigator.of(context).push(route);
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,11 +53,9 @@ class _MessageSystemState extends State<MessageSystem> {
           ],
         ),
 
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-          onPressed: () {
-            Get.to(SwipePage());
-          },
+        leading: CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage("images/2.jpg"),
         ),
 
       ),
@@ -114,17 +96,20 @@ class _MessageSystemState extends State<MessageSystem> {
                 ],
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-               Text(
-                'Matchs',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                 Text(
+                  'Matchs',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
                 ),
+                ],
               ),
-              ],
             ),
 
             SingleChildScrollView(
@@ -134,44 +119,308 @@ class _MessageSystemState extends State<MessageSystem> {
                   15,
                     (index) => Container(
                       padding: EdgeInsets.all(10),
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage(
-                            profileImages[index],
-                        ),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 32,
+                            backgroundImage:  const AssetImage(
+                                "images/color.jpg",
+                            ),
+                            child: CircleAvatar(
+                              radius: 30.5,
+                              backgroundImage: AssetImage(
+                                profileImages[index],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 6),
+                          Text(
+                            'Nom de profile',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
+                  ),
                 ),
-              ),
             ),
+            const Divider(
+              height: 20,
+              thickness: 1,
+              color: Colors.grey,
+            ),
+
+             InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => chatPage()),
+                );
+              },
+              child: Column(
+                children: [
+                  ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 13 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                   SizedBox(height: 10),
+                   ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Peut on se voir ?",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                   SizedBox(height: 10),
+                   ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 2 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 40 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 1 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    subtitle: Text(
+                      "Actif il y a 10 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 20 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Votre profile m'interesse, salut....",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Salut 👋 ",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 1 an",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                  ),
+
+                  SizedBox(height: 10),
+                  const ListTile(
+                    title: Text(
+                      "Nom de profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "Actif il y a 2 minutes",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
+                    ),
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage("images/2.jpg"),
+                    ),
+                    ),
+                ],
+              ),
+             ),
+
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-                height: 30,
-                'images/convert.svg'
-            ),
-            label: 'Swap',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-                height: 30,
-                'images/message.svg'),
-            label: 'Message',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-                height: 30,
-                'images/Notification.svg'),
-            label: 'Notification',
-            backgroundColor: Colors.green,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFFFFA500),
-        onTap: _onItemTapped,
       ),
     );
   }

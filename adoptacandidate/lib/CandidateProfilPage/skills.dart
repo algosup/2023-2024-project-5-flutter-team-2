@@ -1,16 +1,16 @@
-import 'research.dart';
+import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SoftSkills extends StatefulWidget {
-  const SoftSkills({super.key});
+class Skills extends StatefulWidget {
+  const Skills({super.key});
 
   @override
-  _SoftSkillsState createState() => _SoftSkillsState();
+  _SkillsState createState() => _SkillsState();
 }
 
-class _SoftSkillsState extends State<SoftSkills> {
+class _SkillsState extends State<Skills> {
   final List<String> skills = [
     "Communication".tr,
     "Travail d'équipe".tr,
@@ -92,9 +92,9 @@ class _SoftSkillsState extends State<SoftSkills> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Research(),
-                        ),
-                      );
+                        builder: (context) => const Candidateprofile(),
+                      ),
+                    );
                     List<String> selected = selectedSkills.entries
                         .where((entry) => entry.value)
                         .map((entry) => entry.key)
@@ -114,16 +114,16 @@ class _SoftSkillsState extends State<SoftSkills> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                      child: Text(
-                        'Valider'.tr,
-                        style: const TextStyle(
-                            fontSize: 17,
-                            color: Colors.white
-                        ), // Couleur du texte en blanc
-                      ),
+                    child: Text(
+                      'Valider'.tr,
+                      style: const TextStyle(
+                          fontSize: 17,
+                          color: Colors.white
+                      ), // Couleur du texte en blanc
                     ),
                   ),
                 ),
+              ),
             ),
           ],
         ),

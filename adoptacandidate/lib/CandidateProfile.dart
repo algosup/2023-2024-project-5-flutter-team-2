@@ -1,12 +1,14 @@
+import 'package:adoptacandidate/NavigationPage.dart';
 import 'package:adoptacandidate/SettingsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter/cupertino.dart';
-import 'research.dart';
-import 'MySituation.dart';
-import 'softskills.dart';
-import 'CandidatesInfo.dart';
+import 'CandidateProfilPage/CandidatesInfo.dart';
+import 'CandidateProfilPage/research.dart';
+import 'CandidateProfilPage/situation.dart';
+import 'CandidateProfilPage/skills.dart';
 import 'package:adoptacandidate/widgets/DelayAnimation.dart';
+
+import 'SwipePage.dart';
 
 
 class Candidateprofile extends StatefulWidget {
@@ -62,7 +64,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
            child: IconButton(
              icon: Icon(Icons.arrow_back_ios, color: Colors.white),
              onPressed: () {
-               Get.back();
+               Get.to(MainNavigation());
              },
            ),
          ),
@@ -89,7 +91,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                            size: 60,
                            color: Colors.white,
                          ), onPressedCallback: () {
-                           Get.to(Research());
+                           Get.to(ResearchCandidate());
                      },
                      ),
                      SizedBox(width: 15),
@@ -100,7 +102,9 @@ class _CandidateprofileState extends State<Candidateprofile> {
                          size: 60,
                          color: Colors.white,
                        ), onPressedCallback: () {
-                         Get.to(MySituation());
+                         Get.to(
+                           Situations(),
+                         );
                      },
                      ),
                    ],
@@ -119,7 +123,7 @@ class _CandidateprofileState extends State<Candidateprofile> {
                        size: 60,
                        color: Colors.white,
                      ), onPressedCallback: () {
-                       Get.to(SoftSkills());
+                       Get.to(Skills());
                    },
                    ),
                    SizedBox(width: 15),
@@ -252,7 +256,7 @@ class _profileCandidateState extends State<profileCandidate> {
               color: Colors.grey[700],
               borderRadius: BorderRadius.circular(30),
             ),
-            padding: EdgeInsets.fromLTRB(10, 20, 10, 2),
+            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
             height: 120,
             width: 180,
             child: TextButton(

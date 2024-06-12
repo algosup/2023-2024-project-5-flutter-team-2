@@ -1,13 +1,11 @@
-import 'package:adoptacandidate/RecruiterPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:adoptacandidate/widgets/Color.dart';
-import 'package:adoptacandidate/widgets/DelayAnimation.dart';
-import 'CandidatePage.dart';  // Assurez-vous d'importer les pages nouvellement créées
-import 'RecruiterPage.dart';
+import 'CandidatePage.dart';
 import 'sector.dart';
 
 class Status extends StatefulWidget {
+  const Status({super.key});
+
   @override
   _StatusState createState() => _StatusState();
 }
@@ -22,19 +20,19 @@ class _StatusState extends State<Status> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Get.back();
           },
         ),
         actions: [
-          Container(
+          SizedBox(
             height: 90,
             child: Image.asset('images/logo.png'),
           ),
         ],
       ),
-      backgroundColor: Color(0xFF0D1B2A),
+      backgroundColor: const Color(0xFF0D1B2A),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -42,17 +40,17 @@ class _StatusState extends State<Status> {
           children: [
             Text(
               'De quel profil êtes-vous ?.\nÊtes-vous un :'.tr,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             RadioListTile<String>(
-              activeColor: Color(0xFFFFA500),
+              activeColor: const Color(0xFFFFA500),
               title: Text(
                 'Candidat'.tr,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               value: 'Candidat',
               groupValue: _selectedProfile,
@@ -76,7 +74,7 @@ class _StatusState extends State<Status> {
                 });
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Align(
               alignment: Alignment.centerRight, // Aligne le bouton à droite
               child: ElevatedButton(
@@ -86,7 +84,6 @@ class _StatusState extends State<Status> {
                   } else if (_selectedProfile == 'Recruteur') {
                     Get.to(const Sector());
                   } else {
-                    // Afficher un message d'erreur ou une notification
                     Get.snackbar(
                       'Erreur'.tr,
                       'Veuillez sélectionner un profil'.tr,
@@ -96,8 +93,8 @@ class _StatusState extends State<Status> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFFFA500),
-                  padding: EdgeInsets.symmetric(horizontal: 35, vertical: 5),
+                  backgroundColor: const Color(0xFFFFA500),
+                  padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 5),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -106,7 +103,7 @@ class _StatusState extends State<Status> {
                   padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                   child: Text(
                     'Continuer'.tr,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                     ),
@@ -122,7 +119,7 @@ class _StatusState extends State<Status> {
 }
 
 void main() {
-  runApp(GetMaterialApp(
+  runApp(const GetMaterialApp(
     home: Status(),
   ));
 }

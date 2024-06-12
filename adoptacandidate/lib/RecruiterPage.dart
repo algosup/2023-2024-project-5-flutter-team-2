@@ -2,9 +2,7 @@ import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'widgets/Color.dart';
-import 'widgets/DelayAnimation.dart';
-import 'widgets/language.dart';
+
 
 class RecruiterPage extends StatefulWidget {
 
