@@ -2,6 +2,7 @@ import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const String _url = "https://www.youtube.com/watch?v=zQuUIk8zIlE";
 class SwipePage extends StatefulWidget {
@@ -125,36 +126,6 @@ class _SwipePageState extends State<SwipePage> {
           ],
         ),
       ),
-<<<<<<< Updated upstream
-=======
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 20,
-                'images/convert.svg'
-            ),
-            label: 'Swap',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 30,
-                'images/message.svg'),
-            label: 'Message',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              height: 30,
-                'images/Notification.svg'),
-            label: 'Notification',
-            backgroundColor: Colors.green,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFFFFA500),
-        onTap: _onItemTapped,
-      ),
->>>>>>> Stashed changes
     );
   }
 }
