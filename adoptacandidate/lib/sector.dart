@@ -1,11 +1,7 @@
 import 'package:adoptacandidate/RecruiterPage.dart';
-
-import 'research.dart';
-import 'widgets/Color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'SettingsPage.dart';
 
 class Sector extends StatefulWidget {
   const Sector({super.key});
@@ -65,7 +61,7 @@ class _SectorState extends State<Sector> {
         children: [
           Container(
             margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-            child: Text(
+            child: const Text(
               'Dans quel secteur êtes-vous ?',
               style: TextStyle(
                 color: Colors.white,
@@ -74,9 +70,9 @@ class _SectorState extends State<Sector> {
             ),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
-            margin: EdgeInsets.fromLTRB(18, 0, 18, 0),
+            margin: const EdgeInsets.fromLTRB(18, 0, 18, 0),
             child: ElevatedButton(
               onPressed: () {
                 setState(() {

@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/research.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/situation.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/skills.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/ChatPage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/ChatSample.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/CandidatesInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" afterDir="false" />
     </list>
@@ -70,6 +85,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adoptacandidate/lib/profilInfo" />
       <recent name="$PROJECT_DIR$/adoptacandidate/lib" />
     </key>
   </component>

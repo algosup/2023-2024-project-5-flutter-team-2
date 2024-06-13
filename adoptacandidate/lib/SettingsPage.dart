@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -41,151 +39,151 @@ class _SettingsState extends State<Settings> {
             controller: scrollController,
             children: [
               buildSettingsTopic(context, "Gestion des abonnements".tr),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.notifications_none,
                       color: Colors.white,
                     ),
                     buildSettings(context, "Gestion des notifications".tr),
                   ],
                 ),
-                Divider(
+                const Divider(
                   color: Colors.white30,
                   height: 20,
                   thickness: 1,
                 ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.email_outlined,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Gestion des abonnements emails".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               buildSettingsTopic(context, "Sécurité et aides".tr),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.lock_outline,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Modification mot de passe".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.info_outline,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Conditions générales d'utilisation".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.cookie_outlined,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Gestion des cookies".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.privacy_tip_outlined,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Politique de confidentialité".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.error,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Signalr un problème".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               buildSettingsTopic(context, "Autres".tr),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star_border,
                     color: Colors.white,
                   ),
                   buildSettings(context, "Donner mon avis sur l'application".tr),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.file_download_outlined,
                     color: Colors.white30,
                   ),
@@ -193,17 +191,17 @@ class _SettingsState extends State<Settings> {
                 ],
               ),
 
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.logout_outlined,
                     color: Color(0xFFFFA500),
                   ),
@@ -211,25 +209,26 @@ class _SettingsState extends State<Settings> {
                 ],
               ),
 
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,
               ),
 
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.delete_forever_outlined,
                     color: Colors.red,
                   ),
+
                   buildSettings(context, "Supprimer mon compte".tr),
                 ],
               ),
 
-              Divider(
+              const Divider(
                 color: Colors.white30,
                 height: 20,
                 thickness: 1,

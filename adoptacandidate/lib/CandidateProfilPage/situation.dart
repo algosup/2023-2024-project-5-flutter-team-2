@@ -1,5 +1,4 @@
-import 'package:adoptacandidate/NavigationPage.dart';
-import 'package:adoptacandidate/SwipePage.dart';
+import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: MySituation(),
+      home: Situations(),
     );
   }
 }
 
-class MySituationController extends GetxController {
+class SituationsController extends GetxController {
   var selectedJobs = <String>[].obs;
   var isEmployed = false.obs;
   var isAvailableImmediately = false.obs;
@@ -42,8 +41,8 @@ class MySituationController extends GetxController {
   }
 }
 
-class MySituation extends StatelessWidget {
-  final MySituationController controller = Get.put(MySituationController());
+class Situations extends StatelessWidget {
+  final SituationsController controller = Get.put(SituationsController());
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +52,8 @@ class MySituation extends StatelessWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(
-              Icons.arrow_back,
-              color: Colors.white30,
+            Icons.arrow_back,
+            color: Colors.white30,
           ),
           onPressed: () {
             Get.back();
@@ -252,9 +251,9 @@ class MySituation extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context) => MainNavigation()));
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Candidateprofile()));
                       controller.saveSituation();
                     },
                     style: ElevatedButton.styleFrom(
@@ -265,12 +264,12 @@ class MySituation extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                        padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                      padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: Text(
                         'Enregistrer'.tr,
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 17,
+                          color: Colors.white,
+                          fontSize: 17,
                         ),
                       ),
                     ),
