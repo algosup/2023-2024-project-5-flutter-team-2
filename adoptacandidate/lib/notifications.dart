@@ -1,4 +1,3 @@
-import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,7 +50,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
       isFavorite: true,
     ),
      NotificationCard(
-      chosenText: 'Like-Sent.tr'.tr,
+      chosenText: 'Like-Sent'.tr,
       isLike: true,
       isSent: true,
       isFavorite: false,

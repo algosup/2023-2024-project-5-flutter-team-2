@@ -2,6 +2,7 @@ import 'package:adoptacandidate/message.dart';
 import 'package:adoptacandidate/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'SwipePage.dart';
 
 class MainNavigation extends StatefulWidget {
@@ -12,14 +13,14 @@ class MainNavigation extends StatefulWidget {
 }
 
 class _MainNavigationState extends State<MainNavigation> {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    SwipePage(),
-    MessageSystem(),
-    NotificationsPage(),
+    const SwipePage(),
+    const MessageSystem(),
+    const NotificationsPage(),
   ];
 
   void _onPageChanged(int index) {
@@ -37,13 +38,13 @@ class _MainNavigationState extends State<MainNavigation> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        children: _screens,
         onPageChanged: _onPageChanged,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
+        children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFFFFA500),
+        selectedItemColor: const Color(0xFFFFA500),
         onTap: _onItemTapped,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

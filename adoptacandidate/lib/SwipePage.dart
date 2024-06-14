@@ -17,7 +17,7 @@ class _SwipePageState extends State<SwipePage> {
 
   final List<SwipeItem> _swipeItems = List.generate(
     6,
-    (index) => SwipeItem(
+        (index) => SwipeItem(
       content: JobCard(index: index),
     ),
   );
@@ -25,20 +25,20 @@ class _SwipePageState extends State<SwipePage> {
   late final MatchEngine _matchEngine = MatchEngine(
     swipeItems: List.generate(
       6,
-      (index) => SwipeItem(
-        content: JobCard(index: index),
-        likeAction: () {
+          (index) => SwipeItem(
+          content: JobCard(index: index),
+          likeAction: () {
 
-        },
-        nopeAction: () {
+          },
+          nopeAction: () {
 
-        },
-        superlikeAction: () {
+          },
+          superlikeAction: () {
 
-        },
+          },
           onSlideUpdate: (SlideRegion? region) async {
             print("Region $region");
-        }
+          }
 
       ),
     ),
@@ -64,20 +64,20 @@ class _SwipePageState extends State<SwipePage> {
                 icon: const Icon(Icons.person, color: Colors.white),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Candidateprofile(),
-                      ),
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Candidateprofile(),
+                    ),
                   );
                 },
               ),
             ),
             //const SizedBox(width: 100),
             IconButton(
-                icon: const Icon(
+              icon: const Icon(
                   Icons.help_center,
                   color: Colors.white),
-                onPressed: _launchURL,
+              onPressed: _launchURL,
             ),
           ],
         ),
@@ -116,7 +116,7 @@ class _SwipePageState extends State<SwipePage> {
                         border: Border.all(color: Colors.green, width: 4),
                       ),
                       child: const Text(
-                        'LIKE',
+                          'LIKE',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 35,
@@ -175,10 +175,10 @@ class _SwipePageState extends State<SwipePage> {
                   ),
 
                   ElevatedButton(onPressed: () { _matchEngine.currentItem?.superLike(); },
-                  child: Icon(Icons.star, color: Colors.blue)),
+                      child: Icon(Icons.star, color: Colors.blue)),
 
                   ElevatedButton(onPressed: () { _matchEngine.currentItem?.like(); },
-                  child: Icon(Icons.favorite, color: Colors.green)),
+                      child: Icon(Icons.favorite, color: Colors.green)),
                 ],
               ),
             ),
@@ -257,4 +257,3 @@ class JobCard extends StatelessWidget {
 void _launchURL() async{
   if (!await launch (_url)) throw 'could not launch $_url';
 }
-

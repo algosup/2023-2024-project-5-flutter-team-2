@@ -18,10 +18,10 @@ class _SettingsState extends State<Settings> {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-            'Paramètres'.tr,
-            style: GoogleFonts.roboto(
-                color: Colors.white,
-            ),
+          'Paramètres'.tr,
+          style: GoogleFonts.roboto(
+            color: Colors.white,
+          ),
         ),
         backgroundColor: Color(0xFF0D1B2A),
         leading: IconButton(
@@ -35,208 +35,208 @@ class _SettingsState extends State<Settings> {
       backgroundColor: Color(0xFF0D1B2A),
       body: Container(
         padding: const EdgeInsets.all(10.0),
-          child: ListView(
-            controller: scrollController,
-            children: [
-              buildSettingsTopic(context, "Gestion des abonnements".tr),
-              const SizedBox(height: 15),
+        child: ListView(
+          controller: scrollController,
+          children: [
+            buildSettingsTopic(context, "Gestion des abonnements".tr),
+            const SizedBox(height: 15),
 
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.notifications_none,
-                      color: Colors.white,
-                    ),
-                    buildSettings(context, "Gestion des notifications".tr),
-                  ],
+            Row(
+              children: [
+                const Icon(
+                  Icons.notifications_none,
+                  color: Colors.white,
                 ),
-                const Divider(
+                buildSettings(context, "Gestion des notifications".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.email_outlined,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Gestion des abonnements emails".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 25),
+            buildSettingsTopic(context, "Sécurité et aides".tr),
+            const SizedBox(height: 15),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.lock_outline,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Modification mot de passe".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.info_outline,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Conditions générales d'utilisation".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.cookie_outlined,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Gestion des cookies".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.privacy_tip_outlined,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Politique de confidentialité".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.error,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Signaler un problème".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 25),
+            buildSettingsTopic(context, "Autres".tr),
+            const SizedBox(height: 15),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.star_border,
+                  color: Colors.white,
+                ),
+                buildSettings(context, "Donner mon avis sur l'application".tr),
+              ],
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.file_download_outlined,
                   color: Colors.white30,
-                  height: 20,
-                  thickness: 1,
+                ),
+                buildSettings(context, "L'application est à jour".tr),
+              ],
+            ),
+
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.logout_outlined,
+                  color: Color(0xFFFFA500),
+                ),
+                buildSettings(context, "Déconnexion".tr),
+              ],
+            ),
+
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              children: [
+                const Icon(
+                  Icons.delete_forever_outlined,
+                  color: Colors.red,
                 ),
 
-              const SizedBox(height: 10),
+                buildSettings(context, "Supprimer mon compte".tr),
+              ],
+            ),
 
-              Row(
-                children: [
-                  const Icon(
-                    Icons.email_outlined,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Gestion des abonnements emails".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
+            const Divider(
+              color: Colors.white30,
+              height: 20,
+              thickness: 1,
+            ),
 
-              const SizedBox(height: 25),
-              buildSettingsTopic(context, "Sécurité et aides".tr),
-              const SizedBox(height: 15),
+            //SizedBox(height: 10),
 
-              Row(
-                children: [
-                  const Icon(
-                    Icons.lock_outline,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Modification mot de passe".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.info_outline,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Conditions générales d'utilisation".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.cookie_outlined,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Gestion des cookies".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.privacy_tip_outlined,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Politique de confidentialité".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.error,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Signaler un problème".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 25),
-              buildSettingsTopic(context, "Autres".tr),
-              const SizedBox(height: 15),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.star_border,
-                    color: Colors.white,
-                  ),
-                  buildSettings(context, "Donner mon avis sur l'application".tr),
-                ],
-              ),
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.file_download_outlined,
-                    color: Colors.white30,
-                  ),
-                  buildSettings(context, "L'application est à jour".tr),
-                ],
-              ),
-
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.logout_outlined,
-                    color: Color(0xFFFFA500),
-                  ),
-                  buildSettings(context, "Déconnexion".tr),
-                ],
-              ),
-
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              const SizedBox(height: 10),
-
-              Row(
-                children: [
-                  const Icon(
-                    Icons.delete_forever_outlined,
-                    color: Colors.red,
-                  ),
-
-                  buildSettings(context, "Supprimer mon compte".tr),
-                ],
-              ),
-
-              const Divider(
-                color: Colors.white30,
-                height: 20,
-                thickness: 1,
-              ),
-
-              //SizedBox(height: 10),
-
-            ],
+          ],
         ),
       ),
     );

@@ -8,7 +8,6 @@ import 'RecruitersProfilePage/research.dart';
 import 'RecruitersProfilePage/skills.dart';
 import 'package:adoptacandidate/widgets/DelayAnimation.dart';
 
-import 'SwipePage.dart';
 
 
 class Recruitersprofile extends StatefulWidget {
@@ -78,7 +77,7 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
               Container(
                 child: Profile(),
               ),
-        
+
               Container(
                 margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
                 child: Row(
@@ -127,7 +126,7 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
                     },
                     ),
                     SizedBox(width: 15),
-        
+
                     profileCandidate(
                       title: "Mes Infos".tr,
                       icon: Icon(
@@ -142,11 +141,11 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
                   ],
                 ),
               ),
-        
+
             ],
           ),
-        
-        
+
+
         ),
       ),
     );
@@ -283,5 +282,4 @@ class _profileCandidateState extends State<profileCandidate> {
 
 
 //Container profileCandidate (BuildContext, String title, Icon icon){
-
 
