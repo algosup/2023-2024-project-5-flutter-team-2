@@ -2,8 +2,6 @@ import 'package:adoptacandidate/softskills.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class CandidatePage extends StatefulWidget {
   @override
@@ -54,42 +52,12 @@ class _CandidatePageState extends State<CandidatePage> {
     super.dispose();
   }
 
-  Future<void> _submitForm() async {
-    final firstName = _firstNameController.text;
-    final lastName = _lastNameController.text;
-    final email = _emailController.text;
-    final phone = _phoneController.text;
-    final town = _townController.text;
-    final address = _addressController.text;
-    final password = _passwordController.text;
-
-    // Remplacez l'URL par celle de votre serveur PocketBase
-    final url = Uri.parse('http://10.0.2.2:8090/api/collections/users/records');
-
-    final response = await http.post(
-      url,
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'firstname': firstName,
-        'lastname': lastName,
-        'email': email,
-        'phone': phone,
-        'city': town,
-        'postal_adress': address,
-        'password': password,
-      }),
+  void _submitForm() {
+    // Form submission logic would go here
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SoftSkills()),
     );
-
-    if (response.statusCode == 201) {
-      // Si la requête a réussi, naviguez vers la page suivante
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SoftSkills()),
-      );
-    } else {
-      // Si la requête a échoué, affichez un message d'erreur
-      print('Failed to create account');
-    }
   }
 
   @override
