@@ -337,7 +337,15 @@ class _CandidatePageState extends State<CandidatePage> {
                 margin: EdgeInsets.only(top: 60),
                 child: Center(
                   child: ElevatedButton(
-                    onPressed: _submitForm,
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                          builder:
+                      (context) => SoftSkills()
+                      ),
+                      );
+                    },
                     child: Text(
                       'Créer Un Compte'.tr,
                       style: TextStyle(

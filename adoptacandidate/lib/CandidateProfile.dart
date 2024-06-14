@@ -67,79 +67,81 @@ class _CandidateprofileState extends State<Candidateprofile> {
         ),
       ),
       backgroundColor: const Color(0xFF0D1B2A),
-      body: DelayedAnimation(
-        delay: 15,
-        child: Column(
-          children: [
-            Container(
-              child: const Profile(),
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  profileCandidate(
-                    title: "Ma recherhe".tr,
-                    icon: const Icon(
-                      Icons.search_rounded,
-                      size: 45,
-                      color: Colors.white,
-                    ),
-                    onPressedCallback: () {
-                      Get.to(ResearchCandidate());
-                    },
-                  ),
-                  const SizedBox(width: 15),
-                  profileCandidate(
-                    title: "Ma Situation".tr,
-                    icon: const Icon(
-                      Icons.access_time_rounded,
-                      size: 45,
-                      color: Colors.white,
-                    ),
-                    onPressedCallback: () {
-                      Get.to(
-                        Situations(),
-                      );
-                    },
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: DelayedAnimation(
+          delay: 15,
+          child: Column(
+            children: [
+              Container(
+                child: const Profile(),
               ),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  profileCandidate(
-                    title: "Mes Compétences".tr,
-                    icon: const Icon(
-                      Icons.dataset,
-                      size: 45,
-                      color: Colors.white,
+              Container(
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    profileCandidate(
+                      title: "Ma recherhe".tr,
+                      icon: const Icon(
+                        Icons.search_rounded,
+                        size: 45,
+                        color: Colors.white,
+                      ),
+                      onPressedCallback: () {
+                        Get.to(ResearchCandidate());
+                      },
                     ),
-                    onPressedCallback: () {
-                      Get.to(const Skills());
-                    },
-                  ),
-                  const SizedBox(width: 15),
-                  profileCandidate(
-                    title: "Mes Infos".tr,
-                    icon: const Icon(
-                      Icons.perm_device_info_outlined,
-                      size: 45,
-                      color: Colors.white,
+                    const SizedBox(width: 15),
+                    profileCandidate(
+                      title: "Ma Situation".tr,
+                      icon: const Icon(
+                        Icons.access_time_rounded,
+                        size: 45,
+                        color: Colors.white,
+                      ),
+                      onPressedCallback: () {
+                        Get.to(
+                          Situations(),
+                        );
+                      },
                     ),
-                    onPressedCallback: () {
-                      Get.to(const CandidatesInfo());
-                    },
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 20),
+              Container(
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    profileCandidate(
+                      title: "Mes Compétences".tr,
+                      icon: const Icon(
+                        Icons.dataset,
+                        size: 34,
+                        color: Colors.white,
+                      ),
+                      onPressedCallback: () {
+                        Get.to(const Skills());
+                      },
+                    ),
+                    const SizedBox(width: 15),
+                    profileCandidate(
+                      title: "Mes Infos".tr,
+                      icon: const Icon(
+                        Icons.perm_device_info_outlined,
+                        size: 45,
+                        color: Colors.white,
+                      ),
+                      onPressedCallback: () {
+                        Get.to(const CandidatesInfo());
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

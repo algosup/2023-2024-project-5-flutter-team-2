@@ -5,7 +5,7 @@ import 'package:swipe_cards/draggable_card.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const String _url = "https://www.youtube.com/watch?v=zQuUIk8zIlE";
+const String _url = "https://adoptcandidat.helpdocs.io";
 class SwipePage extends StatefulWidget {
   const SwipePage({super.key});
 

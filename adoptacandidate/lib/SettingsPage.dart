@@ -151,7 +151,7 @@ class _SettingsState extends State<Settings> {
                     Icons.error,
                     color: Colors.white,
                   ),
-                  buildSettings(context, "Signalr un problème".tr),
+                  buildSettings(context, "Signaler un problème".tr),
                 ],
               ),
               const Divider(

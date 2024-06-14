@@ -70,82 +70,84 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
 
       ),
       backgroundColor: Color(0xFF0D1B2A),
-      body: DelayedAnimation(
-        delay: 15,
-        child: Column(
-          children: [
-            Container(
-              child: Profile(),
-            ),
-
-            Container(
-              margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  profileCandidate(
-                    title: "Ma recherhe".tr,
-                    icon: Icon(
-                      Icons.search_rounded,
-                      size: 60,
-                      color: Colors.white,
-                    ), onPressedCallback: () {
-                    Get.to(ResearchCandidate());
-                  },
-                  ),
-                  SizedBox(width: 15),
-                  profileCandidate(
-                    title: "Mon Secteur".tr,
-                    icon: Icon(
-                      Icons.access_time_rounded,
-                      size: 60,
-                      color: Colors.white,
-                    ), onPressedCallback: () {
-                    Get.to(
-                      Sector(),
-                    );
-                  },
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: DelayedAnimation(
+          delay: 15,
+          child: Column(
+            children: [
+              Container(
+                child: Profile(),
               ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  profileCandidate(
-                    title: "Mes Compétences".tr,
-                    icon: Icon(
-                      Icons.dataset,
-                      size: 60,
-                      color: Colors.white,
-                    ), onPressedCallback: () {
-                    Get.to(Skills());
-                  },
-                  ),
-                  SizedBox(width: 15),
-
-                  profileCandidate(
-                    title: "Mes Infos".tr,
-                    icon: Icon(
-                      Icons.perm_device_info_outlined,
-                      size: 60,
-                      color: Colors.white,
-                    ),
-                    onPressedCallback: () {
-                      Get.to(RecruiterInfoPage());
+        
+              Container(
+                margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    profileCandidate(
+                      title: "Ma recherhe".tr,
+                      icon: Icon(
+                        Icons.search_rounded,
+                        size: 60,
+                        color: Colors.white,
+                      ), onPressedCallback: () {
+                      Get.to(ResearchCandidate());
                     },
-                  ),
-                ],
+                    ),
+                    SizedBox(width: 15),
+                    profileCandidate(
+                      title: "Mon Secteur".tr,
+                      icon: Icon(
+                        Icons.access_time_rounded,
+                        size: 60,
+                        color: Colors.white,
+                      ), onPressedCallback: () {
+                      Get.to(
+                        Sector(),
+                      );
+                    },
+                    ),
+                  ],
+                ),
               ),
-            ),
-
-          ],
+              SizedBox(height: 20),
+              Container(
+                margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    profileCandidate(
+                      title: "Mes Compétences".tr,
+                      icon: Icon(
+                        Icons.dataset,
+                        size: 60,
+                        color: Colors.white,
+                      ), onPressedCallback: () {
+                      Get.to(Skills());
+                    },
+                    ),
+                    SizedBox(width: 15),
+        
+                    profileCandidate(
+                      title: "Mes Infos".tr,
+                      icon: Icon(
+                        Icons.perm_device_info_outlined,
+                        size: 60,
+                        color: Colors.white,
+                      ),
+                      onPressedCallback: () {
+                        Get.to(RecruiterInfoPage());
+                      },
+                    ),
+                  ],
+                ),
+              ),
+        
+            ],
+          ),
+        
+        
         ),
-
-
       ),
     );
   }
