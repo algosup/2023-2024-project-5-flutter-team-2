@@ -1,12 +1,7 @@
-import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:adoptacandidate/message.dart';
 import 'package:adoptacandidate/notifications.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:swipe_cards/swipe_cards.dart';
-
 import 'SwipePage.dart';
 
 class MainNavigation extends StatefulWidget {

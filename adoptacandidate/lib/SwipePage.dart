@@ -1,6 +1,7 @@
 import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:swipe_cards/draggable_card.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -21,23 +22,38 @@ class _SwipePageState extends State<SwipePage> {
     ),
   );
 
-  final MatchEngine _matchEngine = MatchEngine(
+  late final MatchEngine _matchEngine = MatchEngine(
     swipeItems: List.generate(
       6,
       (index) => SwipeItem(
         content: JobCard(index: index),
+        likeAction: () {
+
+        },
+        nopeAction: () {
+
+        },
+        superlikeAction: () {
+
+        },
+          onSlideUpdate: (SlideRegion? region) async {
+            print("Region $region");
+        }
+
       ),
     ),
   );
 
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         //elevation: 0,
         backgroundColor: Colors.transparent,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
 
           children: [
             Container(
@@ -56,21 +72,7 @@ class _SwipePageState extends State<SwipePage> {
                 },
               ),
             ),
-            const SizedBox(width: 100),
-
-            IconButton(
-              icon: const Icon(
-                  Icons.filter_list,
-                  color: Colors.white),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Candidateprofile(),
-                  ),
-                );
-              },
-            ),
+            //const SizedBox(width: 100),
             IconButton(
                 icon: const Icon(
                   Icons.help_center,
@@ -81,7 +83,7 @@ class _SwipePageState extends State<SwipePage> {
         ),
       ),
       backgroundColor: const Color(0xFF0D1B2A),
-      body: Center(
+      body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -106,6 +108,56 @@ class _SwipePageState extends State<SwipePage> {
                     rightSwipeAllowed: true,
                     upSwipeAllowed: true,
                     fillSpace: true,
+                    likeTag: Container(
+                      margin: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.green, width: 4),
+                      ),
+                      child: const Text(
+                        'LIKE',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35,
+                            color: Colors.green,
+                          )
+                      ),
+                    ),
+
+                    superLikeTag: Container(
+                      margin: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.blue, width: 4)
+                      ),
+                      child: Text(
+                        'SUPER LIKE',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+
+                    nopeTag: Container(
+                      margin: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.red, width: 4,)
+                      ),
+                      child: Text(
+                        'NOPE',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 35,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -113,13 +165,20 @@ class _SwipePageState extends State<SwipePage> {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 27),
               color: const Color(0xFF0D1B2A),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(Icons.refresh, color: Colors.grey),
-                  Icon(Icons.clear, color: Colors.red),
-                  Icon(Icons.favorite, color: Colors.green),
-                  Icon(Icons.star, color: Colors.yellow),
+
+                  ElevatedButton(
+                    onPressed: () { _matchEngine.currentItem?.nope(); },
+                    child: Icon(Icons.clear, color: Colors.red),
+                  ),
+
+                  ElevatedButton(onPressed: () { _matchEngine.currentItem?.superLike(); },
+                  child: Icon(Icons.star, color: Colors.blue)),
+
+                  ElevatedButton(onPressed: () { _matchEngine.currentItem?.like(); },
+                  child: Icon(Icons.favorite, color: Colors.green)),
                 ],
               ),
             ),
@@ -159,7 +218,7 @@ class JobCard extends StatelessWidget {
               'Industrie'.tr,
               style: const TextStyle(
                 fontSize: 18,
-                color: Colors.grey,
+                color: Colors.black87,
               ),
             ),
             const SizedBox(height: 20),
@@ -178,12 +237,12 @@ class JobCard extends StatelessWidget {
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.location_on, color: Colors.grey),
+                Icon(Icons.location_on, color: Colors.black87),
                 SizedBox(width: 5),
                 Text(
                   'Ormes 45',
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black87,
                   ),
                 ),
               ],
@@ -197,5 +256,5 @@ class JobCard extends StatelessWidget {
 }
 void _launchURL() async{
   if (!await launch (_url)) throw 'could not launch $_url';
-
 }
+

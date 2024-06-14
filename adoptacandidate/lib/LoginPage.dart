@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
 
-                    SizedBox(width: 140),
+                    Spacer(),
                     TextButton(
                       onPressed: (){
                         Navigator.push(

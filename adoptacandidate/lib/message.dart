@@ -52,7 +52,6 @@ class _MessageSystemState extends State<MessageSystem> {
             ),
           ],
         ),
-
         leading: CircleAvatar(
           radius: 30,
           backgroundImage: AssetImage("images/2.jpg"),

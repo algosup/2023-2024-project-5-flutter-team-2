@@ -5,30 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/research.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/situation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/skills.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/ChatPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/ChatSample.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidatePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidatesInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfilPage/CandidatesInfo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/Status.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/sector.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/softskills.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +32,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -62,27 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bistrel-tsangue/Desktop/2023-2024-project-5-flutter-team-2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;device.mirroring&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/bistrel-tsangue/Desktop/2023-2024-project-5-flutter-team-2",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/adoptacandidate/lib/profilInfo" />
