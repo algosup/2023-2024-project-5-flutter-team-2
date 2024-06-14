@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfilePage/RecruitersInfo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfilePage/research.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfilePage/sector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfilePage/skills.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/research2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adoptacandidate/lib/softskills2.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/LoginPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/MySituation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/notifications.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/notifications.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/research.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +70,7 @@
     "git-widget-placeholder": "dev",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/bistrel-tsangue/Desktop/2023-2024-project-5-flutter-team-2",
+    "last_opened_file_path": "/Users/bistrel-tsangue/Desktop/2023-2024-project-5-flutter-team-2/adoptacandidate/lib",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -69,6 +79,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adoptacandidate/lib" />
+      <recent name="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfilePage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/adoptacandidate/lib/profilInfo" />
       <recent name="$PROJECT_DIR$/adoptacandidate/lib" />

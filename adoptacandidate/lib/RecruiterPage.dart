@@ -1,4 +1,5 @@
 import 'package:adoptacandidate/softskills.dart';
+import 'package:adoptacandidate/softskills2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -298,7 +299,7 @@ class _RecruiterPageState extends State<RecruiterPage> {
                             context,
                             MaterialPageRoute(
                                 builder:
-                                    (context) => SoftSkills()
+                                    (context) => SoftSkills2()
                             )
                         );
                       },

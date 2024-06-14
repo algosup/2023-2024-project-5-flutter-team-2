@@ -1,5 +1,5 @@
 import 'package:adoptacandidate/NavigationPage.dart';
-import 'package:adoptacandidate/SwipePage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

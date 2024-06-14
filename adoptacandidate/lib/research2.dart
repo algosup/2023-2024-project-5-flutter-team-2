@@ -1,9 +1,14 @@
+import 'package:adoptacandidate/NavigationPage.dart';
+import 'package:adoptacandidate/RecruitersProfilePage/sector.dart';
+
 import 'MySituation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'NavigationPage2.dart';
 
-class Research extends StatelessWidget {
+
+class Research2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,18 +33,18 @@ class Research extends StatelessWidget {
         ],
       ),
       backgroundColor: Color(0xFF0D1B2A),
-      body: MySearchPage(),
+      body: MySearchPage2(),
       bottomNavigationBar: BottomButton(), // Ajout du bouton en bas de l'écran
     );
   }
 }
 
-class MySearchPage extends StatefulWidget {
+class MySearchPage2 extends StatefulWidget {
   @override
-  _MySearchPageState createState() => _MySearchPageState();
+  _MySearchPage2State createState() => _MySearchPage2State();
 }
 
-class _MySearchPageState extends State<MySearchPage> {
+class _MySearchPage2State extends State<MySearchPage2> {
   String? selectedMetier;
   String? selectedLocalite;
 
@@ -172,7 +177,7 @@ class BottomButton extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MySituation()));
+                        builder: (context) => MainNavigation2()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor:Color(0xFFFFA500), // Couleur de fond du bouton

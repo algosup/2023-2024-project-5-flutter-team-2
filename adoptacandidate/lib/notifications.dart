@@ -1,4 +1,8 @@
+import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -34,50 +38,50 @@ class _NotificationsPageState extends State<NotificationsPage> {
 
   // Sample list of notifications
   final List<NotificationCard> notificationList = [
-    const NotificationCard(
-      chosenText: 'Like-Sent-Fav',
+    NotificationCard(
+      chosenText: 'Like-Sent-Fav'.tr,
       isLike: true,
       isSent: true,
       isFavorite: true,
     ),
-    const NotificationCard(
-      chosenText: 'Like-Sent-Fav',
+     NotificationCard(
+      chosenText: 'Like-Sent-Fav'.tr,
       isLike: true,
       isSent: true,
       isFavorite: true,
     ),
-    const NotificationCard(
-      chosenText: 'Like-Sent',
+     NotificationCard(
+      chosenText: 'Like-Sent.tr'.tr,
       isLike: true,
       isSent: true,
       isFavorite: false,
     ),
-    const NotificationCard(
-      chosenText: 'Sent-Fav',
+    NotificationCard(
+      chosenText: 'Sent-Fav'.tr,
       isLike: false,
       isSent: true,
       isFavorite: true,
     ),
-    const NotificationCard(
-      chosenText: 'Like-Fav',
+     NotificationCard(
+      chosenText: 'Like-Fav'.tr,
       isLike: true,
       isSent: false,
       isFavorite: true,
     ),
-    const NotificationCard(
-      chosenText: 'Like',
+     NotificationCard(
+      chosenText: 'Like'.tr,
       isLike: true,
       isSent: false,
       isFavorite: false,
     ),
-    const NotificationCard(
-      chosenText: 'Sent',
+     NotificationCard(
+      chosenText: 'Sent'.tr,
       isLike: false,
       isSent: true,
       isFavorite: false,
     ),
-    const NotificationCard(
-      chosenText: 'Fav',
+     NotificationCard(
+      chosenText: 'Fav'.tr,
       isLike: false,
       isSent: false,
       isFavorite: true,
@@ -117,14 +121,15 @@ class _NotificationsPageState extends State<NotificationsPage> {
       body: Container(
         margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
         child: Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Wrap(
-                spacing: 10.0,
+                spacing: 70.0,
                 children: [
                   FilterChip(
-                    label: const Text('Likes'),
+                    label:  Text('Likes'.tr),
                     selected: showLikes,
                     onSelected: (bool selected) {
                       setState(() {
@@ -132,8 +137,9 @@ class _NotificationsPageState extends State<NotificationsPage> {
                       });
                     },
                   ),
+
                   FilterChip(
-                    label: const Text('Sent'),
+                    label:  Text('Envoyer'.tr),
                     selected: showSent,
                     onSelected: (bool selected) {
                       setState(() {
@@ -142,7 +148,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                     },
                   ),
                   FilterChip(
-                    label: const Text('Favorites'),
+                    label:  Text("Favoris".tr),
                     selected: showFavorites,
                     onSelected: (bool selected) {
                       setState(() {

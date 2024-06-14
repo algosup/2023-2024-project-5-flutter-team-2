@@ -281,6 +281,4 @@ class _profileCandidateState extends State<profileCandidate> {
 }
 
 
-//Container profileCandidate (BuildContext, String title, Icon icon){
-
   

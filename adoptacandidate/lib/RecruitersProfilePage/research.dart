@@ -1,9 +1,9 @@
-import 'MySituation.dart';
+import 'package:adoptacandidate/CandidateProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-class Research extends StatelessWidget {
+class ResearchCandidate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,18 +28,18 @@ class Research extends StatelessWidget {
         ],
       ),
       backgroundColor: Color(0xFF0D1B2A),
-      body: MySearchPage(),
+      body: SearchPage(),
       bottomNavigationBar: BottomButton(), // Ajout du bouton en bas de l'écran
     );
   }
 }
 
-class MySearchPage extends StatefulWidget {
+class SearchPage extends StatefulWidget {
   @override
-  _MySearchPageState createState() => _MySearchPageState();
+  _SearchPageState createState() => _SearchPageState();
 }
 
-class _MySearchPageState extends State<MySearchPage> {
+class _SearchPageState extends State<SearchPage> {
   String? selectedMetier;
   String? selectedLocalite;
 
@@ -69,7 +69,7 @@ class _MySearchPageState extends State<MySearchPage> {
           children: [
             SizedBox(height: 20),
             Text(
-              'Métier recherché/proposé'.tr,
+              'Métier proposé'.tr,
               style: TextStyle(color: Colors.white),
             ),
             DropdownButton<String>(
@@ -90,7 +90,7 @@ class _MySearchPageState extends State<MySearchPage> {
             ),
             SizedBox(height: 20),
             Text(
-              'Localité recherchée/proposée'.tr,
+              'Localité proposée'.tr,
               style: TextStyle(color: Colors.white),
             ),
             DropdownButton<String>(
@@ -172,7 +172,7 @@ class BottomButton extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MySituation()));
+                        builder: (context) => Candidateprofile()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor:Color(0xFFFFA500), // Couleur de fond du bouton
