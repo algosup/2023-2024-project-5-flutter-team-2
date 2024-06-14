@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'CandidatePage.dart';
 import 'sector.dart';
 
@@ -61,10 +62,10 @@ class _StatusState extends State<Status> {
               },
             ),
             RadioListTile<String>(
-              activeColor: Color(0xFFFFA500),
+              activeColor: const Color(0xFFFFA500),
               title: Text(
                 'Recruteur'.tr,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               value: 'Recruteur',
               groupValue: _selectedProfile,
@@ -82,7 +83,7 @@ class _StatusState extends State<Status> {
                   if (_selectedProfile == 'Candidat') {
                     Get.to(CandidatePage());
                   } else if (_selectedProfile == 'Recruteur') {
-                    Get.to(const Sector());
+                    Get.to( const Sector());
                   } else {
                     Get.snackbar(
                       'Erreur'.tr,

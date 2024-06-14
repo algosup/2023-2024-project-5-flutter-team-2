@@ -1,14 +1,13 @@
 import 'package:adoptacandidate/NavigationPage.dart';
 import 'package:adoptacandidate/RecruitersProfilePage/sector.dart';
 import 'package:adoptacandidate/SettingsPage.dart';
+import 'package:adoptacandidate/widgets/DelayAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'RecruitersProfilePage/RecruitersInfo.dart';
 import 'RecruitersProfilePage/research.dart';
 import 'RecruitersProfilePage/skills.dart';
-import 'package:adoptacandidate/widgets/DelayAnimation.dart';
-
-import 'SwipePage.dart';
 
 
 class Recruitersprofile extends StatefulWidget {
@@ -41,14 +40,14 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
               delay: 150,
               child: Container(
                 alignment: Alignment.topLeft,
-                margin: EdgeInsets.only(left: 5),
+                margin: const EdgeInsets.only(left: 5),
                 child: IconButton(
-                  icon: Icon(Icons.settings_outlined, color: Colors.white),
+                  icon: const Icon(Icons.settings_outlined, color: Colors.white),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Settings(),
+                        builder: (context) => const Settings(),
                       ),
                     );
                   },
@@ -61,77 +60,77 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
         leading: DelayedAnimation(
           delay: 150,
           child: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+            icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
-              Get.to(MainNavigation());
+              Get.to(const MainNavigation());
             },
           ),
         ),
 
       ),
-      backgroundColor: Color(0xFF0D1B2A),
+      backgroundColor: const Color(0xFF0D1B2A),
       body: DelayedAnimation(
         delay: 15,
         child: Column(
           children: [
             Container(
-              child: Profile(),
+              child: const Profile(),
             ),
 
             Container(
-              margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
+              margin:const EdgeInsets.fromLTRB(20, 0, 20, 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   profileCandidate(
-                    title: "Ma recherhe".tr,
-                    icon: Icon(
+                    title: "Ma recherche".tr,
+                    icon: const Icon(
                       Icons.search_rounded,
-                      size: 60,
+                      size: 45,
                       color: Colors.white,
                     ), onPressedCallback: () {
                     Get.to(ResearchCandidate());
                   },
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
                   profileCandidate(
                     title: "Mon Secteur".tr,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.access_time_rounded,
-                      size: 60,
+                      size: 45,
                       color: Colors.white,
                     ), onPressedCallback: () {
                     Get.to(
-                      Sector(),
+                      const Sector(),
                     );
                   },
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
-              margin:EdgeInsets.fromLTRB(20, 0, 20, 10),
+              margin:const EdgeInsets.fromLTRB(20, 0, 20, 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   profileCandidate(
                     title: "Mes Compétences".tr,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.dataset,
-                      size: 60,
+                      size: 45,
                       color: Colors.white,
                     ), onPressedCallback: () {
-                    Get.to(Skills());
+                    Get.to(const Skills());
                   },
                   ),
-                  SizedBox(width: 15),
+                  const SizedBox(width: 15),
 
                   profileCandidate(
                     title: "Mes Infos".tr,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.perm_device_info_outlined,
-                      size: 60,
+                      size: 45,
                       color: Colors.white,
                     ),
                     onPressedCallback: () {
@@ -158,6 +157,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
+      clipper: MyCustomClipper(),
       child: Container(
         color: Colors.grey[700],
         height: 350,
@@ -166,14 +166,14 @@ class Profile extends StatelessWidget {
             //margin: EdgeInsets.only(bottom: 100),
             child: Column(
               children: [
-                Icon(
+                const Icon(
                   Icons.person_pin,
                   color: Colors.white,
                   size: 150,
                 ),
                 Text(
                   'Bonjour [Nom de l\'entreprise]'.tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -181,8 +181,8 @@ class Profile extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    'Domain de l\'entreprise'.tr,
-                    style: TextStyle(
+                    'Domaine de l\'entreprise'.tr,
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18
                     ),
@@ -193,7 +193,6 @@ class Profile extends StatelessWidget {
           ),
         ),
       ),
-      clipper: MyCustomClipper(),
     );
   }
 }
@@ -222,8 +221,7 @@ class profileCandidate extends StatefulWidget {
   final String title;
   final Icon icon;
   final VoidCallback onPressedCallback;
-  const profileCandidate({Key? key, required this.onPressedCallback, required this.icon, required this.title}) :
-        super(key: key);
+  const profileCandidate({super.key, required this.onPressedCallback, required this.icon, required this.title});
 
   @override
   State<profileCandidate> createState() => _profileCandidateState();
@@ -255,9 +253,9 @@ class _profileCandidateState extends State<profileCandidate> {
             color: Colors.grey[700],
             borderRadius: BorderRadius.circular(30),
           ),
-          padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-          height: 120,
-          width: 180,
+          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+          height: 110,
+          width: 160,
           child: TextButton(
             style: TextButton.styleFrom(
               backgroundColor: Colors.grey[700],
@@ -267,8 +265,12 @@ class _profileCandidateState extends State<profileCandidate> {
             child: Column(
               children: [
                 widget.icon,
-                SizedBox(height: 2),
-                Text(widget.title),
+                const SizedBox(height: 2),
+                Text(
+                  widget.title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 13),
+                ),
                 //widget.onPressedCallback;
               ],
             ),

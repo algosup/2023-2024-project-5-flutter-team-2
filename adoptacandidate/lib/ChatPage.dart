@@ -16,15 +16,15 @@ class _chatPageState extends State<chatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+        preferredSize: const Size.fromHeight(70.0),
         child: Padding(
-          padding: EdgeInsets.only(top: 5),
+          padding: const EdgeInsets.only(top: 5),
           child: AppBar(
 
             backgroundColor: const Color(0xFF0D1B2A),
             leadingWidth: 30,
             leading: IconButton(
-              icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
               onPressed: () {
                 Get.back();
               },
@@ -49,7 +49,7 @@ class _chatPageState extends State<chatPage> {
                 ),
               ],
             ),
-            actions: [
+            actions: const [
               Padding(
                 padding: EdgeInsets.only(right: 25),
                 child: Icon(
@@ -65,15 +65,15 @@ class _chatPageState extends State<chatPage> {
       backgroundColor: const Color(0xFF0D1B2A),
 
       body: ListView(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-        children: [
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+        children: const [
           ChatSample(),
           ChatSample(),
           ChatSample(),
           ChatSample(),
         ],
       ),
-      bottomSheet: ChatSheet(),
+      bottomSheet: const ChatSheet(),
 
     );
   }
@@ -102,7 +102,7 @@ class ChatSheet extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                   Icons.emoji_emotions_outlined,
                   color: Colors.white
               ),
@@ -114,7 +114,7 @@ class ChatSheet extends StatelessWidget {
             child: Container(
               alignment: Alignment.centerRight,
               //height: 60,
-              width: 270,
+              width: 260,
               child: TextFormField(
                 decoration: InputDecoration(
                   hintText: "Ecrire un message".tr,
@@ -126,11 +126,11 @@ class ChatSheet extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: IconButton(
-              icon: Icon(Icons.send, color: Colors.white),
+              icon: const Icon(Icons.send, color: Colors.white),
               onPressed: () {},
             ),
           ),
