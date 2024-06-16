@@ -19,7 +19,8 @@ In this project, the client want us to create the prototype of the app with the 
 ## Technologies Used
 
 - **Visual Studios Code** is a code editor software used for developing the project's code.
-- **Flutter** is a source framework used to create multi-platformed applications with the Dart programming language.
+- **Flutter** (version 3.22.2) is a source framework used to create multi-platformed applications with the Dart programming language.
+- **Android Studio*** is an IDE to develop Android applications which provides extensions to test Flutter applications through several smartphone simulators like Pixel 4 API 30. 
 
 ## Documentation
 
