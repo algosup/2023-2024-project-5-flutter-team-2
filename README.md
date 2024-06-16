@@ -26,10 +26,10 @@ In this project, the client want us to create the prototype of the app with the 
 This is the list of the important documents related to our project:
 
 - [Project_Management](Docs/Management/Project_Management.md)
-- [Functional_Specifications] (TBD)
-- [Technical_Specifications] (TBD)
-- [User_Manual] (TBD)
-- [Testing_Plan] (TBD)
+- [Functional_Specifications](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/Functional/functional-specification.md)
+- [Technical_Specifications](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/Technical/Technical_Specs.md)
+- [User_Manual](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/User%20Manual/user_guide_en.pdf)
+- [Testing_Plan](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/QA/testing_plan.md)
 
 ## Project Team
 
