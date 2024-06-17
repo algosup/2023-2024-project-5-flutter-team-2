@@ -116,7 +116,10 @@ class Language extends Translations{
       "L'application est à jour" : "The application is up to date",
       "Déconnexion" : "Logout",
       "Supprimer mon compte" : "Delete my account",
-
+      'Employé polyvalent' : 'Versatile employee',
+      '• Expérience préalable dans un environnement industriel\n• Capacité à travailler en équipe\n• Bonne condition physique'
+          : '• Previous experience in an industrial environment\n• Ability to work in a team\n• Good physical condition',
+      'Nous recherchons un employé polyvalent pour travailler dans une usine. Les responsabilités incluent l\'opération de machines, la maintenance de l\'équipement et l\'assistance aux autres employés selon les besoins.' : 'We are looking for a versatile employee to work in a factory. Responsibilities include operating machines, equipment maintenance and assisting other employees as needed.',
 
   },
 
@@ -230,7 +233,11 @@ class Language extends Translations{
         "L'application est à jour" : "L'application est à jour",
         "Déconnexion" : "Déconnexion",
         "Supprimer mon compte" : "Supprimer mon compte",
-
-    },
+        'Employé polyvalent' : 'Employé polyvalent',
+        '• Expérience préalable dans un environnement industriel\n• Capacité à travailler en équipe\n• Bonne condition physique'
+            : '• Expérience préalable dans un environnement industriel\n• Capacité à travailler en équipe\n• Bonne condition physique',
+        'Nous recherchons un employé polyvalent pour travailler dans une usine. Les responsabilités incluent l\'opération de machines, la maintenance de l\'équipement et l\'assistance aux autres employés selon les besoins.'
+            : 'Nous recherchons un employé polyvalent pour travailler dans une usine. Les responsabilités incluent l\'opération de machines, la maintenance de l\'équipement et l\'assistance aux autres employés selon les besoins.',
+      },
   };
 }
