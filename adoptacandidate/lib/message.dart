@@ -42,7 +42,7 @@ class _MessageSystemState extends State<MessageSystem> {
             Container(
               child: Center(
                 child: Text(
-                  'Nom de L\'utisateur',
+                  'Nom de L\'utisateur'.tr,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 17,
@@ -77,7 +77,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.search, color: Colors.white,),
-                        labelText: 'Search'.tr,
+                        labelText: 'Recherche'.tr,
                         labelStyle: TextStyle(color: Colors.grey[400]),
                         filled: true,
                         fillColor: Colors.grey[700],
@@ -134,7 +134,7 @@ class _MessageSystemState extends State<MessageSystem> {
                           ),
                           SizedBox(height: 6),
                           Text(
-                            'Nom de profile',
+                            'Nom de profile'.tr,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 10,
@@ -163,7 +163,7 @@ class _MessageSystemState extends State<MessageSystem> {
                 children: [
                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -171,7 +171,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 13 minutes",
+                      "Actif il y a 13 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -186,7 +186,7 @@ class _MessageSystemState extends State<MessageSystem> {
                    SizedBox(height: 10),
                    ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -194,7 +194,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Peut on se voir ?",
+                      "Peut on se voir ?".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -209,7 +209,7 @@ class _MessageSystemState extends State<MessageSystem> {
                    SizedBox(height: 10),
                    ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -217,7 +217,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 2 minutes",
+                      "Actif il y a 2 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -230,9 +230,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -240,7 +240,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 40 minutes",
+                      "Actif il y a 40 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -253,9 +253,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -263,7 +263,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 1 minutes",
+                      "Actif il y a 1 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -277,9 +277,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -288,7 +288,7 @@ class _MessageSystemState extends State<MessageSystem> {
                     ),
 
                     subtitle: Text(
-                      "Actif il y a 10 minutes",
+                      "Actif il y a 10 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -301,9 +301,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -311,7 +311,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 20 minutes",
+                      "Actif il y a 20 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -324,9 +324,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -334,7 +334,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Votre profile m'interesse, salut....",
+                      "Votre profile m'interesse, salut....".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -347,9 +347,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -357,7 +357,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Salut 👋 ",
+                      "Salut 👋 ".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -370,9 +370,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -380,7 +380,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 1 an",
+                      "Actif il y a 1 an".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,
@@ -393,9 +393,9 @@ class _MessageSystemState extends State<MessageSystem> {
                   ),
 
                   SizedBox(height: 10),
-                  const ListTile(
+                   ListTile(
                     title: Text(
-                      "Nom de profile",
+                      "Nom de profile".tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -403,7 +403,7 @@ class _MessageSystemState extends State<MessageSystem> {
                       ),
                     ),
                     subtitle: Text(
-                      "Actif il y a 2 minutes",
+                      "Actif il y a 2 minutes".tr,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15,

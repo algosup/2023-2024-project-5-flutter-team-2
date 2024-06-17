@@ -38,25 +38,25 @@ class _NotificationsPageState extends State<NotificationsPage> {
   // Sample list of notifications
   final List<NotificationCard> notificationList = [
     NotificationCard(
-      chosenText: 'Like-Sent-Fav'.tr,
+      chosenText: 'Like-Env-Fav'.tr,
       isLike: true,
       isSent: true,
       isFavorite: true,
     ),
      NotificationCard(
-      chosenText: 'Like-Sent-Fav'.tr,
+      chosenText: 'Like-Env-Fav'.tr,
       isLike: true,
       isSent: true,
       isFavorite: true,
     ),
      NotificationCard(
-      chosenText: 'Like-Sent'.tr,
+      chosenText: 'Like-Env'.tr,
       isLike: true,
       isSent: true,
       isFavorite: false,
     ),
     NotificationCard(
-      chosenText: 'Sent-Fav'.tr,
+      chosenText: 'Env-Fav'.tr,
       isLike: false,
       isSent: true,
       isFavorite: true,
@@ -74,7 +74,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
       isFavorite: false,
     ),
      NotificationCard(
-      chosenText: 'Sent'.tr,
+      chosenText: 'Env'.tr,
       isLike: false,
       isSent: true,
       isFavorite: false,

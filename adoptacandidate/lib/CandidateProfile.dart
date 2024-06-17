@@ -161,7 +161,7 @@ class Profile extends StatelessWidget {
         child: Center(
           child: Container(
             //margin: EdgeInsets.only(bottom: 100),
-            child: const Column(
+            child:  Column(
               children: [
                 Icon(
                   Icons.person_pin,
@@ -169,7 +169,7 @@ class Profile extends StatelessWidget {
                   size: 150,
                 ),
                 Text(
-                  'Bonjour [Nom de l\'utilisateur]',
+                  'Bonjour [Nom de l\'utilisateur]'.tr,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -178,7 +178,7 @@ class Profile extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    'Domaine de l\'utilisateur',
+                    'Domaine de l\'utilisateur'.tr,
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),

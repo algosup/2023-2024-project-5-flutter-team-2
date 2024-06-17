@@ -1,3 +1,4 @@
+import 'package:adoptacandidate/WelcomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -199,14 +200,19 @@ class _SettingsState extends State<Settings> {
 
             const SizedBox(height: 10),
 
-            Row(
-              children: [
-                const Icon(
-                  Icons.logout_outlined,
-                  color: Color(0xFFFFA500),
-                ),
-                buildSettings(context, "Déconnexion".tr),
-              ],
+            GestureDetector(
+              onTap: () {
+                Get.to(WelcomePage());
+              },
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.logout_outlined,
+                    color: Color(0xFFFFA500),
+                  ),
+                  buildSettings(context, "Déconnexion".tr),
+                ],
+              ),
             ),
 
             const Divider(

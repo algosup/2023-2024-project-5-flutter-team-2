@@ -304,7 +304,7 @@ class _RecruiterPageState extends State<RecruiterPage> {
                         );
                       },
                       child: Text(
-                        'Créer Un Compte',
+                        'Créer Un Compte'.tr,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 17,

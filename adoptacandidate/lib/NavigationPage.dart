@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'SwipePage.dart';
+import 'SwipePage2.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
