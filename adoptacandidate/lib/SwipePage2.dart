@@ -84,31 +84,42 @@ class _SwipePage2State extends State<SwipePage2> {
         ),
       ),
       backgroundColor: const Color(0xFF0D1B2A),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Center(
-                child: SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  child: SwipeCards(
-                    matchEngine: _matchEngine,
-                    itemBuilder: (BuildContext context, int index) {
-                      return _swipeItems[index].content;
-                    },
-                    onStackFinished: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Vous avez fini toutes les cartes'.tr)),
-                      );
-                    },
-                    itemChanged: (SwipeItem item, int index) {
-                      print("Item: $item, index: $index");
-                    },
-                    leftSwipeAllowed: true,
-                    rightSwipeAllowed: true,
-                    upSwipeAllowed: true,
-                    fillSpace: true,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: Center(
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.75,
+                child: SwipeCards(
+                  matchEngine: _matchEngine,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => JobDetailPage(index: index),
+                          ),
+                        );
+                      },
+                      child: _swipeItems[index].content,
+                    );
+                  },
+                  onStackFinished: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                          content:
+                          Text('Vous avez fini toutes les cartes'.tr)),
+                    );
+                  },
+                  itemChanged: (SwipeItem item, int index) {
+                    print("Item: $item, index: $index");
+                  },
+                  leftSwipeAllowed: true,
+                  rightSwipeAllowed: true,
+                  upSwipeAllowed: true,
+                  fillSpace: true,
                     likeTag: Container(
                       margin: const EdgeInsets.all(20),
                       padding: const EdgeInsets.all(15),
@@ -185,7 +196,6 @@ class _SwipePage2State extends State<SwipePage2> {
             ),
           ],
         ),
-      ),
     );
   }
 }
@@ -202,116 +212,145 @@ class JobCard extends StatelessWidget {
       elevation: 5,
       margin: const EdgeInsets.symmetric(horizontal: 7, vertical: 0),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const SizedBox(height: 20),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
-                        Icons.person, color: Colors.black87,
-                        size: 200,
-                      ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 20),
+                          Container(
+                            alignment: Alignment.center,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.person, color: Colors.black87,
+                                  size: 200,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Nom:'.tr,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                            Text(
+                              'Nom et prénom de l\'employé'.tr,
+                              style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.black87,
+                              ),
+                          ),
+                      const SizedBox(height: 20),
                       Text(
-                        'Nom:'.tr,
+                        'Situation:'.tr,
                         style: const TextStyle(
                           fontSize: 18,
-                          color: Colors.black87,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
-                        Text(
-                          'Nom et Prénom de l\'employé'.tr,
-                          style: const TextStyle(
-                            fontSize: 15,
-                            color: Colors.black87,
+                      Text(
+                        'situation de l\'employé'.tr,
+                        style: const TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        'Compétence: '.tr,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'compétence de l\'employé'.tr,
+                        style: const TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        'Type de Contrat: '.tr,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'type de contrat de l\'employé'.tr,
+                        style: const TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.start,
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.location_on, color: Colors.black87),
+                          SizedBox(width: 5),
+                          Text(
+                            'Localité: '.tr,
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
+                          Text(
+                            'localité de l\'employé'.tr,
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
                       ),
+                      const SizedBox(height: 10),
                     ],
                   ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'Situation:'.tr,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'situation de l\'employé'.tr,
-                    style: const TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'Compétence: '.tr,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'compétence de l\'employé'.tr,
-                    style: const TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'Type de Contrat: '.tr,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'type de contrat de l\'employé'.tr,
-                    style: const TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.location_on, color: Colors.black87),
-                      SizedBox(width: 5),
-                      Text(
-                        'Localité: '.tr,
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black87,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        'localité de l\'employé'.tr,
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.black87,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                ],
-              ),
-            ),
+                ),
           ],
         ),
       ),
     );
   }
 }
-void _launchURL() async{
-  if (!await launch (_url)) throw 'could not launch $_url';
+class JobDetailPage extends StatelessWidget {
+  final int index;
+
+  const JobDetailPage({super.key, required this.index});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Infos sur l\'employé'.tr),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: JobCard(index: index),
+      ),
+    );
+  }
 }
 
+void _launchURL() async {
+  if (!await launch(_url)) throw 'Could not launch $_url';
+}
+
+void main() {
+  runApp(const GetMaterialApp(
+    home: SwipePage2(),
+  ));
+}

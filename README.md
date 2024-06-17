@@ -19,17 +19,18 @@ In this project, the client want us to create the prototype of the app with the 
 ## Technologies Used
 
 - **Visual Studios Code** is a code editor software used for developing the project's code.
-- **Flutter** is a source framework used to create multi-platformed applications with the Dart programming language.
+- **Flutter** (version 3.22.2) is a source framework used to create multi-platformed applications with the Dart programming language.
+- **Android Studio*** is an IDE to develop Android applications which provides extensions to test Flutter applications through several smartphone simulators like Pixel 4 API 30. 
 
 ## Documentation
 
 This is the list of the important documents related to our project:
 
 - [Project_Management](Docs/Management/Project_Management.md)
-- [Functional_Specifications] (TBD)
-- [Technical_Specifications] (TBD)
-- [User_Manual] (TBD)
-- [Testing_Plan] (TBD)
+- [Functional_Specifications](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/Functional/functional-specification.md)
+- [Technical_Specifications](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/Technical/Technical_Specs.md)
+- [User_Manual](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/User%20Manual/user_guide_en.pdf)
+- [Testing_Plan](https://github.com/algosup/2023-2024-project-5-flutter-team-2/blob/main/Docs/QA/testing_plan.md)
 
 ## Project Team
 

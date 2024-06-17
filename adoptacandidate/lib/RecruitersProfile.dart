@@ -3,6 +3,7 @@ import 'package:adoptacandidate/RecruitersProfilePage/sector.dart';
 import 'package:adoptacandidate/SettingsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'NavigationPage2.dart';
 import 'RecruitersProfilePage/RecruitersInfo.dart';
 import 'RecruitersProfilePage/research.dart';
 import 'RecruitersProfilePage/skills.dart';
@@ -62,7 +63,7 @@ class _RecruitersprofileState extends State<Recruitersprofile> {
           child: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: Colors.white),
             onPressed: () {
-              Get.to(MainNavigation());
+              Get.to(MainNavigation2());
             },
           ),
         ),
