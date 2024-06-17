@@ -20,7 +20,71 @@ In this project, the client want us to create the prototype of the app with the 
 
 - **Visual Studios Code** is a code editor software used for developing the project's code.
 - **Flutter** (version 3.22.2) is a source framework used to create multi-platformed applications with the Dart programming language.
-- **Android Studio*** is an IDE to develop Android applications which provides extensions to test Flutter applications through several smartphone simulators like Pixel 4 API 30. 
+- **Android Studio*** is an IDE to develop Android applications which provides extensions to test Flutter applications through several smartphone simulators like Pixel 4 API 30.
+
+## How to Use
+
+### Setting up the Emulator
+
+In order to install our application, please follow these steps:
+
+1. **Clone the Github repository**:
+
+   ```bash
+   git clone https://github.com/algosup/2023-2024-project-5-flutter-team-2.git
+   ```
+   
+2. **Open Visual Studios Code**:
+
+Make sure you have installed Visual Studios Code (can be done [here](https://code.visualstudio.com/)), and open the folder named "adoptacandidate" to open the code.
+
+3. **Install Android Studios**:
+
+To be able to use an Android Emulator in VS Code, install Android Studios ([In this link](https://developer.android.com/studio?gad_source=1&gclid=Cj0KCQjwvb-zBhCmARIsAAfUI2s1cOJDK_ockwC9ehwN_gsTq_WOjDKPzkX9KlUFjcBfy7SyGD7i84QaAqQWEALw_wcB&gclsrc=aw.ds)) and follow the steps of this [video](https://www.youtube.com/watch?v=EhGW4UYpKSE) to set up your emulator.
+
+4. **Activate the emulator**:
+
+Once you have access to the code, you must select your emulator on the bar at the bottom left corner.
+
+5. **Run the program**:
+
+After you selected the emulator, run the program without debugging. You will wait for a while before the emulator display the app's welcome page.
+
+### Testing the app as the Candidate
+
+1. **Select "Continue with an Email".**
+
+2. **Select "Sign In".**
+
+3. **Select "Candidate" and click on "Continue".**
+
+4. **Fill the form to create an account before clicking on "Create an account".**
+
+5. **Select yous Soft Skills before clicking on "Validate".**
+
+6. **Select your expected job, your searched job location and your type of work contract before clicking on "Validate".**
+
+7. **Fill the form about your professionnal situation before clicking on "Register".**
+
+You will be able to start swiping the potential job matches based on your selection.
+
+### Testing the app as the Recruiter
+
+1. **Select "Continue with an Email".**
+
+2. **Select "Sign In".**
+
+3. **Select "Recruiter" and click on "Continue".**
+
+4. **Select your industry sector before clicking on "Continue".**
+
+5. **Fill the form to create your account before clicking "Create an account".**
+
+6. **Select yous Soft Skills before clicking on "Validate".**
+
+7. **Fill the form about your required job before clicking on "validate".**
+
+You will be able to start swiping the potential candidate matches based on your selection.
 
 ## Documentation
 
