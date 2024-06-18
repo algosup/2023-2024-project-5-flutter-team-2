@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bfdca50-5070-4c22-bdc9-ad763650bf35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/CandidateProfile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/NavigationPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruiterPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/RecruitersProfile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SettingsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/SwipePage2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/message.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/notifications.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/notifications.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" beforeDir="false" afterPath="$PROJECT_DIR$/adoptacandidate/lib/widgets/language.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
